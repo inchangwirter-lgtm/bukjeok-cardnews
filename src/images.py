@@ -73,13 +73,21 @@ def gen_openai(prompt: str, aspect: str, model: str) -> bytes:
 
 
 def gen_higgsfield(prompt: str, aspect: str, model: str) -> bytes:
-    """Higgsfield API (구독 크레딧과 별개인 API 잔액에서 차감)."""
-    # 콘솔의 'Copy API key' 값 하나(HF_KEY)면 그대로, 예전 방식(ID + Secret)이면 ID:Secret 으로
+    """Higgsfield API (구독 크레딧과 별개인 API 잔액에서 차감).
+    모델이 지원하지 않는 비율이면 가까운 세로 비율로 바꿔 다시 시도한다 (카드에선 잘라서 맞춤)."""
     key = os.environ.get("HF_KEY") or f"{os.environ['HF_API_KEY']}:{os.environ['HF_API_SECRET']}"
-    headers = {"Authorization": f"Key {key.strip()}", "Idempotency-Key": str(uuid.uuid4())}
-    r = requests.post(f"https://api.higgsfield.ai/{model}", headers=headers,
-                      json={"prompt": prompt, "aspect_ratio": aspect, "num_images": 1}, timeout=120)
-    r.raise_for_status()
+    auth = {"Authorization": f"Key {key.strip()}"}
+    fallbacks = {"4:5": ["4:5", "3:4", "2:3"], "1:1": ["1:1"]}.get(aspect, [aspect])
+    for ratio in fallbacks:
+        r = requests.post(f"https://api.higgsfield.ai/{model}",
+                          headers={**auth, "Idempotency-Key": str(uuid.uuid4())},
+                          json={"prompt": prompt, "aspect_ratio": ratio}, timeout=120)
+        if r.status_code == 400 and ratio != fallbacks[-1]:
+            print(f"    비율 {ratio} 거절 → 다음 비율로 ({r.text[:200]})")
+            continue
+        if r.status_code >= 400:
+            raise RuntimeError(f"Higgsfield {r.status_code}: {r.text[:300]}")
+        break
     req = r.json()
     status_url = req.get("status_url") or f"https://api.higgsfield.ai/requests/{req['request_id']}/status"
     deadline = time.time() + 600
@@ -87,7 +95,7 @@ def gen_higgsfield(prompt: str, aspect: str, model: str) -> bytes:
         if time.time() > deadline:
             raise RuntimeError("Higgsfield 생성 시간 초과")
         time.sleep(4)
-        req = requests.get(status_url, headers={"Authorization": headers["Authorization"]}, timeout=60).json()
+        req = requests.get(status_url, headers=auth, timeout=60).json()
     if req["status"] != "completed":
         raise RuntimeError(f"Higgsfield 생성 실패: {req['status']} {req.get('error') or ''}")
     return requests.get(req["images"][0]["url"], timeout=120).content

@@ -1,6 +1,11 @@
-name: 2. 검수 의견 반영 (/수정 댓글 · post.json 직접 수정)
+name: 2. 검수 의견 반영 (/수정 댓글 · post.json 직접 수정 · 사진 다시 만들기)
 
 on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "사진·카드를 다시 만들 PR 번호"
+        required: true
   issue_comment:
     types: [created]
   pull_request:
@@ -12,7 +17,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: revise-${{ github.event.issue.number || github.event.pull_request.number }}
+  group: revise-${{ github.event.issue.number || github.event.pull_request.number || inputs.pr }}
 
 jobs:
   revise:
@@ -23,10 +28,11 @@ jobs:
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
       || (github.event_name == 'pull_request' && github.actor != 'github-actions[bot]'
           && github.event.pull_request.head.repo.full_name == github.repository)
+      || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      PR: ${{ github.event.issue.number || github.event.pull_request.number }}
+      PR: ${{ github.event.issue.number || github.event.pull_request.number || inputs.pr }}
     steps:
       - uses: actions/checkout@v4
         with:
