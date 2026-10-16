@@ -66,6 +66,8 @@ def _threads_publish(user_id: str, token: str, container_id: str) -> str:
 def threads_post(user_id: str, token: str, text: str, image_urls: list[str] | None = None,
                  reply_to_id: str | None = None) -> str:
     extra = {"reply_to_id": reply_to_id} if reply_to_id else {}
+    if reply_to_id:
+        time.sleep(8)  # 방금 올린 글이 API에 보이기까지 잠깐 걸림 (답글은 threads_manage_replies 권한 필요)
     if image_urls and len(image_urls) > 1:
         children = [
             _call("POST", f"{TH_BASE}/{user_id}/threads", token,
