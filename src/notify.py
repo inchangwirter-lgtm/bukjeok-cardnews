@@ -27,7 +27,7 @@ def approval_link(pr: str) -> str | None:
     if not base or not secret:
         return None
     token = hmac.new(secret.encode(), str(pr).encode(), hashlib.sha256).hexdigest()[:32]
-    return f"{base.rstrip('/')}/p/{pr}?t={token}"
+    return f"{base.rstrip('/')}/?pr={pr}&t={token}"
 
 
 def card_urls(post_dir) -> list[str]:
