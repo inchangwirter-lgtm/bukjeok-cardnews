@@ -1,0 +1,51 @@
+# ─────────────────────────────────────────────
+#  카드뉴스 & 스레드 자동발행 설정
+#  이 파일만 고치면 브랜드/톤/일정을 바꿀 수 있습니다.
+# ─────────────────────────────────────────────
+
+brand:
+  name: "북적마케팅"                  # 카드 상단 프로필·CTA에 표시
+  handle: "@bukjeok_marketing"         # ← 실제 인스타그램 아이디로 바꾸세요
+  threads_handle: "@bukjeok_marketing" # ← 실제 스레드 아이디로 바꾸세요
+  # 마지막 장에 항상 고정으로 들어가는 이벤트 문구 (인스타 캡션 마지막에도 자동으로 붙음)
+  event:
+    badge: "🎁 진단 이벤트"
+    text: "팔로우 + 댓글에 [지역, 가게명] 남겨주시면\n3분을 선정해 사업체 마케팅 진단 PDF를 보내드려요"
+    caption: "🎁 진단 이벤트\n팔로우 + 댓글에 [지역, 가게명] 남겨주시면 3분을 선정해 사업체 마케팅 진단 PDF를 보내드려요."
+  colors:
+    accent: "#C9FF3B"    # 네온 포인트 (제목 둘째 줄, 라벨 번호, 사진 태그)
+    dark: "#111111"
+
+content:
+  audience: "광고·SNS 마케팅을 고민하는 사장님(소상공인·스타트업 대표)과 사내 마케터"
+  voice: "인스타에서 잘 퍼지는 짧고 리듬감 있는 구어체. 존댓말 기반이되 '~함', '진짜', '이거' 같은 말을 자연스럽게 섞고, 현업 대행사만 아는 디테일로 '감 살아있다'는 인상을 준다. 딱딱한 보고서 말투 금지."
+  slides_min: 7
+  slides_max: 9
+  # 최근 트렌드/업데이트를 웹에서 확인한 뒤 작성 (Claude 웹검색, 비용 약간 증가)
+  use_web_search: true
+
+images:
+  # replicate = Flux 실사 모드(가장 자연스러움, 추천) | openai = GPT 이미지 | none = 사진 없이
+  provider: "replicate"
+  model: "black-forest-labs/flux-1.1-pro-ultra"   # openai 사용 시 예: "gpt-image-1"
+  # 모든 사진에 붙는 'AI 티 안 나게' 스타일 문구
+  style: >-
+    candid unposed smartphone snapshot, shot on iPhone, natural available light,
+    slightly imperfect framing, subtle film grain, true-to-life muted colors,
+    realistic skin texture, everyday Korean setting, no text, no logos, no watermark,
+    not a stock photo, not CGI
+  cutout_style: "close-up product-style photo, single subject, simple uncluttered background"
+
+model:
+  name: "claude-opus-5-5"
+  effort: "high"
+
+schedule:
+  timezone: "Asia/Seoul"
+  publish_time: "13:00"     # 승인된 게시물이 올라가는 시각 (매일 오후 1시)
+  publish_delay_days: 1     # 생성 다음 날 발행 (검수 시간 확보)
+
+publish:
+  instagram: true
+  threads: true
+  threads_attach_cards: true  # 스레드 첫 글에 카드 이미지도 함께 첨부

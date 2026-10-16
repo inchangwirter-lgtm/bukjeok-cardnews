@@ -1,0 +1,80 @@
+name: 2. 검수 의견 반영 (/수정 댓글 · post.json 직접 수정)
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [synchronize]
+    paths: ["content/**/post.json"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: revise-${{ github.event.issue.number || github.event.pull_request.number }}
+
+jobs:
+  revise:
+    # PR 댓글이 '/수정' 으로 시작하고 저장소 관리자/협업자가 남긴 경우, 또는 사람이 post.json 을 직접 고친 경우
+    if: >-
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request &&
+       startsWith(github.event.comment.body, '/수정') &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
+      || (github.event_name == 'pull_request' && github.actor != 'github-actions[bot]'
+          && github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.issue.number || github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: PR 브랜치 체크아웃
+        id: pr
+        run: |
+          gh pr checkout "$PR"
+          POST_DIR=$(git diff --name-only origin/main...HEAD | grep 'post.json$' | head -1 | xargs dirname)
+          echo "post_dir=$POST_DIR" >> "$GITHUB_OUTPUT"
+          echo "branch=$(git branch --show-current)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 패키지 설치
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Claude로 수정
+        if: github.event_name == 'issue_comment'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COMMENT: ${{ github.event.comment.body }}
+        run: |
+          gh api "repos/${{ github.repository }}/issues/comments/${{ github.event.comment.id }}/reactions" -f content=eyes >/dev/null
+          python -m src.revise "${{ steps.pr.outputs.post_dir }}" "${COMMENT#/수정}"
+
+      - name: 다시 렌더링 후 PR 갱신
+        env:
+          POST_DIR: ${{ steps.pr.outputs.post_dir }}
+          BRANCH: ${{ steps.pr.outputs.branch }}
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python -m src.images "$POST_DIR"
+          python -m src.render "$POST_DIR"
+          git config user.name "cardnews-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$POST_DIR"
+          git diff --cached --quiet && { echo "변경 없음"; exit 0; }
+          git commit -m "revise: $POST_DIR"
+          git push origin "$BRANCH"
+          CARDS_SHA=$(git rev-parse HEAD) python -m src.pr_body "$POST_DIR" "$BRANCH" > "$RUNNER_TEMP/body.md"
+          gh pr edit "$PR" --body-file "$RUNNER_TEMP/body.md"
+          gh pr comment "$PR" --body "✅ 반영했습니다. 본문의 카드 미리보기가 새 버전으로 바뀌었어요."

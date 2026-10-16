@@ -1,0 +1,6 @@
+anthropic
+pydantic>=2
+jinja2
+pyyaml
+playwright
+requests

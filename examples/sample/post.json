@@ -1,0 +1,206 @@
+{
+  "topic": "네이버 플레이스에 등록했는데 동네 이름으로 검색하면 안 나올 때, 대표키워드 바꾸는 법",
+  "pillar": "네이버 플레이스",
+  "problem": "플레이스 등록했는데 동네 이름으로 검색하면 우리 가게가 안 나와요",
+  "slug": "naver-place-main-keywords",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "네이버 플레이스",
+      "title": "검색해도 안 나오는 플레이스\n==대표키워드부터 바꾸세요==",
+      "image_prompt": "a Korean pasta restaurant owner in her 30s in an apron sitting at an empty table in her small restaurant in the afternoon, frowning at her phone, map app on blurred screen",
+      "cutouts": [
+        {
+          "prompt": "a hand holding a smartphone showing a blurred map search results list, close-up",
+          "label": "검색해도 없음"
+        },
+        {
+          "prompt": "an empty restaurant table set with cutlery and a small vase, afternoon light",
+          "label": "손님 0명"
+        },
+        {
+          "prompt": "a small handwritten sticky note list stuck on a laptop edge, unreadable scribbles",
+          "label": "키워드 5칸"
+        }
+      ],
+      "body": "",
+      "teaser": "5분이면 바꿀 수 있어요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "",
+      "title": "매주 받는 고민\n==대부분 키워드가 문제==",
+      "image_prompt": "over-the-shoulder view of a Korean marketer chatting with a client on a laptop in a small office, afternoon window light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "뭐가 문제였냐면",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "플레이스 등록했는데\n동네 이름 검색하면 안 나와요ㅠ"
+        },
+        {
+          "who": "us",
+          "text": "대표키워드 뭐로 넣으셨어요?"
+        },
+        {
+          "who": "client",
+          "text": "맛집, 분위기좋은, 데이트요!"
+        },
+        {
+          "who": "us",
+          "text": "아… 그게 원인이에요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "원인",
+      "title": "'분위기좋은'으로는\n==아무도 검색 안 해요==",
+      "image_prompt": "a young Korean couple on a street at night looking at a phone together deciding where to eat, neon-lit alley",
+      "cutouts": [],
+      "body": "손님은 [동네 + 메뉴]로 검색해요.\n'성수 파스타', '합정 브런치'처럼요.\n대표키워드는 손님 검색어와 같아야 의미가 있어요.",
+      "teaser": "그럼 손님 검색어는 어떻게 찾냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "STEP 1",
+      "title": "손님 검색어 찾기\n==5분이면 끝나요==",
+      "image_prompt": "close-up of a hand typing on a laptop keyboard at a cafe table, blurred keyword table on screen, coffee cup",
+      "cutouts": [
+        {
+          "prompt": "a pen and a small notepad with a short scribbled list, unreadable handwriting, on a wooden table",
+          "label": "검색수 메모"
+        }
+      ],
+      "body": "",
+      "teaser": "이제 5개를 고르면 되는데",
+      "items": [
+        "네이버 검색광고 → 도구 → 키워드 도구",
+        "'동네명 + 업종' 입력해서 조회",
+        "월간 검색수 있는 키워드 메모",
+        "'서울 맛집'처럼 너무 큰 건 빼기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 2",
+      "title": "5개 고르는 공식\n==동네 2개 + 메뉴 3개==",
+      "image_prompt": "a cozy small Korean pasta restaurant interior with an open kitchen, chef plating pasta, warm evening light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "여기서 끝내면 반만 한 거예요",
+      "items": [],
+      "chat": [],
+      "bad": "맛집, 분위기좋은, 데이트,\n친절한, 가성비",
+      "good": "성수 파스타, 성수동 맛집,\n뚝섬 파스타, 성수 와인바, 성수 데이트",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 3",
+      "title": "상세설명·메뉴명에도\n==키워드를 문장으로==",
+      "image_prompt": "a restaurant owner photographing a plate of pasta with her smartphone on a table by the window, natural light",
+      "cutouts": [
+        {
+          "prompt": "a close-up of a plate of fresh truffle pasta on a wooden table, overhead",
+          "label": "생면 트러플 파스타"
+        }
+      ],
+      "body": "나열 말고 문장으로.\n'성수동에서 생면을 직접 뽑는 파스타집이에요'\n메뉴명도 '파스타1' 말고 '생면 트러플 파스타'로.",
+      "teaser": "마지막으로 이것만 지켜주세요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "바꾼 뒤 2주는\n==건드리지 말고 지켜보기==",
+      "image_prompt": "a desk calendar on a restaurant counter with two weeks marked by a pen, blurred background of a small restaurant",
+      "cutouts": [],
+      "body": "자주 바꾸면 뭐가 효과였는지 몰라요.\n바꾼 날짜를 적어두고 2주 뒤\n스마트플레이스 통계에서 어떤 검색어로 들어왔는지 보세요.",
+      "teaser": "오늘 할 일만 정리해드릴게요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "체크리스트",
+      "title": "오늘 할 일\n==딱 4개만 하세요==",
+      "image_prompt": "a Korean restaurant owner relaxing with a cup of coffee at the counter before opening, smiling at her phone, morning light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장해두고 하나씩 체크하세요",
+      "items": [
+        "키워드 도구로 손님 검색어 찾기",
+        "대표키워드 5개 교체",
+        "상세설명·메뉴명 문장으로 수정",
+        "2주 뒤 유입 검색어 확인"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 바로 바꿔보기==",
+      "image_prompt": "a busy small Korean restaurant at dinner time with customers at every table, candid, warm light, slight motion blur",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "플레이스 등록했는데 동네 이름 검색하면 우리 가게가 안 나오나요? 대표키워드부터 확인해보세요.\n\n✔ STEP 1 키워드 도구로 손님 검색어 찾기\n✔ STEP 2 동네 2개 + 메뉴 3개로 5개 고르기\n✔ STEP 3 상세설명·메뉴명에 키워드를 문장으로\n✔ STEP 4 2주는 건드리지 말고 지켜보기\n\n📌 저장해두고 오늘 하나씩 바꿔보세요",
+  "hashtags": [
+    "네이버플레이스",
+    "스마트플레이스",
+    "플레이스상위노출",
+    "대표키워드",
+    "자영업자",
+    "사장님마케팅",
+    "소상공인마케팅",
+    "북적마케팅"
+  ],
+  "threads": [
+    "플레이스 등록해놓고 '동네 이름 + 메뉴'로 검색했는데 우리 가게가 안 나온다면, 대표키워드부터 열어보세요. 10곳 중 절반은 여기가 문제예요 🧵",
+    "1. 대표키워드에 '맛집, 분위기좋은, 데이트' 넣으신 분 많아요. 근데 손님은 그렇게 검색 안 해요. '성수 파스타', '합정 브런치'처럼 동네+메뉴로 찾죠.",
+    "2. 손님 검색어는 네이버 검색광고 → 도구 → 키워드 도구에서 '동네명+업종'만 넣어보면 바로 나와요. 월간 검색수가 보이는 키워드를 메모하고, '서울 맛집'처럼 너무 큰 건 빼세요.",
+    "3. 5개는 동네 2개 + 메뉴 3개 조합이 무난해요. 예) 성수 파스타 / 성수동 맛집 / 뚝섬 파스타 / 성수 와인바 / 성수 데이트.\n그리고 상세설명·메뉴명에도 키워드를 문장으로 넣어주세요. '파스타1' 말고 '생면 트러플 파스타'.",
+    "4. 바꾸고 나서 2주는 그대로 두고, 스마트플레이스 통계에서 어떤 검색어로 들어왔는지 보세요.\n\n인스타 @bukjeok_marketing 게시물 댓글에 지역·가게명 남겨주시면 3분 뽑아 마케팅 진단 PDF 보내드려요."
+  ],
+  "sources": [
+    "네이버 검색광고 키워드 도구 (searchad.naver.com)",
+    "네이버 스마트플레이스 (smartplace.naver.com)"
+  ]
+}

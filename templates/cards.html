@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  @font-face { font-family: "GmarketSans"; font-weight: 700; font-display: block;
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); }
+  @font-face { font-family: "GmarketSans"; font-weight: 500; font-display: block;
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff"); }
+  :root {
+    --accent: {{ c.accent }};
+    --ink: {{ c.dark }};
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #333; font-family: "Pretendard Variable", Pretendard, "Noto Sans CJK KR", sans-serif; }
+  .g { font-family: "GmarketSans", "Pretendard Variable", sans-serif; }
+
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; color: #fff;
+           background: #2a2c2b; letter-spacing: -0.03em; word-break: keep-all; }
+
+  /* ── 배경 사진 + 필름 질감 + 하단 어둡게 ── */
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) contrast(1.04); }
+  .shade { position: absolute; inset: 0;
+           background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 16%, rgba(0,0,0,0) 38%, rgba(0,0,0,.55) 58%, rgba(0,0,0,.88) 100%); }
+  .dense .shade { background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.05) 14%, rgba(0,0,0,.35) 30%, rgba(0,0,0,.82) 52%, rgba(0,0,0,.92) 100%); }
+  .grain { position: absolute; inset: 0; opacity: .16; mix-blend-mode: overlay;
+           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  /* ── 상단 브랜드 ── */
+  .brand { position: absolute; top: 66px; left: 0; right: 0; text-align: center; font-size: 42px; font-weight: 700;
+           letter-spacing: -0.02em; text-shadow: 0 2px 14px rgba(0,0,0,.45); }
+
+  /* ── 콜라주 사진 ── */
+  .cut { position: absolute; background: #fff; padding: 12px; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  .cut img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.92); }
+  .cut .tag { position: absolute; left: -26px; bottom: 34px; }
+  .tag { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 46px; color: var(--accent);
+         -webkit-text-stroke: 9px #111; paint-order: stroke fill; letter-spacing: -0.03em; white-space: nowrap; }
+  .p0 { width: 400px; height: 400px; right: 64px; top: 170px; transform: rotate(4deg); }
+  .p1 { width: 300px; height: 300px; left: 48px; top: 330px; transform: rotate(-6deg); }
+  .p2 { width: 270px; height: 270px; right: 110px; top: 570px; transform: rotate(-3deg); }
+  .slide:not(.cover) .p0 { width: 330px; height: 330px; top: 160px; }
+
+  /* ── 하단 텍스트 블록 ── */
+  .text { position: absolute; left: 80px; right: 80px; bottom: 150px; display: flex; flex-direction: column; align-items: flex-start; }
+  .label { display: inline-flex; align-items: stretch; font-family: "GmarketSans", sans-serif; font-weight: 700;
+           font-size: 50px; line-height: 1; margin-bottom: 34px; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+  .label span { background: #fff; color: #111; padding: 20px 26px 16px; }
+  .label b { background: var(--accent); color: #111; padding: 20px 26px 16px; }
+  h1 { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 100px; line-height: 1.2;
+       letter-spacing: -0.045em; text-shadow: 0 4px 24px rgba(0,0,0,.45); }
+  h2 { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.22;
+       letter-spacing: -0.045em; text-shadow: 0 4px 20px rgba(0,0,0,.45); }
+  mark { background: none; color: var(--accent); }
+  .body { font-size: 42px; line-height: 1.55; font-weight: 500; margin-top: 34px; color: rgba(255,255,255,.88); }
+
+  /* 체크리스트 */
+  .list { list-style: none; margin-top: 36px; display: flex; flex-direction: column; gap: 22px; }
+  .list li { display: flex; gap: 22px; align-items: center; font-size: 44px; font-weight: 700; }
+  .list li::before { content: "✔"; color: var(--accent); font-size: 40px; }
+
+  /* 대화 */
+  .chat { display: flex; flex-direction: column; gap: 16px; margin-top: 34px; width: 100%; }
+  .bubble { max-width: 80%; font-size: 38px; line-height: 1.4; font-weight: 600; padding: 22px 30px; border-radius: 32px; }
+  .bubble.client { align-self: flex-start; background: rgba(255,255,255,.95); color: #111; border-top-left-radius: 8px; }
+  .bubble.us { align-self: flex-end; background: var(--accent); color: #111; border-top-right-radius: 8px; }
+
+  /* 비교 */
+  .vs { display: flex; flex-direction: column; gap: 18px; margin-top: 36px; width: 100%; }
+  .vs > div { display: flex; gap: 22px; align-items: center; padding: 28px 34px; border-radius: 22px; font-size: 42px; font-weight: 700; line-height: 1.35; }
+  .vs .bad { background: rgba(255,255,255,.12); color: rgba(255,255,255,.6); }
+  .vs .bad span { text-decoration: line-through; text-decoration-thickness: 4px; }
+  .vs .good { background: var(--accent); color: #111; }
+  .vs .good mark { color: #111; }
+  .vs i { font-style: normal; font-size: 50px; }
+
+  .stat { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 230px; line-height: 1; color: var(--accent);
+          letter-spacing: -0.06em; margin-bottom: 10px; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+
+  /* CTA */
+  /* 복사해서 쓰는 문구 */
+  .copy-box { margin-top: 34px; width: 100%; background: rgba(255,255,255,.95); color: #111; border-radius: 26px;
+              padding: 34px 38px 30px; font-size: 38px; line-height: 1.55; font-weight: 600; position: relative; }
+  .copy-box::before { content: "복사해서 쓰세요 ⧉"; position: absolute; top: -22px; right: 30px; background: var(--accent);
+                      font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 26px; padding: 10px 18px; border-radius: 10px; }
+
+  /* 고정 이벤트 박스 */
+  .event { margin-top: 40px; width: 100%; border: 4px solid var(--accent); border-radius: 28px; padding: 30px 36px;
+           background: rgba(0,0,0,.55); }
+  .event .badge { display: inline-block; background: var(--accent); color: #111; font-family: "GmarketSans", sans-serif;
+                  font-weight: 700; font-size: 34px; padding: 12px 20px 8px; border-radius: 10px; margin-bottom: 18px; }
+  .event p { font-size: 40px; line-height: 1.5; font-weight: 700; }
+  .event b { color: var(--accent); }
+  .acts { display: flex; gap: 18px; margin-top: 30px; }
+  .act { font-size: 36px; font-weight: 800; padding: 20px 30px; border-radius: 999px; background: rgba(255,255,255,.16); border: 2px solid rgba(255,255,255,.5); }
+  .act.on { background: var(--accent); color: #111; border-color: var(--accent); }
+  .handle { margin-top: 36px; font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 44px; }
+
+  /* ── 하단 티저 ── */
+  .teaser { position: absolute; left: 80px; right: 80px; bottom: 58px; display: flex; justify-content: space-between; align-items: center;
+            font-size: 34px; font-weight: 600; color: rgba(255,255,255,.75); }
+  .teaser .go { font-family: "GmarketSans", sans-serif; font-weight: 700; color: var(--accent); font-size: 36px; }
+</style>
+</head>
+<body>
+{% for s in slides %}
+{% set n = loop.index %}
+<section class="slide {{ s.type }}{{ ' dense' if s.type in ['chat','list','compare','copy','cta'] or (s.body and s.type != 'cover') else '' }}" id="slide-{{ n }}">
+  {% if imgs[n].bg %}<img class="bg" src="{{ imgs[n].bg }}">{% endif %}
+  <div class="shade"></div>
+  <div class="grain"></div>
+  <div class="brand g">{{ brand.name }}</div>
+
+  {% for cut in imgs[n].cuts %}
+    <div class="cut p{{ loop.index0 }}"><img src="{{ cut.src }}">{% if cut.label %}<span class="tag">{{ cut.label }}</span>{% endif %}</div>
+  {% endfor %}
+
+  <div class="text">
+    {% if s.sticker %}
+      {% set parts = s.sticker.rsplit(' ', 1) %}
+      {% if parts|length == 2 and parts[1].isdigit() %}
+        <div class="label"><span>{{ parts[0] }}</span><b>{{ parts[1] }}</b></div>
+      {% else %}
+        <div class="label"><b>{{ s.sticker }}</b></div>
+      {% endif %}
+    {% endif %}
+
+    {% if s.type == 'stat' %}<div class="stat">{{ s.stat }}</div>{% endif %}
+
+    {% if s.type in ['cover', 'cta'] %}<h1 style="font-size:{{ s.title | title_size(100) }}px">{{ s.title | fmt }}</h1>
+    {% else %}<h2 style="font-size:{{ s.title | title_size(80) }}px">{{ s.title | fmt }}</h2>{% endif %}
+
+    {% if s.type == 'chat' %}
+      <div class="chat">{% for line in s.chat %}<div class="bubble {{ line.who }}">{{ line.text | fmt }}</div>{% endfor %}</div>
+    {% elif s.type == 'list' %}
+      <ul class="list">{% for it in s.items %}<li>{{ it | fmt }}</li>{% endfor %}</ul>
+    {% elif s.type == 'copy' %}
+      <div class="copy-box">{{ s.body | fmt }}</div>
+    {% elif s.type == 'compare' %}
+      <div class="vs">
+        <div class="bad"><i>❌</i><span>{{ s.bad | fmt }}</span></div>
+        <div class="good"><i>⭕</i><span>{{ s.good | fmt }}</span></div>
+      </div>
+    {% elif s.body and s.type != 'cta' %}
+      <div class="body">{{ s.body | fmt }}</div>
+    {% endif %}
+
+    {% if s.type == 'cta' %}
+      <div class="event">
+        <span class="badge">{{ brand.event.badge }}</span>
+        <p>{{ brand.event.text | event_fmt }}</p>
+      </div>
+      <div class="acts"><span class="act on">＋ 팔로우</span><span class="act">💬 댓글</span><span class="act">📌 저장</span></div>
+      <div class="handle">{{ brand.handle }}</div>
+    {% endif %}
+  </div>
+
+  {% if s.type != 'cta' %}
+    <div class="teaser"><span>{{ s.teaser | fmt }}</span><span class="go">넘겨보기 ›</span></div>
+  {% endif %}
+</section>
+{% endfor %}
+</body>
+</html>

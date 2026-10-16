@@ -1,0 +1,66 @@
+name: 1. 카드뉴스 생성 → 검수 PR
+
+on:
+  schedule:
+    - cron: "0 11 * * *" # 매일 20:00 KST 생성 → 다음 날 13:00 발행 (UTC 기준 표기)
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "주제 직접 지정 (비우면 Claude가 자동 기획)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 패키지 설치
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Claude로 원고 작성
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ inputs.topic }}
+        run: python -m src.generate --topic "$TOPIC"
+
+      - name: AI 사진 생성
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m src.images "${{ steps.gen.outputs.post_dir }}"
+
+      - name: 카드 이미지 렌더링
+        run: python -m src.render "${{ steps.gen.outputs.post_dir }}"
+
+      - name: 검수용 PR 생성
+        env:
+          GH_TOKEN: ${{ github.token }}
+          POST_DIR: ${{ steps.gen.outputs.post_dir }}
+          TOPIC: ${{ steps.gen.outputs.topic }}
+        run: |
+          BRANCH="draft/$(basename "$POST_DIR")"
+          git config user.name "cardnews-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add content topics.yaml
+          git commit -m "draft: $TOPIC"
+          git push origin "$BRANCH"
+          CARDS_SHA=$(git rev-parse HEAD) python -m src.pr_body "$POST_DIR" "$BRANCH" > "$RUNNER_TEMP/body.md"
+          gh label create cardnews --color 2B50FF --force >/dev/null
+          gh pr create --base main --head "$BRANCH" --label cardnews \
+            --title "[검수] $TOPIC" --body-file "$RUNNER_TEMP/body.md"
