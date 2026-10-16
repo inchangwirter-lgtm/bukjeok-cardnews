@@ -77,7 +77,7 @@ def gen_higgsfield(prompt: str, aspect: str, model: str) -> bytes:
     모델이 지원하지 않는 비율이면 가까운 세로 비율로 바꿔 다시 시도한다 (카드에선 잘라서 맞춤)."""
     key = os.environ.get("HF_KEY") or f"{os.environ['HF_API_KEY']}:{os.environ['HF_API_SECRET']}"
     auth = {"Authorization": f"Key {key.strip()}"}
-    fallbacks = {"4:5": ["4:5", "3:4", "2:3"], "1:1": ["1:1"]}.get(aspect, [aspect])
+    fallbacks = {"4:5": ["3:4", "4:5", "2:3"], "1:1": ["1:1"]}.get(aspect, [aspect])
     for ratio in fallbacks:
         r = requests.post(f"https://api.higgsfield.ai/{model}",
                           headers={**auth, "Idempotency-Key": str(uuid.uuid4())},
