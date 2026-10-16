@@ -80,8 +80,6 @@ jobs:
           NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
           NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
           NOTIFY_TO: ${{ vars.NOTIFY_TO }}
-          APPROVAL_URL: ${{ vars.APPROVAL_URL }}
-          APPROVAL_SECRET: ${{ secrets.APPROVAL_SECRET }}
         run: |
           python -m src.images "$POST_DIR"
           python -m src.render "$POST_DIR"

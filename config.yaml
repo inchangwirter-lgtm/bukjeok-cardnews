@@ -44,7 +44,7 @@ model:
 
 schedule:
   timezone: "Asia/Seoul"
-  publish_time: "13:00"     # 승인된 게시물이 올라가는 시각 (매일 오후 1시)
+  publish_time: "13:00"     # (참고용) 이제는 메일에서 승인(Merge)하는 즉시 올라갑니다
   publish_delay_days: 1     # 생성 다음 날 발행 (검수 시간 확보)
 
 publish:

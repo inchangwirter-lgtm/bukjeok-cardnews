@@ -1,8 +1,0 @@
-# 비밀값 파일은 밖에서 열 수 없게
-<Files "config.php">
-  Require all denied
-</Files>
-<Files "config.sample.php">
-  Require all denied
-</Files>
-Options -Indexes

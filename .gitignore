@@ -3,8 +3,4 @@
 .venv/
 __pycache__/
 first-test/
-hosting/approve/config.php
 node_modules/
-upload-to-hpanel/
-worker/.dev.vars
-worker/.wrangler/

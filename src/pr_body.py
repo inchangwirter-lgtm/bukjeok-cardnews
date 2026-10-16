@@ -24,12 +24,12 @@ def main() -> None:
 
     out = [
         f"## 📌 {post.topic}",
-        f"**발행 예정:** {at}  ·  **카테고리:** {post.pillar}",
+        f"**카테고리:** {post.pillar}",
         f"**해결하는 고민:** {post.problem}",
         "",
-        "> ✅ **승인** → 이 PR을 Merge 하면 예정 시각에 인스타그램·스레드에 자동 발행됩니다.",
+        "> ✅ **승인** → 아래 **Merge pull request → Confirm merge** 를 누르면 1~2분 뒤 인스타그램·스레드에 바로 올라갑니다.",
         "> ✏️ **수정 요청** → 댓글로 `/수정 3번 카드를 더 구체적으로` 처럼 남기면 Claude가 고쳐서 다시 올립니다.",
-        "> 🗓 **시간 변경** → `meta.json` 의 `publish_at` 을 직접 고치세요.  ❌ **반려** → PR을 Close 하세요.",
+        "> ❌ **반려** → 맨 아래 **Close pull request** 를 누르세요.",
         "",
         "### 🖼 카드뉴스",
         "",

@@ -118,6 +118,12 @@ def main() -> None:
     args = ap.parse_args()
 
     config = load_config()
+    if args.only and not args.dry_run:
+        # 승인 즉시 발행: 발행 시각을 지금으로 바꿔 두면, 혹시 실패해도 15분 주기 작업이 이어서 재시도한다
+        meta_path = ROOT / args.only / "meta.json"
+        meta = read_json(meta_path, {})
+        meta["publish_at"] = now(config).isoformat()
+        write_json(meta_path, meta)
     targets = [ROOT / args.only] if args.only else due_posts(config)
     if not targets:
         print("발행할 게시물이 없습니다.")

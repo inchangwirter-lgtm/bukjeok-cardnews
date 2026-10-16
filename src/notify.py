@@ -5,29 +5,18 @@
   python -m src.notify published content/2026-10-17-xxx
 
 필요 환경변수: NAVER_EMAIL, NAVER_PASSWORD (네이버 비밀번호 또는 애플리케이션 비밀번호)
-선택: NOTIFY_TO (받는 주소, 기본은 NAVER_EMAIL), APPROVAL_URL, APPROVAL_SECRET, CARDS_SHA, GITHUB_REPOSITORY
+선택: NOTIFY_TO (받는 주소, 기본은 NAVER_EMAIL), CARDS_SHA, GITHUB_REPOSITORY
 """
 from __future__ import annotations
 
-import hashlib
-import hmac
 import os
 import smtplib
 import sys
-from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from html import escape
 
 from .common import ROOT, load_config, read_json, read_post
-
-
-def approval_link(pr: str) -> str | None:
-    base, secret = os.environ.get("APPROVAL_URL"), os.environ.get("APPROVAL_SECRET")
-    if not base or not secret:
-        return None
-    token = hmac.new(secret.encode(), str(pr).encode(), hashlib.sha256).hexdigest()[:32]
-    return f"{base.rstrip('/')}/?pr={pr}&t={token}"
 
 
 def card_urls(post_dir) -> list[str]:
@@ -61,18 +50,15 @@ def send(subject: str, html: str) -> None:
 
 def review_mail(post_dir, pr: str, revised: bool) -> None:
     post = read_post(post_dir)
-    meta = read_json(post_dir / "meta.json", {})
-    at = datetime.fromisoformat(meta["publish_at"]).strftime("%m월 %d일 %H:%M") if meta else "-"
     urls = card_urls(post_dir)
-    link = approval_link(pr)
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     pr_url = f"https://github.com/{repo}/pull/{pr}"
     thumbs = "".join(f'<img src="{u}" width="180" style="margin:4px;border-radius:8px">' for u in urls)
-    action = (button(link, "✅ 확인하고 올리기") if link else button(pr_url, "✅ GitHub에서 확인하기"))
+    action = button(pr_url, "✅ 확인하고 올리기")
     html = f"""<div style="font-family:Apple SD Gothic Neo,Malgun Gothic,sans-serif;max-width:640px;margin:auto;color:#111">
   <p style="font-size:14px;color:#888">{'✏️ 수정본이 도착했어요' if revised else '📬 오늘의 카드뉴스가 도착했어요'}</p>
   <h2 style="margin:4px 0 6px">{escape(post.topic)}</h2>
-  <p style="margin:0 0 4px"><b>카테고리</b> {escape(post.pillar)} · <b>예약</b> {at}</p>
+  <p style="margin:0 0 4px"><b>카테고리</b> {escape(post.pillar)}</p>
   <p style="margin:0 0 18px;color:#555"><b>해결하는 고민</b> {escape(post.problem)}</p>
   <div style="margin:0 0 22px">{action}</div>
   <div>{thumbs}</div>
@@ -81,7 +67,12 @@ def review_mail(post_dir, pr: str, revised: bool) -> None:
   <h3>🧵 스레드 첫 글</h3>
   <pre style="white-space:pre-wrap;background:#f5f5f5;padding:14px;border-radius:10px;font-family:inherit">{escape(post.threads[0])}</pre>
   <div style="margin:22px 0">{action}</div>
-  <p style="font-size:12px;color:#999">버튼을 누르면 미리보기 페이지에서 [지금 바로 올리기 / 예약 / 수정 요청 / 반려]를 고를 수 있어요.</p>
+  <div style="background:#f7f7f7;border-radius:10px;padding:14px;font-size:14px;line-height:1.8">
+    버튼을 누르면 GitHub 검수 화면이 열려요.<br>
+    🚀 <b>바로 올리기</b>: 아래로 내려 <b>Merge pull request → Confirm merge</b> (1~2분 뒤 인스타·스레드에 올라가요)<br>
+    ✏️ <b>고치기</b>: 댓글에 <code>/수정 고칠 내용</code> 을 쓰고 Comment (고친 버전을 메일로 다시 보내드려요)<br>
+    ❌ <b>안 올리기</b>: 맨 아래 <b>Close pull request</b>
+  </div>
 </div>"""
     prefix = "[수정본]" if revised else "[검수]"
     send(f"{prefix} {post.topic}", html)

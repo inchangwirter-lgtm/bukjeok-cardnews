@@ -58,8 +58,6 @@ jobs:
           NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
           NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
           NOTIFY_TO: ${{ vars.NOTIFY_TO }}
-          APPROVAL_URL: ${{ vars.APPROVAL_URL }}
-          APPROVAL_SECRET: ${{ secrets.APPROVAL_SECRET }}
         run: |
           BRANCH="draft/$(basename "$POST_DIR")"
           git config user.name "cardnews-bot"
