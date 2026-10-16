@@ -48,7 +48,7 @@ def main() -> None:
     event = load_config()["brand"].get("event", {}).get("caption", "")
     out += ["", "### 📝 인스타그램 캡션", "", "```", post.instagram_caption, "", event, ".", tags, "```", "", "### 🧵 스레드 연재", ""]
     for i, t in enumerate(post.threads):
-        label = "첫 글 (카드 이미지 첨부)" if i == 0 else f"답글 {i}"
+        label = "첫 글 (후킹)" if i == 0 else f"댓글 {i}"
         out += [f"**{label}** · {len(t)}자", "", "> " + t.replace("\n", "\n> "), ""]
     if post.sources:
         out += ["### 🔗 출처", ""] + [f"- {s}" for s in post.sources]

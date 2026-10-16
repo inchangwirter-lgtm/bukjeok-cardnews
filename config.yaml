@@ -50,4 +50,4 @@ schedule:
 publish:
   instagram: true
   threads: true
-  threads_attach_cards: true  # 스레드 첫 글에 카드 이미지도 함께 첨부
+  threads_attach_cards: false # 스레드는 사진 없이 글만 (true 로 바꾸면 첫 글에 카드 첨부)
