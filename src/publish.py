@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import meta_api
-from .common import CONTENT_DIR, ROOT, load_config, now, read_json, read_post, write_json
+from .common import CONTENT_DIR, ROOT, load_config, now, read_json, read_post, threads_texts, write_json
 
 
 def image_urls(post_dir: Path) -> list[str]:
@@ -75,19 +75,20 @@ def publish_one(post_dir: Path, config: dict, dry_run: bool) -> bool:
     if config["publish"].get("threads") and "threads" not in record:
         try:
             if dry_run:
-                for i, t in enumerate(post.threads):
+                for i, t in enumerate(threads_texts(post, config)):
                     print(f"  [dry-run] Threads {i}: {t[:40]}...")
             else:
                 tok = os.environ["THREADS_ACCESS_TOKEN"]
                 uid = os.environ.get("THREADS_USER_ID") or meta_api.threads_me(tok)["id"]
                 attach = urls if config["publish"].get("threads_attach_cards") else None
                 # 중간에 실패하면 올라간 글 id를 남겨두고, 다음 실행에서 이어서 단다 (중복 방지)
+                texts = threads_texts(post, config)
                 ids = record.get("threads_progress", [])
-                for i in range(len(ids), len(post.threads)):
+                for i in range(len(ids), len(texts)):
                     if i == 0:
-                        ids.append(meta_api.threads_post(uid, tok, post.threads[0], image_urls=attach))
+                        ids.append(meta_api.threads_post(uid, tok, texts[0], image_urls=attach))
                     else:
-                        ids.append(meta_api.threads_post(uid, tok, post.threads[i], reply_to_id=ids[-1]))
+                        ids.append(meta_api.threads_post(uid, tok, texts[i], reply_to_id=ids[-1]))
                     record["threads_progress"] = ids
                     write_json(record_path, record)
                 record.pop("threads_progress", None)

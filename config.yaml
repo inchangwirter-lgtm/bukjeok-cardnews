@@ -7,6 +7,7 @@ brand:
   name: "북적마케팅"                  # 카드 상단 프로필·CTA에 표시
   handle: "@bustling_marketing"         # 인스타그램 아이디
   threads_handle: "@bustling_marketing" # 스레드 아이디
+  threads_intro: "자영업자 마케팅 대표입니다."  # 스레드 첫 글 맨 위에 항상 붙는 고정 문구
   # 마지막 장에 항상 고정으로 들어가는 이벤트 문구 (인스타 캡션 마지막에도 자동으로 붙음)
   event:
     badge: "🎁 진단 이벤트"

@@ -85,6 +85,15 @@ class Post(BaseModel):
     sources: List[str] = Field(description="수치·사실의 출처 (URL 또는 기관명). 없으면 빈 배열")
 
 
+def threads_texts(post: "Post", config: dict) -> list[str]:
+    """실제로 올라갈 스레드 글 목록. 첫 글 맨 위에 고정 소개 문구를 붙인다."""
+    texts = [t.replace("\\n", "\n") for t in post.threads]
+    intro = (config["brand"].get("threads_intro") or "").strip()
+    if intro and texts and not texts[0].startswith(intro):
+        texts[0] = f"{intro}\n\n{texts[0]}"
+    return texts
+
+
 def read_post(post_dir: Path) -> Post:
     return Post.model_validate_json((post_dir / "post.json").read_text(encoding="utf-8"))
 

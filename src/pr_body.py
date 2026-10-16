@@ -8,7 +8,7 @@ import os
 import sys
 from datetime import datetime
 
-from .common import ROOT, load_config, read_json, read_post
+from .common import ROOT, load_config, read_json, read_post, threads_texts
 
 
 def main() -> None:
@@ -47,7 +47,7 @@ def main() -> None:
     tags = " ".join(f"#{t.lstrip('#')}" for t in post.hashtags)
     event = load_config()["brand"].get("event", {}).get("caption", "")
     out += ["", "### 📝 인스타그램 캡션", "", "```", post.instagram_caption, "", event, ".", tags, "```", "", "### 🧵 스레드 연재", ""]
-    for i, t in enumerate(post.threads):
+    for i, t in enumerate(threads_texts(post, load_config())):
         label = "첫 글 (후킹)" if i == 0 else f"댓글 {i}"
         out += [f"**{label}** · {len(t)}자", "", "> " + t.replace("\n", "\n> "), ""]
     if post.sources:
