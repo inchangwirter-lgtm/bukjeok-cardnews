@@ -42,6 +42,8 @@ jobs:
         id: pr
         run: |
           gh pr checkout "$PR"
+          # 프로그램은 항상 main 의 최신 버전으로 실행 (PR 에는 원고·사진만 커밋)
+          git restore --source origin/main --worktree -- src templates config.yaml requirements.txt
           POST_DIR=$(git diff --name-only origin/main...HEAD | grep 'post.json$' | head -1 | xargs dirname)
           echo "post_dir=$POST_DIR" >> "$GITHUB_OUTPUT"
           echo "branch=$(git branch --show-current)" >> "$GITHUB_OUTPUT"
