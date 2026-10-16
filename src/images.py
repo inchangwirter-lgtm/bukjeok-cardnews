@@ -4,7 +4,7 @@
 - 'AI 티'를 줄이기 위해 모든 프롬프트 뒤에 실사 스냅 느낌의 스타일 문구를 붙인다.
 
 사용: python -m src.images content/2026-10-17-xxx
-필요 환경변수: HF_API_KEY + HF_API_SECRET (provider=higgsfield) / REPLICATE_API_TOKEN / OPENAI_API_KEY
+필요 환경변수: HF_KEY (provider=higgsfield, 콘솔의 Copy API key 값) / REPLICATE_API_TOKEN / OPENAI_API_KEY
 """
 from __future__ import annotations
 
@@ -74,8 +74,9 @@ def gen_openai(prompt: str, aspect: str, model: str) -> bytes:
 
 def gen_higgsfield(prompt: str, aspect: str, model: str) -> bytes:
     """Higgsfield API (구독 크레딧과 별개인 API 잔액에서 차감)."""
-    headers = {"Authorization": f"Key {os.environ['HF_API_KEY']}:{os.environ['HF_API_SECRET']}",
-               "Idempotency-Key": str(uuid.uuid4())}
+    # 콘솔의 'Copy API key' 값 하나(HF_KEY)면 그대로, 예전 방식(ID + Secret)이면 ID:Secret 으로
+    key = os.environ.get("HF_KEY") or f"{os.environ['HF_API_KEY']}:{os.environ['HF_API_SECRET']}"
+    headers = {"Authorization": f"Key {key.strip()}", "Idempotency-Key": str(uuid.uuid4())}
     r = requests.post(f"https://api.higgsfield.ai/{model}", headers=headers,
                       json={"prompt": prompt, "aspect_ratio": aspect, "num_images": 1}, timeout=120)
     r.raise_for_status()

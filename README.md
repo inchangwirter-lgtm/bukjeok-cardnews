@@ -51,9 +51,9 @@ Claude가 마케팅 주제를 기획해 **인스타그램 카드뉴스(캐러셀
 카드 배경·콜라주 사진을 주제에 맞게 힉스필드로 만듭니다.
 > ⚠️ 힉스필드 **웹 구독 크레딧과 API 잔액은 별개**입니다. 자동화 서버는 API 잔액(달러, $5부터 충전)을 씁니다.
 
-1. https://console.higgsfield.ai 로그인 → 잔액 충전(Billing) → **API Keys → 새 키 만들기**
-2. 키 ID와 Secret 이 한 번만 보이니 바로 복사
-3. Secrets 추가: `HF_API_KEY` = 키 ID, `HF_API_SECRET` = Secret
+1. 힉스필드 API 콘솔 로그인 → 잔액 충전 → **API Keys → 새 키 만들기**
+2. 키가 한 번만 보이니 **Copy API key** 버튼으로 바로 복사
+3. Secret 추가: `HF_KEY` = 복사한 키 전체
 4. 다른 모델(GPT 이미지 등)을 쓰고 싶으면 콘솔의 모델 페이지에 나온 주소를 `config.yaml` 의 `images.model` 에
 
 다른 공급자: `provider: replicate`(Secret `REPLICATE_API_TOKEN`) / `openai`(Secret `OPENAI_API_KEY`) / `none`(사진 없이)
