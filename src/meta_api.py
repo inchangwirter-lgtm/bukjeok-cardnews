@@ -84,6 +84,17 @@ def threads_post(user_id: str, token: str, text: str, image_urls: list[str] | No
     return _threads_publish(user_id, token, c["id"])
 
 
+def instagram_me(token: str) -> dict:
+    """토큰 주인의 인스타 계정 정보. user_id 가 게시용 계정 ID."""
+    d = _call("GET", f"{IG_BASE}/me", token, fields="user_id,username")
+    return {"id": str(d.get("user_id") or d["id"]), "username": d.get("username")}
+
+
+def threads_me(token: str) -> dict:
+    d = _call("GET", f"{TH_BASE}/me", token, fields="id,username")
+    return {"id": str(d["id"]), "username": d.get("username")}
+
+
 def threads_permalink(post_id: str, token: str) -> str | None:
     return _call("GET", f"{TH_BASE}/{post_id}", token, fields="permalink").get("permalink")
 

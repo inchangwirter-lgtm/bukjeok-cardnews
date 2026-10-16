@@ -4,7 +4,8 @@
 - 이미지 URL: 기본은 공개 저장소의 raw.githubusercontent.com 주소. 다른 곳에 올린다면 IMAGE_BASE_URL 로 지정.
 
 사용: python -m src.publish [--dry-run] [--only content/2026-10-17-xxx]
-필요 환경변수: IG_USER_ID, IG_ACCESS_TOKEN, THREADS_USER_ID, THREADS_ACCESS_TOKEN, GITHUB_REPOSITORY
+필요 환경변수: IG_ACCESS_TOKEN, THREADS_ACCESS_TOKEN, GITHUB_REPOSITORY
+(IG_USER_ID / THREADS_USER_ID 는 없으면 토큰으로 자동 조회)
 """
 from __future__ import annotations
 
@@ -60,7 +61,8 @@ def publish_one(post_dir: Path, config: dict, dry_run: bool) -> bool:
                 print("  [dry-run] Instagram 캐러셀:", urls[0], "...")
             else:
                 res = meta_api.instagram_carousel(
-                    os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"], urls, caption
+                    os.environ.get("IG_USER_ID") or meta_api.instagram_me(os.environ["IG_ACCESS_TOKEN"])["id"],
+                    os.environ["IG_ACCESS_TOKEN"], urls, caption
                 )
                 record["instagram"] = {**res, "at": now(config).isoformat()}
                 write_json(record_path, record)
@@ -75,7 +77,8 @@ def publish_one(post_dir: Path, config: dict, dry_run: bool) -> bool:
                 for i, t in enumerate(post.threads):
                     print(f"  [dry-run] Threads {i}: {t[:40]}...")
             else:
-                uid, tok = os.environ["THREADS_USER_ID"], os.environ["THREADS_ACCESS_TOKEN"]
+                tok = os.environ["THREADS_ACCESS_TOKEN"]
+                uid = os.environ.get("THREADS_USER_ID") or meta_api.threads_me(tok)["id"]
                 attach = urls if config["publish"].get("threads_attach_cards") else None
                 # 중간에 실패하면 올라간 글 id를 남겨두고, 다음 실행에서 이어서 단다 (중복 방지)
                 ids = record.get("threads_progress", [])
