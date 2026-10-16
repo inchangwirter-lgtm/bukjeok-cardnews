@@ -76,9 +76,13 @@ def main() -> None:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
         page.goto(html_path.as_uri(), wait_until="networkidle")
-        page.evaluate("document.fonts.ready")
-        page.wait_for_timeout(500)
+        # 모든 글꼴이 완전히 받아질 때까지 기다린다 (덜 받아진 채 찍히면 글자가 겹침)
+        page.evaluate("Promise.all([...document.fonts].map(f => f.load().catch(() => null)))")
+        page.wait_for_function("document.fonts.status === 'loaded'", timeout=60000)
+        page.wait_for_timeout(800)
         for i in range(1, len(post.slides) + 1):
+            page.locator(f"#slide-{i}").scroll_into_view_if_needed()
+            page.wait_for_timeout(150)
             page.locator(f"#slide-{i}").screenshot(
                 path=str(cards_dir / f"{i:02d}.jpg"), type="jpeg", quality=92
             )

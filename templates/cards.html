@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <style>
   @font-face { font-family: "GmarketSans"; font-weight: 700; font-display: block;
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); }
@@ -75,7 +75,7 @@
   .vs .good mark { color: #111; }
   .vs i { font-style: normal; font-size: 50px; }
 
-  .stat { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 230px; line-height: 1; color: var(--accent);
+  .stat-num { font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 230px; line-height: 1; color: var(--accent);
           letter-spacing: -0.06em; margin-bottom: 10px; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
 
   /* CTA */
@@ -126,7 +126,7 @@
       {% endif %}
     {% endif %}
 
-    {% if s.type == 'stat' %}<div class="stat">{{ s.stat }}</div>{% endif %}
+    {% if s.type == 'stat' %}<div class="stat-num">{{ s.stat }}</div>{% endif %}
 
     {% if s.type in ['cover', 'cta'] %}<h1 style="font-size:{{ s.title | title_size(100) }}px">{{ s.title | fmt }}</h1>
     {% else %}<h2 style="font-size:{{ s.title | title_size(80) }}px">{{ s.title | fmt }}</h2>{% endif %}
