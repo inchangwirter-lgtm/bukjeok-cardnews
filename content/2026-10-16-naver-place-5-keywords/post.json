@@ -1,0 +1,217 @@
+{
+  "topic": "네이버 플레이스 대표키워드 5칸, '맛집' 반복 대신 1+4 구조로 다시 채우기",
+  "pillar": "네이버 플레이스",
+  "problem": "대표키워드 5칸에 뭘 넣을지 몰라서 '맛집'·'○○동맛집'만 넣어놨는데 검색에 잘 안 걸려요",
+  "slug": "naver-place-5-keywords",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "네이버 플레이스",
+      "title": "대표키워드 5칸 막막하면\n==딱 이 순서로 채우세요==",
+      "image_prompt": "A Korean man in his 30s, owner of a small pasta restaurant in Seongsu-dong, sitting at the wooden counter looking at a laptop with a puzzled expression, hand on chin, blurred screen, warm afternoon light, pasta plates and wine glasses softly out of focus in background, candid documentary photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a yellow sticky note with five empty hand-drawn boxes and a pen lying on it, on a wooden table, no readable text",
+          "label": "5칸 뭐 넣지?"
+        },
+        {
+          "prompt": "Close-up of a hand holding a smartphone showing a blurred map app screen with location pins, no readable text",
+          "label": "검색해도 없음"
+        },
+        {
+          "prompt": "Close-up of a stopwatch on a cafe table next to a coffee cup, soft daylight",
+          "label": "10분 컷"
+        }
+      ],
+      "body": "",
+      "teaser": "5칸 다 채웠는데 왜 안 걸릴까?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "실제 상담",
+      "title": "5칸 다 채웠는데\n==왜 검색이 안 될까요==",
+      "image_prompt": "A Korean woman restaurant owner in her 40s talking on the phone behind the counter of a small neighborhood eatery, confused face, apron on, evening lighting, blurred menu board behind her with no readable text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "그 5칸, 사실 1칸짜리예요",
+      "items": [],
+      "chat": [
+        {
+          "who": "us",
+          "text": "대표키워드 5칸 뭐 넣으셨어요?"
+        },
+        {
+          "who": "client",
+          "text": "맛집, 성수맛집, 성수동맛집… 그런 거요"
+        },
+        {
+          "who": "us",
+          "text": "아 그럼 사실상 1칸짜리예요 ㅠ"
+        },
+        {
+          "who": "client",
+          "text": "네? 5칸 꽉 채웠는데요??"
+        },
+        {
+          "who": "us",
+          "text": "바로 비교해서 보여드릴게요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "흔한 실수",
+      "title": "지역명만 5번 넣으면\n==4칸이 그냥 버려져요==",
+      "image_prompt": "Overhead shot of a Korean restaurant owner's hands crossing out notes in a small notebook on a wooden counter, a cup of coffee and a pen nearby, natural light, no readable text",
+      "cutouts": [],
+      "body": "지역은 매장 주소가 이미 잡아줌. 거기에 '맛집'은 설정 제한 단어라 반려 위험까지(현업 기준). 성수/성수동처럼 결과 같은 단어도 1칸 낭비.",
+      "teaser": "그럼 뭘 넣냐? 옆 가게부터 봄",
+      "items": [],
+      "chat": [],
+      "bad": "맛집 / 성수맛집 / 성수동맛집 / 성수파스타맛집 / 데이트맛집",
+      "good": "성수파스타 / 크림파스타 / 수제뇨끼 / 데이트코스 / 기념일레스토랑",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "잘되는 옆 가게 키워드\n==1분 만에 훔쳐보기==",
+      "image_prompt": "A Korean marketer in her late 20s at an office desk using a desktop PC with a mouse, leaning toward the monitor with a focused curious look, blurred screen, bright office with plants",
+      "cutouts": [
+        {
+          "prompt": "Close-up of fingers pressing Ctrl and F keys on a computer keyboard, shallow depth of field",
+          "label": "Ctrl+F"
+        }
+      ],
+      "body": "PC 네이버 지도에서 '동네+업종' 검색 → 상위 3곳 정보창 우클릭 → 프레임 소스 보기 → Ctrl+F로 keywordlist. 비공식 현업 방법, 참고만!",
+      "teaser": "복붙 금지. 우리 건 이렇게 만듦",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 2",
+      "title": "손님이 치는 말로\n==후보 10개 먼저 적기==",
+      "image_prompt": "A Korean cafe owner's hands sticking ten colorful sticky notes on a white wall in a small shop, choosing some of them, warm natural light, notes blank with no readable text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone search bar with a dropdown of blurred autocomplete suggestions, no readable text",
+          "label": "자동완성=손님 말투"
+        }
+      ],
+      "body": "네이버 검색창 자동완성 = 손님 말투. 메뉴·랜드마크·방문목적 섞어 후보 10개. 형용사 빼고 명사로. 검색광고 키워드 도구에서 월 검색수 비교.",
+      "teaser": "10개 중 5개, 배치가 핵심",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 3",
+      "title": "1칸만 지역+업종\n==나머지 4칸은 메뉴·목적==",
+      "image_prompt": "A Korean restaurant owner filling in a printed form with a pen at a small table in an empty restaurant before opening, morning light, focused expression, paper with no readable text",
+      "cutouts": [],
+      "body": "[1칸] 동네+업종 (예: 성수파스타)\n[2칸] 제일 잘 팔리는 메뉴\n[3칸] 두 번째 메뉴/서비스\n[4칸] 손님이 오는 목적 (데이트·회식)\n[5칸] 우리 가게만의 것\n✔ 한 칸에 1개만 ✔ '맛집' 금지 ✔ 검색 결과 같으면 1칸만",
+      "teaser": "저장 버튼, 한 번만 누르세요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "STEP 4",
+      "title": "5칸 한 번에 저장하고\n==반영까지 기다리기==",
+      "image_prompt": "Close-up of a Korean shop owner's finger tapping a button on a laptop trackpad, blurred screen, cozy small bakery counter in background, soft focus",
+      "cutouts": [],
+      "body": "스마트플레이스 → 업체정보 → 대표키워드에서 5칸 입력 → 맨 아래 저장. 반영까지 그동안 다른 수정 막힘. 업종·키워드 몰아서!",
+      "teaser": "오늘 할 일만 딱 정리함",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "2~3일"
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장해두고 따라 하면\n==10분이면 끝==",
+      "image_prompt": "A smiling Korean small business owner in his 30s checking off items on a clipboard at the counter of a neighborhood restaurant, relieved expression, warm lighting",
+      "cutouts": [],
+      "body": "공식 기준 아님: 키워드는 검색 입장권, 순위는 저장·길찾기·리뷰가 좌우하는 흐름(현업).",
+      "teaser": "저장 안 하면 내일 까먹음",
+      "items": [
+        "PC 지도로 경쟁 3곳 키워드 확인",
+        "자동완성으로 후보 10개 적기",
+        "키워드 도구로 월 검색수 비교",
+        "검색 결과 같은 단어 지우기",
+        "5칸 한 번에 입력하고 저장"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 5칸 다시 채우기==",
+      "image_prompt": "A Korean restaurant owner flipping the shop sign to open at the entrance of a small neighborhood restaurant, confident smile, bright morning street, sign with no readable text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "대표키워드 5칸, 혹시 '맛집·○○동맛집'으로 채워두셨나요?\n\n지역은 주소가 이미 잡아줘서, 지역명만 반복하면 사실상 1칸짜리예요. 오늘 10분이면 고칩니다.\n\n✔ STEP 1. PC 네이버 지도에서 상위 3곳 keywordlist 훔쳐보기 (참고용, 복붙 X)\n✔ STEP 2. 검색창 자동완성으로 손님 말투 후보 10개 적기\n✔ STEP 3. 1칸은 동네+업종, 4칸은 메뉴·목적·우리 가게만의 것\n✔ STEP 4. 5칸 한 번에 저장 → 반영 2~3일 기다리기\n\n오늘 할 일: 후보 10개 적고, 검색 결과 같은 단어 지우고, 5칸 한 번에 저장.\n\n※ 키워드는 '검색 입장권'이고 순위는 저장·리뷰 같은 손님 행동이 좌우한다는 게 현업 흐름이에요 (공식 기준 아님).\n\n저장해두고 오늘 마감 후에 바로 바꿔보세요 📌",
+  "hashtags": [
+    "네이버플레이스",
+    "스마트플레이스",
+    "대표키워드",
+    "플레이스상위노출",
+    "네이버지도",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님필독",
+    "동네가게마케팅",
+    "성수동사장님"
+  ],
+  "threads": [
+    "대표키워드 5칸, 뭐 넣을지 몰라서 '맛집, 성수맛집, 성수동맛집'으로 채워두신 사장님 진짜 많아요. 근데 그거 사실상 1칸짜리예요. 10분 만에 고치는 순서 풀어볼게요 🧵",
+    "STEP 1. 옆 가게부터 봅니다.\nPC 네이버 지도에서 '우리 동네+업종' 검색 → 상위 가게 정보창에서 마우스 오른쪽 → 프레임 소스 보기 → Ctrl+F로 keywordlist 검색하면 그 가게 대표키워드가 보여요.\n\n단, 비공식 방법이라 네이버가 페이지 구조 바꾸면 안 될 수 있어요. 그리고 그대로 복붙은 의미 없어요. '이 동네 손님은 어떤 단어로 찾는구나' 파악용으로만 3곳 정도 보세요.",
+    "STEP 2. 손님 말투로 후보 10개.\n재료는 4개예요: 메뉴/서비스, 상권·지역, 주변 랜드마크, 방문 목적(소개팅·회식·기념일).\n네이버 검색창에 '크림파스타', '성수역' 치고 자동완성에 뜨는 말 그대로 받아 적으세요. 그게 손님이 실제로 치는 말이에요.\n'맛있는', '분위기 좋은' 같은 형용사는 빼고 명사만. 그다음 네이버 검색광고 키워드 도구에서 월 검색수 비교해서 순위 매기면 됩니다.",
+    "STEP 3. 배치는 1+4.\n1칸만 '동네+업종'(예: 성수파스타), 나머지 4칸은 지역명 빼고 메뉴·목적·우리 가게만의 것.\n\n성수 파스타집 예시로 보면\n❌ 맛집 / 성수맛집 / 성수동맛집 / 성수파스타맛집 / 데이트맛집\n⭕ 성수파스타 / 크림파스타 / 수제뇨끼 / 데이트코스 / 기념일레스토랑\n\n규칙 3개: 한 칸에 단어 1개만(여러 개 넣으면 반려될 수 있음), '맛집'은 설정 제한 단어라 빼기, '성수'랑 '성수동'처럼 검색 결과 같으면 1칸만.",
+    "STEP 4. 한 번에 저장.\n스마트플레이스 → 업체정보 → 대표키워드에서 5칸 입력하고 맨 아래 저장. 수정하면 반영까지 2~3일 걸리고 그동안 다른 정보 수정이 막힌다는 안내가 있어요. 업종·소개글 고칠 거 있으면 같이 몰아서 하세요.\n\n소개글에 '강남 피부과 강남역 피부과…'처럼 같은 단어 나열하는 건 스팸으로 보고 노출 제한된다는 얘기가 있으니 금지.",
+    "한 줄 요약: 지역은 1칸, 나머지 4칸은 손님이 실제로 치는 메뉴·목적 단어로. 키워드는 입장권이고 순위는 저장·리뷰가 만든다는 게 현업 흐름이에요(공식 기준은 아님).\n\n인스타 @bustling_marketing 게시물 댓글에 지역·가게명 남겨주시면 3분 뽑아 마케팅 진단 PDF 보내드려요"
+  ],
+  "sources": [
+    "i-boss.co.kr/ab-1486505-49455",
+    "sohotip.co.kr/naver-place-ranking-2026.html",
+    "web.kbuwel.or.kr 업종 변경 절차 안내 PDF (한국시각장애인연합회)",
+    "pinead.co.kr (대표키워드 설정방법 part1)",
+    "marketing-way.co.kr (대표 키워드 설정 꿀팁 10가지)",
+    "sellerlabs.oopy.io/10cfc32d-f71a-805a-a26d-c1ed23bea72b",
+    "brunch.co.kr/@foodeditor/174",
+    "marketingchef.net/blog/naver-map/",
+    "bbima.kr/blog/naver-place-ranking-2026",
+    "kbthink.com (ceo-content-guide-240626)"
+  ]
+}
