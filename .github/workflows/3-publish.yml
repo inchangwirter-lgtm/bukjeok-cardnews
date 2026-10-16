@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main # 방금 승인된 게시물까지 포함한 최신 상태로
 
       - uses: actions/setup-python@v5
         with:
@@ -40,6 +42,9 @@ jobs:
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           IMAGE_BASE_URL: ${{ vars.IMAGE_BASE_URL }}
+          NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
+          NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
+          NOTIFY_TO: ${{ vars.NOTIFY_TO }}
           ONLY: ${{ inputs.only }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |

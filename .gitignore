@@ -3,3 +3,6 @@ __pycache__/
 .env
 .DS_Store
 first-test/
+worker/.dev.vars
+worker/.wrangler/
+node_modules/

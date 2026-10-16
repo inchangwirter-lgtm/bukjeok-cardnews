@@ -49,6 +49,7 @@ def publish_one(post_dir: Path, config: dict, dry_run: bool) -> bool:
     urls = image_urls(post_dir)
     record_path = post_dir / "published.json"
     record = read_json(record_path, {})
+    before = dict(record)
     ok = True
     print(f"\n▶ {post_dir.name}: {post.topic} (카드 {len(urls)}장)")
 
@@ -100,6 +101,13 @@ def publish_one(post_dir: Path, config: dict, dry_run: bool) -> bool:
         except Exception as e:
             ok = False
             print("  ❌ Threads 실패:", e)
+    if not dry_run and any(k in record for k in ("instagram", "threads")) and read_json(record_path, {}) != before:
+        from .notify import published_mail
+        if os.environ.get("NAVER_EMAIL") and os.environ.get("NAVER_PASSWORD"):
+            try:
+                published_mail(post_dir)
+            except Exception as e:
+                print("  ⚠️ 완료 메일 실패:", e)
     return ok
 
 

@@ -55,6 +55,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           POST_DIR: ${{ steps.gen.outputs.post_dir }}
           TOPIC: ${{ steps.gen.outputs.topic }}
+          NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
+          NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
+          NOTIFY_TO: ${{ vars.NOTIFY_TO }}
+          APPROVAL_URL: ${{ vars.APPROVAL_URL }}
+          APPROVAL_SECRET: ${{ secrets.APPROVAL_SECRET }}
         run: |
           BRANCH="draft/$(basename "$POST_DIR")"
           git config user.name "cardnews-bot"
@@ -65,5 +70,7 @@ jobs:
           git push origin "$BRANCH"
           CARDS_SHA=$(git rev-parse HEAD) python -m src.pr_body "$POST_DIR" "$BRANCH" > "$RUNNER_TEMP/body.md"
           gh label create cardnews --color 2B50FF --force >/dev/null
-          gh pr create --base main --head "$BRANCH" --label cardnews \
-            --title "[검수] $TOPIC" --body-file "$RUNNER_TEMP/body.md"
+          PR_URL=$(gh pr create --base main --head "$BRANCH" --label cardnews \
+            --title "[검수] $TOPIC" --body-file "$RUNNER_TEMP/body.md")
+          echo "$PR_URL"
+          CARDS_SHA=$(git rev-parse HEAD) python -m src.notify review "$POST_DIR" "${PR_URL##*/}"

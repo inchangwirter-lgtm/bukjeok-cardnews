@@ -1,0 +1,8 @@
+name = "bukjeok-approval"
+main = "index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+REPO = "inchangwirter-lgtm/bukjeok-cardnews"
+
+# 비밀값(GH_PAT, APPROVAL_SECRET)은 `npx wrangler secret put 이름` 으로 따로 등록합니다.

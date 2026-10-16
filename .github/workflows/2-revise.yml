@@ -77,6 +77,11 @@ jobs:
           HF_API_SECRET: ${{ secrets.HF_API_SECRET }}
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
+          NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
+          NOTIFY_TO: ${{ vars.NOTIFY_TO }}
+          APPROVAL_URL: ${{ vars.APPROVAL_URL }}
+          APPROVAL_SECRET: ${{ secrets.APPROVAL_SECRET }}
         run: |
           python -m src.images "$POST_DIR"
           python -m src.render "$POST_DIR"
@@ -89,3 +94,4 @@ jobs:
           CARDS_SHA=$(git rev-parse HEAD) python -m src.pr_body "$POST_DIR" "$BRANCH" > "$RUNNER_TEMP/body.md"
           gh pr edit "$PR" --body-file "$RUNNER_TEMP/body.md"
           gh pr comment "$PR" --body "✅ 반영했습니다. 본문의 카드 미리보기가 새 버전으로 바뀌었어요."
+          CARDS_SHA=$(git rev-parse HEAD) python -m src.notify review "$POST_DIR" "$PR" revised
