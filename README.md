@@ -47,11 +47,16 @@ Claude가 마케팅 주제를 기획해 **인스타그램 카드뉴스(캐러셀
 2. 저장소 **Settings → Secrets and variables → Actions → New repository secret**
    - `ANTHROPIC_API_KEY` = 발급받은 키
 
-### 2-1) AI 사진 생성 키
-카드 배경·콜라주 사진을 주제에 맞게 AI로 만듭니다. `config.yaml` 의 `images.provider` 로 선택하세요.
-- **replicate (기본, 추천)** — Flux 실사(raw) 모드. 'AI 티'가 가장 덜 납니다. https://replicate.com 에서 토큰 발급 → Secret `REPLICATE_API_TOKEN`
-- **openai** — GPT 이미지. https://platform.openai.com 에서 키 발급 → Secret `OPENAI_API_KEY`, `images.model` 을 `gpt-image-1` 등으로
-- **none** — 사진 없이 어두운 배경으로만
+### 2-1) AI 사진 생성 키 (힉스필드 API)
+카드 배경·콜라주 사진을 주제에 맞게 힉스필드로 만듭니다.
+> ⚠️ 힉스필드 **웹 구독 크레딧과 API 잔액은 별개**입니다. 자동화 서버는 API 잔액(달러, $5부터 충전)을 씁니다.
+
+1. https://console.higgsfield.ai 로그인 → 잔액 충전(Billing) → **API Keys → 새 키 만들기**
+2. 키 ID와 Secret 이 한 번만 보이니 바로 복사
+3. Secrets 추가: `HF_API_KEY` = 키 ID, `HF_API_SECRET` = Secret
+4. 다른 모델(GPT 이미지 등)을 쓰고 싶으면 콘솔의 모델 페이지에 나온 주소를 `config.yaml` 의 `images.model` 에
+
+다른 공급자: `provider: replicate`(Secret `REPLICATE_API_TOKEN`) / `openai`(Secret `OPENAI_API_KEY`) / `none`(사진 없이)
 
 AI 티를 줄이는 장치: 모든 프롬프트에 '아이폰 스냅·자연광·필름 그레인·무보정 색감' 스타일을 붙이고(`images.style`),
 카드에서도 채도를 살짝 낮추고 그레인을 한 겹 더 얹습니다. Claude에게는 실존 인물·로고·글자를 사진에 넣지 않도록 지시해 두었습니다.
@@ -124,10 +129,10 @@ AI 티를 줄이는 장치: 모든 프롬프트에 '아이폰 스냅·자연광�
 | 항목 | 1개당 | 월 30개 | 비고 |
 |---|---|---|---|
 | Claude 원고 (Opus 5.5 + 웹 리서치) | 약 $0.6~0.8 | 약 $20~25 (3만~3.5만 원) | `/수정` 요청이 많으면 조금 늘어남 |
-| AI 사진 (Flux Ultra, 1개당 13장 안팎) | 약 $0.8 | 약 $24 (3.5만 원) | OpenAI 고화질로 바꾸면 월 약 $100 |
+| AI 사진 (힉스필드 API, 1개당 13장 안팎) | 약 $1.2 (장당 약 $0.09 가정) | 약 $37 (5만 원) | 실제 단가는 힉스필드 콘솔에서 확인 |
 | GitHub Actions | 0 | 0 | Public 저장소 무료 |
 | 인스타그램·스레드 API | 0 | 0 | |
-| **합계** | | **약 $45~50 (월 6만~7만 원)** | 환율 1,400원 가정 |
+| **합계** | | **약 $60 (월 8만~9만 원)** | 환율 1,400원 가정 |
 
 더 줄이려면: `model.name: claude-sonnet-5-5` + `effort: medium` (원고비 약 1/3), 본문 장 콜라주 사진 끄기(사진 약 30%↓).
 메타 API 한도는 인스타 24시간 100건, 스레드 250건이라 하루 1개는 넉넉합니다.

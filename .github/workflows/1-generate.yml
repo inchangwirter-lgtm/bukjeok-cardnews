@@ -40,6 +40,8 @@ jobs:
 
       - name: AI 사진 생성
         env:
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+          HF_API_SECRET: ${{ secrets.HF_API_SECRET }}
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python -m src.images "${{ steps.gen.outputs.post_dir }}"

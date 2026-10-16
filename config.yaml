@@ -25,9 +25,11 @@ content:
   use_web_search: true
 
 images:
-  # replicate = Flux 실사 모드(가장 자연스러움, 추천) | openai = GPT 이미지 | none = 사진 없이
-  provider: "replicate"
-  model: "black-forest-labs/flux-1.1-pro-ultra"   # openai 사용 시 예: "gpt-image-1"
+  # higgsfield = 힉스필드 API (사용 중) | replicate = Flux | openai = GPT 이미지 | none = 사진 없이
+  provider: "higgsfield"
+  # 힉스필드 콘솔(console.higgsfield.ai)의 모델 페이지에 나온 주소 뒷부분. Soul = 실사 스냅 느낌
+  model: "higgsfield-ai/soul/v2/standard"
+  # replicate 예: "black-forest-labs/flux-1.1-pro-ultra" / openai 예: "gpt-image-1"
   # 모든 사진에 붙는 'AI 티 안 나게' 스타일 문구
   style: >-
     candid unposed smartphone snapshot, shot on iPhone, natural available light,
