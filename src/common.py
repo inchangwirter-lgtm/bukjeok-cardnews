@@ -11,6 +11,12 @@ from zoneinfo import ZoneInfo
 import yaml
 from pydantic import BaseModel, Field
 
+# 키를 붙여넣을 때 딸려 들어간 줄바꿈·공백 제거 (헤더 오류 방지)
+for _k in ("ANTHROPIC_API_KEY", "HF_KEY", "HF_API_KEY", "HF_API_SECRET", "REPLICATE_API_TOKEN", "OPENAI_API_KEY",
+           "IG_USER_ID", "IG_ACCESS_TOKEN", "THREADS_USER_ID", "THREADS_ACCESS_TOKEN", "GH_PAT"):
+    if os.environ.get(_k):
+        os.environ[_k] = os.environ[_k].strip()
+
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content"
 
