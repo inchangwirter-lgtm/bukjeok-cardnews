@@ -1,0 +1,217 @@
+{
+  "topic": "릴스 조회수가 200에서 멈출 때, 첫 3초·길이·DM 공유·테스트 릴스 4단계로 뚫기",
+  "pillar": "인스타그램",
+  "problem": "매장 릴스를 몇 달째 올려도 조회수가 200 언저리에서 더 안 늘어요",
+  "slug": "reels-stuck-at-200-views",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "인스타그램",
+      "title": "릴스 조회수 200에서 멈춤?\n==이 4단계로 뚫으세요==",
+      "image_prompt": "A young Korean cafe owner in an apron sitting at a small wooden counter of a cozy neighborhood cafe, holding a smartphone with a blurred screen, frowning slightly while checking numbers, warm afternoon light, realistic candid photo, subject in upper-center of frame",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone screen showing a vertical video player, screen blurred with no readable text, on a cafe table",
+          "label": "조회수 200"
+        },
+        {
+          "prompt": "Close-up of a hand holding a phone filming a cheesy pasta dish with cheese stretching, shallow depth of field",
+          "label": "첫 3초"
+        },
+        {
+          "prompt": "Close-up of a thumb tapping a paper-plane style send icon area on a blurred phone screen, no readable text",
+          "label": "DM 공유"
+        }
+      ],
+      "body": "",
+      "teaser": "200에서 멈추는 이유부터 봄",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 상담",
+      "title": "매일 올리는데\n==왜 200이 끝일까==",
+      "image_prompt": "A Korean small restaurant owner in his 40s talking with a young female marketer at a table inside a modest neighborhood restaurant, both looking at a laptop with a blurred screen, owner gesturing with a puzzled expression, natural daylight, documentary style photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "범인은 딱 두 군데에 있음",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "릴스 계속 올리는데 조회수 200이에요"
+        },
+        {
+          "who": "us",
+          "text": "첫 장면 뭐로 시작하세요?"
+        },
+        {
+          "who": "client",
+          "text": "가게 간판부터 천천히 보여줘요"
+        },
+        {
+          "who": "us",
+          "text": "거기서 다 넘겨요. 이유 있어요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "원인",
+      "title": "200에서 멈추는 이유\n==3초랑 공유 때문==",
+      "image_prompt": "Close-up of a Korean woman's hand quickly swiping up on a smartphone with a blurred video screen while sitting on a subway seat, motion blur on the thumb, realistic everyday photo",
+      "cutouts": [],
+      "body": "인스타가 꼽은 핵심 신호=시청 시간·좋아요·공유. 비팔로워에겐 공유가 더 무거움. 200 구간은 공식 아닌 현업 패턴, 3초에 넘기면 멈춤",
+      "teaser": "그럼 첫 3초엔 뭘 넣냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 1",
+      "title": "첫 3초에\n==결론부터 보여주기==",
+      "image_prompt": "A Korean pizza shop owner filming a close-up of melting cheese being pulled from a fresh pizza with a smartphone held vertically, steam rising, bright kitchen of a small neighborhood shop, realistic photo, subject centered",
+      "cutouts": [
+        {
+          "prompt": "Extreme close-up of stretchy mozzarella cheese being pulled from a slice, vertical framing",
+          "label": "0초 클로즈업"
+        }
+      ],
+      "body": "1080×1920 세로로 찍고 자막은 위아래 안 잘리게 가운데. 캡션·자막엔 '동네+메뉴' 키워드 넣기",
+      "teaser": "근데 길이도 문제였음",
+      "items": [],
+      "chat": [],
+      "bad": "외관→간판→내부를 천천히 훑는 첫 5초 + 자막 '안녕하세요 ○○입니다'",
+      "good": "0초에 치즈 늘어나는 클로즈업 + 자막 '성수에서 줄 서는 이유 딱 하나'",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "STEP 2",
+      "title": "길이는 짧게\n==컷은 1~2초마다==",
+      "image_prompt": "A young Korean bakery owner editing a short vertical video on a smartphone at a flour-dusted counter, phone screen blurred, focused expression, freshly baked bread in the background, soft morning light, candid photo",
+      "cutouts": [],
+      "body": "비팔로워 추천엔 90초 미만이 유리하단 분석. 최대 3분까지 올려도 길수록 이득 아님. 매장 릴스 15~30초는 현업 기준",
+      "teaser": "이제 '보내고 싶게' 만들 차례",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "15~30초"
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 3",
+      "title": "마지막 장면에\n==DM 보낼 이유 넣기==",
+      "image_prompt": "Two Korean friends in their 20s sitting side by side in a cafe, one showing the other a smartphone with a blurred screen and laughing, the other pointing excitedly, warm interior, natural candid photo",
+      "cutouts": [],
+      "body": "① 같이 갈 사람한테 보내두세요\n② 주말 데이트 코스 고민하는 친구한테 DM으로 🍝\n③ 저장 말고 ○○한테 보내기\n→ 마지막 2초 자막 + 캡션 첫 줄에 같이 넣기",
+      "teaser": "마지막 STEP은 숨은 기능",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "올리기 전에\n==테스트 릴스로 시험==",
+      "image_prompt": "A Korean flower shop owner in her 30s standing among flower buckets, carefully tapping her smartphone with a blurred screen before posting, thoughtful expression, bright storefront, realistic photo, subject upper-center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone settings screen with a toggle switch being turned on by a fingertip, screen blurred, no readable text",
+          "label": "테스트 토글"
+        }
+      ],
+      "body": "공유 직전 '테스트' 토글 ON → 비팔로워에게만 노출. 약 24시간 뒤 반응 좋으면 전체 공개. 토글 없으면 팔로워 수 조건 탓일 수 있음",
+      "teaser": "오늘 할 일 5개로 정리함",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장하고\n==오늘 이것만 하기==",
+      "image_prompt": "A Korean small business owner checking off items on a paper notepad with a pen next to a smartphone with a blurred screen on a wooden counter of a neighborhood shop, top-down angle, warm light, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "다음 릴스부터 바로 적용",
+      "items": [
+        "최근 릴스 3개 첫 3초 다시 보기",
+        "0초에 결론 자막 한 줄 넣기",
+        "30초 넘는 영상은 컷 줄이기",
+        "마지막 자막에 'DM으로 보내기'",
+        "첫 3초만 다른 2개 테스트하기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==다음 릴스에 바로==",
+      "image_prompt": "A smiling Korean cafe owner holding a smartphone vertically to film a latte art pour by a barista, bright cozy cafe interior, energetic mood, realistic candid photo, subjects in upper-center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "릴스 첫 장면이 간판이면, 조회수 200에서 멈추는 게 당연함.\n\n인스타가 직접 꼽은 핵심 신호는 시청 시간·좋아요·공유.\n특히 팔로워 아닌 사람한테 퍼지려면 '공유(DM 보내기)'가 진짜 중요해요.\n\n✔ STEP 1. 첫 3초에 결론 장면 + 자막 한 줄\n✔ STEP 2. 길이는 15~30초, 컷은 1~2초마다\n✔ STEP 3. 마지막 2초에 'DM으로 보낼 이유' 넣기\n✔ STEP 4. 공유 직전 '테스트' 토글 켜고 먼저 시험\n\n오늘 할 일\n- 최근 릴스 3개 첫 3초 다시 보기\n- 다음 릴스는 첫 3초만 다른 2개로 테스트\n\n※ '200 구간'은 공식 기준은 아니고 현업에서 자주 보는 패턴이에요.\n\n다음 릴스 찍기 전에 꺼내 보게 저장해두세요.",
+  "hashtags": [
+    "인스타그램마케팅",
+    "릴스조회수",
+    "릴스알고리즘",
+    "테스트릴스",
+    "매장릴스",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님마케팅",
+    "동네가게홍보",
+    "카페사장님"
+  ],
+  "threads": [
+    "매장 릴스 첫 장면이 간판이라면\n조회수 200에서 멈추는 게 당연합니다.\n\n첫 3초에 결론이 안 보이면 넘기고,\n넘긴 영상은 새 사람에게 잘 안 퍼집니다.\n\n첫 장면과 마지막 자막만 바꾸면\n편집 10분으로 다음 릴스가 달라집니다.\n\n방법은 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 첫 3초에 결론부터 보여주세요\n\n가게 외관, 간판, 인사는 뺍니다.\n가장 맛있어 보이는 장면을 0초에 둡니다.\n자막은 1080×1920 화면 가운데, 잘리지 않게.\n\n예) 치즈 늘어나는 클로즈업 + '성수에서 줄 서는 이유 딱 하나'",
+    "2. 길이는 15~30초로 줄이세요\n\n릴스는 3분까지 올릴 수 있지만\n비팔로워 추천엔 90초 미만이 유리하다는 분석이 있습니다.\n\n컷은 1~2초마다 바꾸는 게 현업 기준입니다.\n\n예) 45초 메뉴 소개 → 조리·완성·한입 3컷, 20초",
+    "3. 마지막 장면에 DM 보낼 이유를 넣으세요\n\n팔로워가 아닌 사람에게 퍼질 땐\n좋아요보다 공유가 더 무겁게 작용합니다.\n\n마지막 2초 자막과 캡션 첫 줄에 같이 넣으세요.\n\n예) '같이 갈 사람한테 보내두세요'",
+    "4. 올리기 전 테스트 릴스로 시험하세요\n\n공유 직전 화면에서 '테스트' 토글을 켜면\n팔로워가 아닌 사람에게만 먼저 보여집니다.\n약 24시간 뒤 반응이 좋으면 전체 공개하세요.\n\n토글이 없다면 팔로워 수 조건 때문일 수 있습니다.\n\n예) 첫 3초만 다른 2개를 테스트 → 조회수 높은 쪽 공개",
+    "첫 3초는 결론, 마지막 2초는 DM 보낼 이유. 이 두 가지가 200을 넘기는 출발점입니다.\n\n도움이 되셨다면 저장, 주변 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://www.highstyle.ai/insights/instagram-reels-algorithm-2026",
+    "https://blckalpaca.at/en/knowledge-base/social-media/social-media-algorithms-distribution/instagram-algorithm-2026",
+    "https://www.reeldrop.io/learn/instagram-algorithm",
+    "https://promall.io/en/blog/algoritm-instagram-forushgah",
+    "https://vidico.com/news/instagram-reels-statistics/",
+    "https://retensis.com/blog/instagram-reels-skip-rate-benchmarks-2026",
+    "https://quso.ai/blog/instagram-reels-best-practices",
+    "https://influenceflow.io/resources/best-practices-for-instagram-reels-the-ultimate-growth-strategy-guide-2026/",
+    "https://www.etnews.com/20250109000187",
+    "https://www.hankookilbo.com/news/article/A2025100209470002100",
+    "https://metricool.com/instagram-trial-reels/",
+    "https://buffer.com/resources/instagram-trial-reels/",
+    "https://postfa.st/blog/instagram-trial-reels",
+    "https://creatorflow.so/blog/instagram-trial-reels/"
+  ]
+}
