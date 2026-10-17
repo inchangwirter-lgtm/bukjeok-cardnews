@@ -1,0 +1,212 @@
+{
+  "topic": "스레드 글 조회수 두 자리·댓글 0개, 첫 줄·태그·답글 4단계로 대화 붙이기",
+  "pillar": "스레드",
+  "problem": "스레드에 가게 글을 매일 올려도 조회수는 두 자리, 댓글은 0개예요.",
+  "slug": "threads-zero-replies-fix",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "스레드",
+      "title": "스레드 댓글 계속 0개?\n==4단계로 대화 붙이기==",
+      "image_prompt": "A Korean bakery owner in her 30s wearing an apron, standing behind the counter of a small neighborhood bakery, looking at her smartphone with a disappointed expression, trays of golden salt bread on the counter, warm afternoon light, phone screen blurred with no readable text, candid documentary photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone on a wooden counter showing a blurred social media feed with an empty notification area, no readable text",
+          "label": "댓글 0개"
+        },
+        {
+          "prompt": "Close-up of a metal tray of freshly baked Korean salt bread rolls, glossy and golden, top-down angle",
+          "label": "오늘의 소금빵"
+        },
+        {
+          "prompt": "Close-up of a hand typing on a smartphone keyboard, screen blurred, soft cafe light",
+          "label": "첫 줄 고치기"
+        }
+      ],
+      "body": "",
+      "teaser": "왜 내 글만 조용할까요?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 고민",
+      "title": "매일 올리는데\n==왜 아무도 말을 안 걸까==",
+      "image_prompt": "A Korean cafe owner in his 40s sitting alone at a small table in his closed shop in the evening, chairs stacked, scrolling his phone with a frustrated sigh, phone screen blurred, natural candid photo",
+      "cutouts": [],
+      "body": "스레드는 답글이 오가는 글이 멀리 퍼지는 곳. 홍보문엔 손님이 답할 말이 없어서 대화가 안 붙어요.",
+      "teaser": "첫 줄 하나부터 고쳐볼게요",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "스레드 매일 올려도 조회수 두 자리예요"
+        },
+        {
+          "who": "us",
+          "text": "첫 줄이 '신메뉴 출시!'로 시작하죠?"
+        },
+        {
+          "who": "client",
+          "text": "네, #맛집 #빵집 태그도 잔뜩 달고요"
+        },
+        {
+          "who": "us",
+          "text": "올리고 바로 앱 닫고, 남의 글엔 답글 0개?"
+        },
+        {
+          "who": "client",
+          "text": "헉 다 맞아요… 뭐부터 고쳐요?"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 1",
+      "title": "첫 줄은 홍보 말고\n==숫자 + 질문으로==",
+      "image_prompt": "A Korean bakery owner leaning on the counter, thoughtfully typing a post on her smartphone with one thumb, flour on her apron, bread shelves softly out of focus behind her, phone screen blurred",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a pen over an open blank notebook next to a cup of coffee, no readable text",
+          "label": "복붙 템플릿"
+        }
+      ],
+      "body": "① 오늘 [메뉴] [숫자]개 만들었는데 [시간]에 끝났어요. 몇 시에 오세요?\n② [업종] [N]년 하면서 손님이 제일 많이 묻는 거: [질문]\n③ [A] vs [B], 우리 손님들 반반 갈려요. 여러분은?",
+      "teaser": "실제로 고치면 이렇게 달라져요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "BEFORE / AFTER",
+      "title": "같은 소금빵 글인데\n==첫 줄만 바꿨어요==",
+      "image_prompt": "Empty bakery display shelf in the early afternoon with only a few crumbs left, a Korean baker smiling and pointing at the empty tray, warm daylight, candid photo",
+      "cutouts": [],
+      "body": "손님이 '저 3시에 가요'처럼 바로 답할 수 있는 글이 대화를 만들어요.",
+      "teaser": "근데 태그는 왜 1개만?",
+      "items": [],
+      "chat": [],
+      "bad": "망원동 ○○베이커리 신메뉴 출시! 많이 사랑해주세요 🙏 #망원동 #빵집 #맛집 #신상",
+      "good": "오늘 소금빵 60개 구웠는데 2시에 끝났어요. 내일은 몇 개 구워야 헛걸음 안 하실까요? + 주제 태그 '망원동 빵집' 1개",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 2",
+      "title": "태그는 여러 개 말고\n==[동네+업종] 딱 1개==",
+      "image_prompt": "A Korean shop owner standing outside a small neighborhood storefront on a quiet alley, looking at her phone and tapping the screen, street and shop signs blurred with no readable text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a thumb tapping a smartphone screen with a blurred blue highlighted element, no readable text",
+          "label": "태그 1개"
+        }
+      ],
+      "body": "오른쪽 아래 추가 → 새 글에서 '태그' 누르거나 # 입력. 글 하나에 주제 1개, 50자까지가 공식 규칙. 예) 망원동 빵집",
+      "teaser": "올리기 전 10분, 이걸 하세요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 3",
+      "title": "올리기 전 10분\n==남의 글에 답글 5개==",
+      "image_prompt": "A Korean small business owner sitting on a stool in the back of her shop before opening, scrolling and replying on her phone with a friendly smile, coffee cup beside her, phone screen blurred",
+      "cutouts": [],
+      "body": "내 태그 눌러 나온 동네·업종 글에 한 문장 이상 답글 5개. 인스타·스레드 총괄이 '글보다 답글을 더 많이' 하라고 직접 말함.",
+      "teaser": "올린 뒤엔 앱 닫으면 안 돼요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "STEP 4",
+      "title": "올리고 앱 닫지 말고\n==30분은 답글 타임==",
+      "image_prompt": "A Korean bakery owner at the counter holding her phone, laughing while reading new comments, a customer in the background picking bread, phone screen blurred, warm candid photo",
+      "cutouts": [],
+      "body": "공식 기준은 아니지만 현업에서 효과 본 방법. 댓글엔 '감사해요' 대신 질문 한 줄로 답하고, 링크는 본문 말고 내 첫 댓글에.",
+      "teaser": "오늘 할 일 5개로 정리했어요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "30분"
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장하고 하나씩\n==체크만 하세요==",
+      "image_prompt": "A Korean shop owner's hand checking off items on a paper checklist with a pen on a wooden counter, smartphone beside it, paper text not readable, soft morning light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "마지막 한 장 남았어요",
+      "items": [
+        "마지막 글 첫 줄 숫자+질문으로",
+        "주제 태그 '동네+업종' 1개 정하기",
+        "올리기 전 동네 글 답글 5개",
+        "올린 뒤 30분 댓글 다 답하기",
+        "링크는 본문 빼고 첫 댓글로"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==다음 글부터 바꿔보기==",
+      "image_prompt": "A cheerful Korean bakery owner holding a tray of fresh bread in front of her shop counter, smiling at the camera, warm golden light, cozy neighborhood bakery",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "스레드 매일 올리는데 댓글 0개라면, 첫 줄부터 홍보문이라서예요.\n\n✔ STEP 1 첫 줄은 숫자+질문으로\n✔ STEP 2 주제 태그는 [동네+업종] 딱 1개\n✔ STEP 3 올리기 전 동네 글에 답글 5개\n✔ STEP 4 올린 뒤 30분은 답글 타임, 링크는 첫 댓글로\n\n오늘 할 일: 마지막 글 첫 줄 하나만 숫자+질문으로 다시 써보세요.\n\n다음 글 올리기 전에 꺼내 보게 저장해두세요.",
+  "hashtags": [
+    "스레드",
+    "스레드마케팅",
+    "스레드운영",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님마케팅",
+    "동네가게",
+    "SNS마케팅",
+    "가게홍보"
+  ],
+  "threads": [
+    "스레드에 '신메뉴 출시!'로\n시작하셨다면 첫 줄에서\n이미 넘겨지고 있는 겁니다.\n\n스레드는 답글이 오가는 글이 퍼지는데\n홍보문엔 손님이 답할 말이 없어요.\n\n첫 줄과 태그만 바꾸는 데 10분이면 됩니다.\n\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. 첫 줄을 숫자 + 질문으로 바꾸세요\n\n사장님만 아는 숫자 하나로 시작하고\n손님이 바로 답할 수 있는 질문으로 끝내세요.\n\n예) 오늘 소금빵 60개 구웠는데 2시에 끝났어요. 내일은 몇 시에 오세요?",
+    "2. 주제 태그는 [동네+업종] 1개만 다세요\n\n새 글 작성에서 '태그'를 누르거나 #을 입력해 주제를 넣습니다.\n글 하나에 주제 1개, 50자까지가 공식 규칙입니다.\n#을 여러 개 달아도 태그로는 1개만 적용됩니다.\n\n예) 망원동 빵집",
+    "3. 올리기 전 10분, 남의 글에 답글 5개\n\n내 태그를 눌러 나오는 동네·업종 글에\n한 문장 이상 답글을 다세요.\n인스타·스레드 총괄이 직접\n'글보다 답글을 더 많이' 하라고 말했습니다.\n\n예) 저희도 2시면 소금빵 끝나는데 하루 몇 개 구우세요?",
+    "4. 올린 뒤 30분은 앱을 닫지 마세요\n\n공식 기준은 아니지만 현업에서 효과 본 방법입니다.\n댓글마다 질문 한 줄로 답하고\n링크는 본문 말고 내 첫 댓글에 다세요.\n\n예) '3시에 갈게요' → '3시엔 두 번째 판 나와요. 따뜻할 때 오세요'",
+    "홍보문 대신 말 거는 글을 쓰고, 답글로 대화를 이어가면 됩니다.\n\n도움이 되셨다면 저장하고 옆 가게 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://help.instagram.com/1356090605000312",
+    "https://recurpost.com/tools/hashtag-generator/meta-threads/",
+    "https://www.platformer.news/threads-175-million-users-adam-mosseri-interview/",
+    "https://getautodm.com/en/guides/threads-algorithm-2026/",
+    "https://momentumhive.app/blog/threads-algorithm-2026-how-it-works-and-why",
+    "https://posteverywhere.ai/blog/how-the-threads-algorithm-works"
+  ]
+}
