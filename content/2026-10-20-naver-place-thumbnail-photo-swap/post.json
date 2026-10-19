@@ -1,0 +1,208 @@
+{
+  "topic": "동네 검색에 뜨는데 안 눌리는 플레이스, 썸네일 1·2번 사진만 바꿔서 클릭 받기",
+  "pillar": "네이버 플레이스",
+  "problem": "동네 검색에서 우리 가게는 뜨는데, 썸네일이 간판·메뉴판이라 아무도 안 눌러요",
+  "slug": "naver-place-thumbnail-photo-swap",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "네이버 플레이스",
+      "title": "검색엔 뜨는데 안 눌러요?\n==사진 2장만 바꾸세요==",
+      "image_prompt": "A Korean restaurant owner in her 40s sitting at an empty table in a small neighborhood pasta restaurant in Seoul, frowning at her smartphone with a blurred screen, warm afternoon light through the window, realistic candid photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone with a blurred search result list showing small thumbnail of a plain shop signboard, no readable text",
+          "label": "간판 썸네일"
+        },
+        {
+          "prompt": "Extreme close-up of a creamy pasta dish shot at 45 degrees, filling the frame, natural window light, appetizing",
+          "label": "메뉴 클로즈업"
+        },
+        {
+          "prompt": "Wide-angle shot of a cozy small Korean cafe interior with window seats and warm lighting, tidy tables, no people",
+          "label": "매장 광각"
+        }
+      ],
+      "body": "",
+      "teaser": "어떤 사진이 눌리는지 넘겨보세요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "실제 상담",
+      "title": "뜨긴 뜨는데\n==클릭이 없는 이유==",
+      "image_prompt": "A Korean male shop owner in his 30s talking with a marketer across a small cafe table, both looking at a smartphone with a blurred screen, owner looking puzzled, natural daylight, candid documentary style",
+      "cutouts": [],
+      "body": "검색 결과에서 손님이 리뷰보다 먼저 보는 게 1·2번 사진. 간판·안내문이 앞에 걸려 있으면 눌릴 이유가 없음.",
+      "teaser": "먼저 내 썸네일부터 보세요",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "동네 검색하면 우리 가게 뜨긴 해요"
+        },
+        {
+          "who": "us",
+          "text": "썸네일에 무슨 사진 걸려 있어요?"
+        },
+        {
+          "who": "client",
+          "text": "간판 사진이랑 메뉴판이요"
+        },
+        {
+          "who": "us",
+          "text": "그럼 손님은 그냥 넘겨요. 사진이 첫인상이라"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "손님 눈으로\n==썸네일부터 캡처==",
+      "image_prompt": "Close-up of a Korean woman's hands holding a smartphone with a blurred search results screen, standing outside a neighborhood shop in Seoul, shallow depth of field, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Four smartphone screenshots laid side by side on a wooden table, blurred content with small food and signboard thumbnails, no readable text",
+          "label": "경쟁 3곳 비교"
+        }
+      ],
+      "body": "네이버 앱에서 '망원동 파스타'처럼 동네+업종 검색. 내 가게와 위아래 3곳 썸네일을 캡처해 나란히. 간판·메뉴판 보이면 교체 대상.",
+      "teaser": "그럼 어떤 사진으로 바꾸냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 2",
+      "title": "1번은 메뉴 클로즈업\n==2번은 매장 광각==",
+      "image_prompt": "A Korean restaurant staff member photographing a plated dish with a smartphone at a 45-degree angle by a sunny window seat, focused expression, real restaurant setting",
+      "cutouts": [],
+      "body": "공식 기준은 아니지만 현업에서 보는 구조. 미용실·병원·학원은 썸네일 1장이라 시술·수업 중인 장면 1장으로.",
+      "teaser": "직원에게 이대로 보내세요",
+      "items": [],
+      "chat": [],
+      "bad": "1번 간판 정면 사진 / 2번 벽에 붙은 메뉴판 사진",
+      "good": "1번 대표 메뉴 45도로 화면 꽉 차게 / 2번 입구에서 찍은 창가 좌석 가로 광각",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "복붙 템플릿",
+      "title": "직원 단톡에\n==이대로 보내세요==",
+      "image_prompt": "A young Korean part-time worker in an apron reading a message on a smartphone with a blurred screen in a small cafe kitchen, nodding, warm lighting, candid photo",
+      "cutouts": [],
+      "body": "[사진 촬영 부탁]\n1번컷: 대표메뉴 ○○ 하나만. 창가 자연광, 45도, 접시가 화면 80% 차게. 나오자마자 바로.\n2번컷: 입구에서 홀 전체 가로로. 조명 다 켜고 테이블 정리 후.\n각 5장씩 찍어서 단톡에 올려주세요.",
+      "teaser": "찍었으면 이제 앞에 거는 법",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 3",
+      "title": "대표사진 지정하고\n==영상은 숨기세요==",
+      "image_prompt": "A Korean shop owner sitting at the counter of a small restaurant after closing, uploading photos on a laptop with a blurred screen, focused face, soft evening light",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a laptop screen showing a blurred photo gallery grid with food and interior images, no readable text",
+          "label": "1·2번 지정"
+        }
+      ],
+      "body": "스마트플레이스 내 업체 사진 메뉴에서 새 사진을 대표로 지정. 소식 영상이 앞에 뜨면 소식관리에서 숨김. 완전 고정은 안 돼도 확률은 올라감.",
+      "teaser": "바꾼 뒤 확인은 딱 2개만",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "2주 뒤엔\n==조회·저장만 비교==",
+      "image_prompt": "A Korean cafe owner in her 30s smiling slightly while checking a tablet with a blurred chart screen at a cafe table, coffee cup beside, natural morning light",
+      "cutouts": [],
+      "body": "스마트플레이스 통계에서 바꾸기 전 2주 vs 후 2주 플레이스 조회수·저장수 비교. 조회는 느는데 전화·예약이 그대로면 메뉴 정보 손볼 차례.",
+      "teaser": "오늘 할 일만 모아봤어요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "오늘 30분\n==이것만 하면 끝==",
+      "image_prompt": "A Korean restaurant owner ticking off a paper checklist with a pen on a wooden counter, smartphone with blurred screen beside, warm light, close-up from above",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장 안 하면 까먹어요",
+      "items": [
+        "동네+업종 검색해 썸네일 캡처",
+        "간판·메뉴판 사진 뒤로 빼기",
+        "1번 메뉴 클로즈업, 2번 공간 광각",
+        "소식 영상이 앞에 뜨면 숨김",
+        "2주 뒤 조회·저장 비교하기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 사진 2장 바꾸기==",
+      "image_prompt": "Customers entering a cozy neighborhood restaurant in Seoul at dusk, warm light from inside, owner greeting them at the door, realistic candid photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "동네 검색에 우리 가게 뜨는데 아무도 안 누른다면, 썸네일 1·2번 사진부터 보세요.\n\n손님은 리뷰보다 사진을 먼저 봐요. 간판·메뉴판이 앞에 걸려 있으면 그냥 넘어감.\n\n✔ STEP 1 네이버 앱에서 동네+업종 검색 → 내 가게+경쟁 3곳 썸네일 캡처\n✔ STEP 2 1번은 대표메뉴 45도 클로즈업, 2번은 입구에서 찍은 매장 광각\n✔ STEP 3 스마트플레이스 사진 메뉴에서 대표사진 지정, 소식 영상이 앞에 뜨면 숨김\n✔ STEP 4 2주 뒤 통계에서 조회수·저장수 전후 비교\n\n오늘 할 일: 직원 단톡에 촬영 템플릿 보내고, 사진 5장씩 받아서 1·2번만 교체하기. 30분이면 끝나요.\n\n까먹기 전에 저장해두고 오늘 마감 후에 바로 바꿔보세요.",
+  "hashtags": [
+    "네이버플레이스",
+    "스마트플레이스",
+    "플레이스사진",
+    "플레이스상위노출",
+    "자영업자마케팅",
+    "소상공인마케팅",
+    "식당사장님",
+    "카페사장님",
+    "동네가게마케팅"
+  ],
+  "threads": [
+    "네이버 플레이스 1번 사진이\n간판 정면이라면\n검색에 떠도 손님은 넘깁니다.\n\n손님은 리뷰보다\n썸네일 사진을 먼저 보니까요.\n\n1·2번 사진만 바꾸면\n눌릴 이유가 생깁니다. 30분이면 됩니다.\n\n방법은 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 손님 눈으로 내 썸네일부터 보세요\n\n네이버 앱에서 동네+업종으로 검색하세요.\n내 가게와 위아래 경쟁 3곳 썸네일을\n캡처해서 나란히 놓고 비교합니다.\n\n간판·메뉴판·안내문이 보이면 교체 대상입니다.\n\n예) '망원동 파스타' 검색 → 4곳 캡처 → 우리만 간판이면 1순위로 교체",
+    "2. 1번은 메뉴, 2번은 공간으로 찍으세요\n\n음식점·카페는 검색 썸네일에 1·2번 사진이 보입니다.\n공식 기준은 아니고 현업에서 보는 구조입니다.\n\n미용실·병원·학원은 1장이라\n작업 중인 장면 한 컷이 좋습니다.\n\n예) 1번 파스타 45도, 화면 80% / 2번 입구에서 찍은 창가 좌석 가로샷",
+    "3. 대표사진으로 지정하고 영상은 숨기세요\n\n스마트플레이스 내 업체의 사진 메뉴에서\n새 사진을 대표사진으로 지정하세요.\n\n소식에 올린 영상이 썸네일을 차지하면\n소식관리에서 숨김 처리합니다.\n100% 고정은 안 되지만 확률은 올라갑니다.\n\n예) 1번 메뉴컷, 2번 홀 광각, 간판 사진은 맨 뒤로",
+    "4. 2주 뒤 숫자 2개만 보세요\n\n스마트플레이스 통계에서\n플레이스 조회수와 저장수를 확인하세요.\n\n바꾸기 전 2주와 바꾼 후 2주를\n같은 기간으로 놓고 비교합니다.\n\n예) 조회는 늘었는데 전화·예약이 그대로면 다음은 메뉴 정보 차례",
+    "검색에 걸린 다음은, 눌리게 만드는 1·2번 사진입니다.\n\n도움이 됐다면 저장하고 필요한 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "팀넥스트 네이버 플레이스 사진 전략 https://blog.teamnext.co.kr/marketing-insight/711/naver-place-photo-strategy/",
+    "피네애드 네이버 플레이스 사진 업로드 팁 https://pinead.co.kr/",
+    "크몽 아티클 https://kmong.com/article/3400",
+    "스토어아트 대표사진·영상 https://www.storeartmagazine.com/news/articleView.html?idxno=672",
+    "추종범 블로그 스마트플레이스 유입경로 가이드 https://choojongbum.com/",
+    "OSC 네이버 플레이스 운영 가이드 https://oscsnm.com/naver-place-operation-guide-2026-4/"
+  ]
+}
