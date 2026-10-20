@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import os
 from datetime import datetime
 from pathlib import Path
@@ -87,7 +88,8 @@ class Post(BaseModel):
 
 def threads_texts(post: "Post", config: dict) -> list[str]:
     """실제로 올라갈 스레드 글 목록. 첫 글 맨 위에 고정 소개 문구를 붙인다."""
-    texts = [t.replace("\\n", "\n") for t in post.threads]
+    # 스레드에는 링크를 올리지 않는다 (출처는 매체명만). 혹시 들어간 URL 은 지운다.
+    texts = [re.sub(r"[ \t]*\(?https?://\S+\)?", "", t.replace("\\n", "\n")).rstrip() for t in post.threads]
     intro = (config["brand"].get("threads_intro") or "").strip()
     if intro and texts and not texts[0].startswith(intro):
         texts[0] = f"{intro}\n\n{texts[0]}"
