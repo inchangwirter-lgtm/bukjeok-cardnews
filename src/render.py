@@ -53,6 +53,11 @@ def source_labels(sources: list[str]) -> list[str]:
     """출처를 카드에 짧게: URL 은 도메인만, 최대 3개."""
     out = []
     for src in sources:
+        if "|" in src:  # '매체명 | URL' 형식이면 매체명만
+            label = src.split("|")[0].strip()
+            if label and label not in out:
+                out.append(label)
+            continue
         m = re.match(r"https?://(?:www\.)?([^/]+)", src.strip())
         label = m.group(1) if m else src.strip()[:30]
         if label and label not in out:
