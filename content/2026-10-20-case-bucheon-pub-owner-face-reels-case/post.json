@@ -1,0 +1,203 @@
+{
+  "topic": "부천역 2층 한식 주점 사장님이 얼굴 공개 릴스와 '부천역 거리 살리기' 연재를 시작했고, 약 1년 뒤 월매출이 3,000만~4,000만 원에서 6,000만~7,000만 원대가 됨",
+  "pillar": "국내 사례",
+  "problem": "블로그 체험단·플레이스 홍보가 한계에 왔는데 광고비는 더 쓸 수 없는 사장님이, 인스타에 무엇을 올려야 손님이 오는지 모르는 고민",
+  "slug": "bucheon-pub-owner-face-reels-case",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "국내 사례",
+      "title": "부천역 2층 주점이\n==대기 손님 생긴 이유==",
+      "image_prompt": "A Korean male pub owner in his 30s holding a smartphone on a small tripod, filming himself with a shy but determined smile inside a cozy Korean-style pub on a second floor, warm wooden tables, soft evening lighting, customers blurred in background, subject in upper center of frame, realistic candid photo, no text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone recording a vertical video, blurred screen, warm pub lighting, realistic photo, no text",
+          "label": "릴스 직접 촬영"
+        },
+        {
+          "prompt": "Young Korean customers waiting in line on a narrow staircase leading up to a second-floor restaurant at night, candid realistic photo, no signs or readable text",
+          "label": "대기 손님"
+        },
+        {
+          "prompt": "Close-up of Korean pub dishes and soju glasses on a wooden table, warm lighting, realistic food photo, no labels or text",
+          "label": "광고비 0원"
+        }
+      ],
+      "body": "",
+      "teaser": "처음 상황부터 보시죠",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "배경",
+      "title": "블로그·플레이스로\n==버티던 2층 가게==",
+      "image_prompt": "A Korean restaurant owner sitting alone at an empty table in a quiet second-floor pub in the early evening, looking at a laptop with a blurred screen, worried expression, empty chairs around, realistic candid photo, no text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "첫 번째로 바꾼 건 이거",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "체험단·플레이스만으론 요즘 한계예요"
+        },
+        {
+          "who": "us",
+          "text": "부천역 2층 주점도 딱 그 상황이었어요"
+        },
+        {
+          "who": "client",
+          "text": "2층이면 지나가다 들어오지도 않잖아요"
+        },
+        {
+          "who": "us",
+          "text": "월세 300만 원 선, 월매출 3~4천만 원"
+        },
+        {
+          "who": "us",
+          "text": "경기 꺾이자 인스타를 제대로 시작함"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 1",
+      "title": "내향적인 사장님이\n==얼굴부터 공개했다==",
+      "image_prompt": "A Korean pub owner talking to a smartphone camera while wiping a counter, slightly awkward but genuine smile, a staff member laughing nearby, warm interior of a Korean pub, realistic candid photo, subject upper center, no text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone on a mini tripod on a pub counter, blurred screen, warm bokeh lights, realistic photo, no text",
+          "label": "매장 안 일상"
+        }
+      ],
+      "body": "스스로 내향적이라던 사장님이 직접 카메라 앞에 섰습니다. 처음엔 매장 내부, 직원 일상, 손님 이야기부터 올렸어요.",
+      "teaser": "그다음 판을 키운 방법",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 2",
+      "title": "우리 가게 말고\n==거리를 찍기 시작함==",
+      "image_prompt": "A Korean man walking down a lively street near a train station at dusk, holding a smartphone to film small neighborhood restaurants, people passing by, shop fronts with no readable signs, realistic street photo, subject in center, no text",
+      "cutouts": [],
+      "body": "'부천역 거리 살리기' 연재로 주변 맛집을 소개하고, 거리 문제를 고쳐가는 과정을 보여줬습니다. 가게 홍보가 동네 이야기로 커진 셈.",
+      "teaser": "근데 매번 찍을 시간 있었을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "무엇을 했나 3",
+      "title": "릴스 한 편 만드는\n==시간이 줄었다==",
+      "image_prompt": "A Korean pub owner editing a short video on his smartphone at a pub table after closing time, focused expression, blurred screen, a cup of coffee beside him, warm dim lighting, realistic candid photo, no text",
+      "cutouts": [],
+      "body": "처음엔 한 편에 3~4시간. 지금은 1시간~1시간 30분이면 끝. 따로 쓰는 광고비는 없다고 밝혔습니다.",
+      "teaser": "1년 뒤 숫자는 이랬습니다",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "1~1.5시간"
+    },
+    {
+      "type": "stat",
+      "sticker": "결과",
+      "title": "시작 약 1년 뒤\n==월평균 매출은==",
+      "image_prompt": "A busy Korean pub on a second floor at night, every table full of cheerful customers, staff carrying dishes, the owner smiling behind the counter, warm lights, realistic candid photo, no text",
+      "cutouts": [],
+      "body": "3,000만~4,000만 원이던 월매출이 6,000만~7,000만 원대로. 매출 대비 월세는 5% 수준. 릴스 한 편은 조회수 150만 회, 바로 대기 손님으로.",
+      "teaser": "보통 가게랑 뭐가 달랐을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "6,000만~7,000만 원대"
+    },
+    {
+      "type": "compare",
+      "sticker": "보통 가게 vs 이 가게",
+      "title": "같은 인스타라도\n==올리는 게 달랐다==",
+      "image_prompt": "Two Korean small business owners side by side in different shops: one looking bored at a blurred phone screen behind a counter, the other laughing while filming with staff, realistic split-scene style photo, no text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "우리 가게 버전으로 바꾸면",
+      "items": [],
+      "chat": [],
+      "bad": "메뉴 사진·이벤트 공지만 올리고 사장님은 끝까지 안 보이는 계정",
+      "good": "사장님 얼굴, 직원 일상, 손님 이야기, 동네 거리까지 담는 계정",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "우리 가게 적용",
+      "title": "우리 가게라면\n==이렇게 시작==",
+      "image_prompt": "A Korean cafe owner in an apron writing a plan in a notebook at a small table in her neighborhood shop, smartphone beside the notebook with blurred screen, bright daylight, focused hopeful expression, realistic photo, no readable text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "마지막 장 저장 필수",
+      "items": [
+        "첫 릴스는 사장님 얼굴로",
+        "직원·손님 이야기 주 1편",
+        "옆 가게 소개하는 동네 연재",
+        "한 편 제작 시간 재며 줄이기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==이번 주 첫 릴스 찍기==",
+      "image_prompt": "A Korean shop owner standing in front of his small restaurant at dusk, holding a smartphone up to start filming himself, confident smile, warm street lights, realistic candid photo, subject upper center, no text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "체험단 돌려도 반응 없고, 광고비는 더 못 쓰겠고. 이 가게도 딱 그랬습니다.\n\n부천역 근처 2층 한식 주점, 월세 300만 원 선에 월매출 3,000만~4,000만 원.\n경기가 꺾이자 내향적인 사장님이 얼굴을 공개하고 릴스를 시작했어요.\n약 1년 뒤 월평균 매출 6,000만~7,000만 원대, 릴스 한 편은 조회수 150만 회.\n\n✔ STEP 1. 사장님 얼굴 + 매장·직원·손님 이야기\n✔ STEP 2. '부천역 거리 살리기'처럼 동네로 판 키우기\n✔ STEP 3. 한 편 3~4시간 → 1시간~1시간 30분으로 줄여 꾸준히\n\n우리 가게라면\n이번 주 첫 릴스는 메뉴 말고 사장님 얼굴로.\n다음 편은 옆 가게 하나 소개해보기.\n\n오늘 할 일: 휴대폰 세워두고 15초 자기소개 한 편 찍기\n\n저장해두고 이번 주에 하나만 따라 해보세요.\n\n출처: 인사이트, 유튜브 깡대표",
+  "hashtags": [
+    "자영업자마케팅",
+    "소상공인마케팅",
+    "인스타마케팅",
+    "릴스마케팅",
+    "마케팅사례",
+    "주점사장님",
+    "부천사장님",
+    "사장님인스타",
+    "동네가게"
+  ],
+  "threads": [
+    "블로그 체험단만 돌리고\n사장님 얼굴은 숨기고 계시다면\n가장 센 무기를 놀리고 계신 겁니다.\n\n부천역 2층 주점 사장님은\n얼굴 공개 약 1년 뒤\n월매출이 6,000만~7,000만 원대가 됐습니다.\n\n어떻게 했는지 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 배경부터 보시죠\n\n부천역 근처 2층 매장, 월세 300만 원 선.\n오픈 초엔 블로그 체험단과 플레이스로 홍보했고\n월매출은 3,000만~4,000만 원이었습니다.\n\n예) 경기가 꺾이자 그 방식만으론 부족해졌고, 인스타를 제대로 시작했습니다.",
+    "2. 사장님 얼굴부터 공개했습니다\n\n스스로 내향적이라던 사장님이\n직접 카메라 앞에 섰습니다.\n처음엔 매장 내부, 직원 일상, 손님 이야기를 올렸습니다.\n\n예) 메뉴 사진 대신 마감 후 직원과 나누는 대화를 그대로 찍는 식입니다.",
+    "3. 가게 밖, 거리로 판을 키웠습니다\n\n'부천역 거리 살리기' 연재를 시작해\n주변 맛집을 소개하고\n거리 문제를 고쳐가는 과정을 보여줬습니다.\n\n예) 우리 가게 자랑이 아니라 동네 이야기라서, 보는 사람이 부담 없이 따라옵니다.",
+    "4. 결과는 이렇습니다\n\n시작 약 1년 뒤 월평균 매출 6,000만~7,000만 원대.\n매출 대비 월세 비중은 5% 수준이 됐습니다.\n릴스 한 편 제작은 3~4시간에서 1시간~1시간 30분으로 줄었습니다.\n\n예) 조회수 150만 회 릴스 한 편은 바로 대기 손님으로 이어졌습니다.",
+    "5. 우리 가게라면 이렇게 하세요\n\n첫 릴스는 메뉴가 아니라 사장님 얼굴로.\n그다음 직원·손님 이야기, 이어서 옆 가게 소개 연재.\n한 편 만들 때마다 걸린 시간을 적어두세요.\n\n예) '우리 골목 사장님들' 연재로 매주 이웃 가게 한 곳씩 소개하기.",
+    "광고비보다 사장님 얼굴과 동네 이야기가 먼저입니다.\n\n도움이 됐다면 저장하고 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다.\n\n출처: 인사이트, 유튜브 깡대표"
+  ],
+  "sources": [
+    "https://www.insight.co.kr/news/562894",
+    "https://www.youtube.com/watch?v=5gMv3w0tMRg (유튜브 '깡대표' 출연 영상, 2026-07-07 — 인사이트 기사의 원본)"
+  ]
+}
