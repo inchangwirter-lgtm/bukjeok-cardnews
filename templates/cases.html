@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&family=Nanum+Gothic+Coding:wght@700&display=block">
+<style>
+  /* 북적 사례 수집 노트 — 투박한 진(zine) 스타일. 꿀팁 카드(cards.html)와 일부러 다르게 */
+  :root { --ink: #161514; --paper: #EFEBE1; --red: #E2392B; --hl: #FFE45C; --tape: rgba(240, 228, 190, .78); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #555; font-family: "Pretendard Variable", Pretendard, sans-serif; }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; color: var(--ink);
+           background-color: var(--paper); padding: 64px 72px 0; letter-spacing: -0.03em; word-break: keep-all;
+           background-image:
+             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+             repeating-linear-gradient(0deg, transparent 0 46px, rgba(0,0,0,.035) 46px 47px); }
+  .pen { font-family: "Nanum Pen Script", cursive; letter-spacing: 0; }
+  .mono { font-family: "Nanum Gothic Coding", monospace; letter-spacing: 0; }
+  .heavy { font-family: "Black Han Sans", "Pretendard Variable", sans-serif; font-weight: 400; letter-spacing: -0.02em; }
+
+  /* 머리글 */
+  .head { display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--ink); padding-bottom: 14px; }
+  .head .no { font-size: 28px; }
+  .head .brand { font-size: 30px; }
+  .head .pg { font-size: 26px; opacity: .6; }
+
+  /* 폴라로이드 + 마스킹테이프 */
+  .pol { position: absolute; background: #fff; padding: 16px 16px 64px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .pol img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.25) brightness(1.02); }
+  .pol .cap { position: absolute; left: 20px; right: 16px; bottom: 10px; font-size: 44px; color: var(--ink); }
+  .pol::before { content: ""; position: absolute; top: -22px; left: 50%; width: 170px; height: 46px; margin-left: -85px;
+                 background: var(--tape); transform: rotate(-4deg); box-shadow: 0 1px 2px rgba(0,0,0,.1); }
+  .main-pol { width: 640px; height: 560px; right: 60px; top: 150px; transform: rotate(2.5deg); }
+  .slide.t-cover .main-pol { width: 620px; height: 560px; right: 56px; top: 140px; }
+  .c0 { width: 270px; height: 300px; left: 56px; top: 170px; transform: rotate(-6deg); }
+  .c1 { width: 240px; height: 270px; left: 150px; top: 440px; transform: rotate(5deg); }
+  .c2 { width: 230px; height: 260px; right: 30px; top: 560px; transform: rotate(-4deg); }
+  .slide.t-cta .main-pol { width: 520px; height: 440px; top: 150px; }
+  .slide:not(.t-cover) .c0 { width: 290px; height: 320px; left: 70px; top: 230px; }
+
+  /* 빨간 도장 */
+  .stamp { display: inline-block; border: 5px solid var(--red); color: var(--red); padding: 8px 20px 4px; font-size: 40px;
+           transform: rotate(-5deg); border-radius: 6px; opacity: .9; }
+
+  /* 본문 블록 (아래쪽) */
+  .text { position: absolute; left: 72px; right: 72px; bottom: 140px; }
+  .text.top { bottom: auto; top: 150px; }
+  h1 { font-size: 116px; line-height: 1.08; margin-top: 22px; }
+  h2 { font-size: 86px; line-height: 1.12; margin-top: 18px; }
+  mark { background: none; position: relative; z-index: 0; color: inherit; white-space: nowrap; }
+  mark::before { content: ""; position: absolute; z-index: -1; left: -8px; right: -10px; top: 52%; bottom: -2%;
+                 background: var(--hl); transform: rotate(-1.5deg) skewX(-6deg); }
+  .body { font-size: 40px; line-height: 1.55; margin-top: 26px; font-weight: 500; background: rgba(255,255,255,.55); padding: 18px 22px; border-left: 8px solid var(--ink); }
+
+  /* 체크리스트: 손글씨 체크 */
+  .list { list-style: none; margin-top: 24px; display: grid; gap: 14px; }
+  .list li { font-size: 42px; font-weight: 700; display: flex; gap: 18px; align-items: center; background: #fff; padding: 16px 20px; transform: rotate(-.4deg); }
+  .list li:nth-child(even) { transform: rotate(.5deg); }
+  .list li::before { content: "☐"; font-size: 46px; }
+
+  /* 대화: 캡처를 테이프로 붙인 느낌 */
+  .chat { margin-top: 24px; background: #fff; padding: 26px; display: grid; gap: 14px; transform: rotate(-1deg); box-shadow: 0 8px 18px rgba(0,0,0,.18); position: relative; }
+  .chat::before { content: ""; position: absolute; top: -20px; right: 60px; width: 150px; height: 42px; background: var(--tape); transform: rotate(5deg); }
+  .bub { max-width: 82%; font-size: 36px; line-height: 1.4; padding: 16px 22px; border-radius: 22px; font-weight: 600; }
+  .bub.client { background: #EEE; justify-self: start; }
+  .bub.us { background: var(--ink); color: #fff; justify-self: end; }
+
+  /* 비교: 포스트잇 두 장 */
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 28px; }
+  .note { padding: 30px 26px 34px; font-size: 38px; line-height: 1.45; font-weight: 700; box-shadow: 0 8px 16px rgba(0,0,0,.18); min-height: 300px; }
+  .note b { display: block; font-size: 56px; margin-bottom: 10px; }
+  .note.bad { background: #DCDAD3; transform: rotate(-2.5deg); color: #555; }
+  .note.good { background: var(--hl); transform: rotate(2deg); }
+
+  /* 숫자: 빨간 동그라미 */
+  .num { display: inline-block; position: relative; color: var(--ink); line-height: 1; margin-top: 10px; }
+  .num::after { content: ""; position: absolute; left: -30px; right: -30px; top: -18px; bottom: -22px; border: 7px solid var(--red);
+                border-radius: 50% 46% 52% 44% / 56% 50% 48% 52%; transform: rotate(-3deg); border-left-color: transparent; }
+
+  /* 따라 쓰는 문구 */
+  .copy { margin-top: 24px; background: #fff; border: 4px dashed var(--ink); padding: 26px; font-size: 36px; line-height: 1.55; }
+
+  /* 쿠폰형 이벤트 */
+  .coupon { margin-top: 30px; background: #fff; border: 4px dashed var(--ink); padding: 26px 30px; position: relative; }
+  .coupon::before { content: "✂"; position: absolute; top: -30px; left: 24px; font-size: 44px; background: var(--paper); padding: 0 8px; }
+  .coupon .t { font-size: 40px; color: var(--red); }
+  .coupon p { font-size: 36px; line-height: 1.5; font-weight: 700; margin-top: 8px; }
+  .coupon b { background: var(--hl); }
+  .handle { margin-top: 26px; font-size: 52px; }
+
+  /* 하단: 찢은 종이 띠 */
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; height: 104px; background: var(--ink); color: #fff;
+          display: flex; align-items: center; justify-content: space-between; padding: 14px 72px 0;
+          clip-path: polygon(0 18%, 4% 8%, 9% 16%, 15% 6%, 22% 15%, 30% 5%, 38% 14%, 46% 4%, 55% 13%, 63% 5%, 71% 15%, 79% 6%, 87% 14%, 94% 4%, 100% 12%, 100% 100%, 0 100%); }
+  .foot .t { font-size: 34px; font-weight: 700; }
+  .foot .go { font-size: 50px; color: var(--hl); }
+  .src { position: absolute; left: 72px; right: 72px; bottom: 120px; font-size: 24px; opacity: .7; }
+  .staged { position: absolute; font-size: 20px; opacity: .55; right: 72px; top: 118px; }
+</style>
+</head>
+<body>
+{% for s in slides %}
+{% set n = loop.index %}
+<section class="slide t-{{ s.type }}" id="slide-{{ n }}">
+  <div class="head">
+    <span class="no mono">CASE FILE No.{{ '%03d' % case_no }}</span>
+    <span class="brand heavy">{{ brand.name }} 사례 수집</span>
+    <span class="pg mono">{{ n }}/{{ slides|length }}</span>
+  </div>
+  {% if imgs[n].bg %}<div class="staged mono">AI 연출 이미지</div>{% endif %}
+
+  {% set has_photo = imgs[n].bg and s.type not in ['list', 'compare', 'chat', 'copy'] %}
+  {% if has_photo %}
+    <div class="pol main-pol"><img src="{{ imgs[n].bg }}">{% if s.type != 'cover' and imgs[n].cuts %}<span class="cap pen">{{ imgs[n].cuts[0].label }}</span>{% endif %}</div>
+  {% endif %}
+  {% if s.type == 'cover' %}
+    {% for cut in imgs[n].cuts %}<div class="pol c{{ loop.index0 }}"><img src="{{ cut.src }}"><span class="cap pen">{{ cut.label }}</span></div>{% endfor %}
+  {% endif %}
+
+  <div class="text{{ ' top' if not has_photo and s.type in ['list','compare','chat','copy'] else '' }}">
+    {% if s.sticker %}<span class="stamp heavy">{{ s.sticker }}</span>{% endif %}
+    {% if s.type == 'stat' %}
+      <div><span class="num heavy" style="font-size:{{ s.stat | title_size(200) }}px">{{ s.stat }}</span></div>
+    {% endif %}
+    {% if s.type in ['cover', 'cta'] %}
+      <h1 class="heavy" style="font-size:{{ s.title | title_size(116) }}px">{{ s.title | fmt }}</h1>
+    {% else %}
+      <h2 class="heavy" style="font-size:{{ s.title | title_size(86) }}px">{{ s.title | fmt }}</h2>
+    {% endif %}
+
+    {% if s.type == 'chat' %}
+      <div class="chat">{% for line in s.chat %}<div class="bub {{ line.who }}">{{ line.text | fmt }}</div>{% endfor %}</div>
+    {% elif s.type == 'list' %}
+      <ul class="list">{% for it in s.items %}<li>{{ it | fmt }}</li>{% endfor %}</ul>
+    {% elif s.type == 'compare' %}
+      <div class="vs">
+        <div class="note bad"><b class="pen">보통 가게</b>{{ s.bad | fmt }}</div>
+        <div class="note good"><b class="pen">이 가게</b>{{ s.good | fmt }}</div>
+      </div>
+    {% elif s.type == 'copy' %}
+      <div class="copy">{{ s.body | fmt }}</div>
+    {% elif s.body and s.type != 'cta' %}
+      <div class="body">{{ s.body | fmt }}</div>
+    {% endif %}
+
+    {% if s.type == 'cta' %}
+      <div class="coupon">
+        <span class="t heavy">{{ brand.event.badge }}</span>
+        <p>{{ brand.event.text | event_fmt }}</p>
+      </div>
+      <div class="handle heavy">{{ brand.handle }}</div>
+    {% endif %}
+  </div>
+
+  {% if s.type == 'cta' %}
+    {% if sources %}<div class="src mono">SOURCE: {{ sources | join(' / ') }}</div>{% endif %}
+    <div class="foot"><span class="t">팔로우 · 댓글 · 저장</span><span class="go pen">다음 사례도 모아올게요</span></div>
+  {% else %}
+    <div class="foot"><span class="t">{{ s.teaser | fmt }}</span><span class="go pen">넘겨 →</span></div>
+  {% endif %}
+</section>
+{% endfor %}
+</body>
+</html>

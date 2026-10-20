@@ -65,15 +65,24 @@ def source_labels(sources: list[str]) -> list[str]:
     return out[:3]
 
 
+def case_number(post_dir) -> int:
+    """사례 시리즈 번호: 지금까지 쌓인 사례 폴더 중 몇 번째인지."""
+    cases = sorted(d.name for d in post_dir.parent.glob("*-case-*") if d.is_dir())
+    return cases.index(post_dir.name) + 1 if post_dir.name in cases else len(cases) + 1
+
+
 def render_html(post, config, post_dir) -> str:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
+    series = read_json(post_dir / "meta.json", {}).get("series", "tips")
     env.filters["fmt"] = fmt
     env.filters["event_fmt"] = event_fmt
     env.filters["title_size"] = title_size
-    return env.get_template("cards.html").render(
+    # 꿀팁(tips)과 사례(cases)는 디자인을 다르게
+    template = "cases.html" if series == "cases" else "cards.html"
+    return env.get_template(template).render(
         slides=post.slides, brand=config["brand"], c=config["brand"]["colors"],
         imgs=slide_images(post, post_dir), sources=source_labels(post.sources),
-        staged=read_json(post_dir / "meta.json", {}).get("series") == "cases",
+        staged=series == "cases", case_no=case_number(post_dir),
     )
 
 
