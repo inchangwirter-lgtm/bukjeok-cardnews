@@ -2,7 +2,8 @@ name: 1. 카드뉴스 생성 → 검수 PR
 
 on:
   schedule:
-    - cron: "0 11 * * *" # 매일 20:00 KST 생성 → 다음 날 13:00 발행 (UTC 기준 표기)
+    - cron: "0 11 * * *"  # 매일 20:00 KST — 마케팅 꿀팁 (UTC 기준 표기)
+    - cron: "30 11 * * *" # 매일 20:30 KST — 자영업자 마케팅 사례
   workflow_dispatch:
     inputs:
       topic:
@@ -41,7 +42,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ inputs.topic }}
-          SERIES: ${{ inputs.series || 'tips' }}
+          SERIES: ${{ github.event.schedule == '30 11 * * *' && 'cases' || inputs.series || 'tips' }}
         run: python -m src.generate --topic "$TOPIC" --series "$SERIES"
 
       - name: AI 사진 생성
