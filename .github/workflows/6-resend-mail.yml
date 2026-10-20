@@ -1,0 +1,33 @@
+name: 6. 검수 메일 다시 보내기
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "검수 메일을 다시 받을 PR 번호"
+        required: true
+
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml pydantic
+      - name: 메일 보내기
+        env:
+          NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
+          NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
+          NOTIFY_TO: ${{ vars.NOTIFY_TO }}
+          PR: ${{ inputs.pr }}
+        run: |
+          gh pr checkout "$PR"
+          git restore --source origin/main --worktree -- src config.yaml
+          POST_DIR=$(git diff --name-only origin/main...HEAD | grep 'post.json$' | head -1 | xargs dirname)
+          CARDS_SHA=$(git rev-parse HEAD) python -m src.notify review "$POST_DIR" "$PR"
