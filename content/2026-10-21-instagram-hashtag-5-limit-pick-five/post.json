@@ -1,0 +1,218 @@
+{
+  "topic": "해시태그 30개 세트가 막혔을 때, 5칸 배분과 캡션 첫 줄로 다시 짜기",
+  "pillar": "인스타그램",
+  "problem": "해시태그 30개 세트를 붙여넣다 막혔는데, 5개만 남기려니 뭘 골라야 할지 모르겠어요",
+  "slug": "instagram-hashtag-5-limit-pick-five",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "인스타그램",
+      "title": "해시태그 30개 막혔다면\n==딱 5개 공식 있어요==",
+      "image_prompt": "A Korean female cafe owner in her 30s standing behind the counter of a small neighborhood bakery cafe, frowning slightly at her smartphone, freshly baked salt bread on trays beside her, warm morning light, phone screen blurred, candid documentary photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone with a long blurred block of text filling the screen, no readable letters, soft focus",
+          "label": "30개 복붙 끝"
+        },
+        {
+          "prompt": "A small yellow sticky note with five empty boxes drawn in pen, placed on a wooden cafe table, top-down shot, no readable text",
+          "label": "딱 5칸"
+        },
+        {
+          "prompt": "Close-up of golden salt bread rolls on a tray in a Korean bakery, warm light",
+          "label": "우리 가게 태그"
+        }
+      ],
+      "body": "",
+      "teaser": "왜 갑자기 안 올라가는지부터",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 실화",
+      "title": "늘 쓰던 세트 붙였더니\n==업로드가 안 돼요==",
+      "image_prompt": "A Korean male restaurant owner in his 40s sitting at an empty table in his small diner after lunch rush, staring at his phone with a puzzled expression, apron on, blurred phone screen, natural window light, candid photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "이거 내 계정만 그런 걸까요?",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "#맛집 #소통 #선팔… 붙였더니 안 올라가요"
+        },
+        {
+          "who": "us",
+          "text": "아 그거 이제 5개까지만 돼요"
+        },
+        {
+          "who": "client",
+          "text": "30개 중에 뭘 남겨요? 다 아까운데"
+        },
+        {
+          "who": "us",
+          "text": "아까운 거 거의 없어요. 공식 있어요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "왜 막혔냐면",
+      "title": "내 계정 문제 아님\n==작년 12월부터 5개==",
+      "image_prompt": "A Korean woman in her 30s at a small office desk with a laptop and coffee, relieved expression, leaning back in her chair, laptop screen blurred, bright daytime office, candid photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a desk calendar flipped to a winter month with a red circle drawn on a date, no readable text, shallow depth of field",
+          "label": "30개→5개"
+        }
+      ],
+      "body": "게시물·릴스, 모든 계정 공통이에요. 인스타 공식 입장도 '구체적인 태그 몇 개가 일반 태그 긴 목록보다 낫다'예요.",
+      "teaser": "그럼 뭐부터 지우냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "STEP 1",
+      "title": "메모장 세트에서\n==이것부터 지우세요==",
+      "image_prompt": "Close-up of a Korean shop owner's hands deleting text on a smartphone notes app at a cafe counter, screen blurred, coffee cup nearby, warm tones, candid photo",
+      "cutouts": [],
+      "body": "인스타는 상관없는 일반 태그를 잔뜩 붙이는 걸 스팸으로 봐요.",
+      "teaser": "남은 5칸, 이렇게 나눠요",
+      "items": [
+        "#맛스타그램 #일상",
+        "#소통 #선팔 #좋아요반사",
+        "가게와 상관없는 인기 태그",
+        "첫 댓글 태그도 5개에 포함"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 2",
+      "title": "5칸은 이렇게 나눠요\n==2·1·1·1 배분==",
+      "image_prompt": "A Korean female cafe owner writing on a small notepad at a wooden table, five neat rows on the page, pastries and a latte beside her, focused expression, no readable text, soft daylight, candid photo",
+      "cutouts": [
+        {
+          "prompt": "Top-down shot of five small paper cards lined up on a wooden table, blank, with a pen beside them",
+          "label": "현업 공식"
+        }
+      ],
+      "body": "동네+업종 2 · 대표메뉴 1 · 상황 1 · 가게 고유 1\n예) #성수동카페 #성수카페 #성수소금빵 #성수데이트 #카페○○",
+      "teaser": "태그 빠진 자리, 뭘로 채우냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 3",
+      "title": "빠진 25개 자리는\n==캡션 첫 줄이 채워요==",
+      "image_prompt": "A Korean baker in her 30s taking a photo of freshly baked salt bread with her smartphone on the counter of a small bakery at 11am, bright light, phone screen blurred, candid photo",
+      "cutouts": [],
+      "body": "공식 기준은 아니지만 현업에서 효과 본 방법. 손님이 검색할 단어를 첫 줄에 넣어요.",
+      "teaser": "그대로 베껴 쓰는 템플릿 드려요",
+      "items": [],
+      "chat": [],
+      "bad": "오늘도 화이팅☕ #맛스타그램 #소통 #선팔 #일상 … (30개)",
+      "good": "성수동 소금빵, 오전 11시에 갓 나와요\n#성수동카페 #성수카페 #성수소금빵 #성수데이트 #카페○○",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "복사해서 쓰기",
+      "title": "빈칸만 채우면\n==내 가게 세트 완성==",
+      "image_prompt": "A Korean male owner of a small burger shop typing on his phone at the counter during a quiet afternoon, slight smile, phone screen blurred, warm interior lights, candid photo",
+      "cutouts": [],
+      "body": "첫 줄: [동네] [메뉴], [시간·특징 한 가지]\n예) 망원동 수제버거, 패티 매일 아침 직접 다져요\n\n#[동네][업종] #[동네약칭][업종]\n#[동네][대표메뉴]\n#[동네][상황]\n#[가게이름]",
+      "teaser": "마지막으로 2주만 확인할 것",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장하고 하나씩\n==체크하면 끝==",
+      "image_prompt": "A Korean female shop owner checking off items on a paper checklist with a pen at her store counter, phone beside it with blurred screen, satisfied expression, natural light, candid photo",
+      "cutouts": [],
+      "body": "2주 비교는 같은 요일·시간대 게시물끼리. 태그와 첫 줄만 바꿔야 차이가 보여요.",
+      "teaser": "저장 안 하면 또 30개 붙여요",
+      "items": [
+        "기존 30개 세트 메모장 삭제",
+        "5칸 세트 메모장에 저장",
+        "다음 게시물 3개 첫 줄 바꾸기",
+        "2주 뒤 인사이트 조회수 비교"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 세트부터 정리==",
+      "image_prompt": "A smiling Korean cafe owner in her 30s holding a smartphone near the window of her small neighborhood cafe, afternoon sunlight, phone screen blurred, relaxed and confident mood, candid photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "해시태그 30개 세트 붙여넣었는데 업로드가 안 됐다면, 내 계정 문제 아니에요.\n\n작년 12월부터 인스타는 게시물·릴스 모두 해시태그 5개까지만 받아요. 모든 계정 공통이에요.\n\n✔ STEP 1 #맛스타그램 #소통 #선팔 같은 일반 태그부터 삭제 (첫 댓글 태그도 5개에 포함된다고 보세요)\n✔ STEP 2 5칸 배분 2·1·1·1 → 동네+업종 2 / 대표메뉴 1 / 상황 1 / 가게 고유 1\n✔ STEP 3 빠진 자리는 캡션 첫 줄로 → '[동네] [메뉴], [시간·특징]'\n(공식 기준은 아니지만 현업에서 효과 본 방법이에요)\n\n오늘 할 일\n- 기존 30개 세트 지우기\n- 내 가게 5칸 세트 메모장에 저장\n- 다음 게시물 3개 첫 줄 바꾸기\n- 2주 뒤 조회수 비교\n\n다음 게시물 올리기 전에 꺼내 보게 저장해두세요.",
+  "hashtags": [
+    "인스타그램마케팅",
+    "인스타해시태그",
+    "해시태그",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님",
+    "동네가게",
+    "카페사장님",
+    "매장인스타"
+  ],
+  "threads": [
+    "해시태그 30개 세트,\n아직 메모장에서 복붙하고 계시면\n그중 25개는 이미 못 쓰는 태그입니다.\n\n작년 12월부터 인스타는\n게시물·릴스 모두 5개까지만 받아요.\n\n5칸만 다시 채우면 10분이면 끝납니다.\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. 일반 태그부터 지우세요\n\n#맛스타그램 #일상 #소통 #선팔 같은\n가게와 상관없는 태그는 남길 이유가 없습니다.\n인스타는 이런 대량 부착을 스팸으로 봅니다.\n\n첫 댓글에 숨기던 태그도\n같은 5개에 포함된다고 보시는 게 안전합니다.\n\n예) 30개 중 일반 태그 20개 이상이 바로 빠집니다.",
+    "2. 5칸을 2·1·1·1로 나누세요\n\n동네+업종 2개, 대표 메뉴 1개,\n방문 상황 1개, 가게 고유 태그 1개입니다.\n\n공식 기준은 아니고,\n해외 가이드의 '세부·주제·브랜드 섞기'를\n동네 가게에 맞게 바꾼 현업 방법입니다.\n\n예) #성수동카페 #성수카페 #성수소금빵 #성수데이트 #카페○○",
+    "3. 빠진 자리는 캡션 첫 줄로 채우세요\n\n손님이 검색할 단어를\n첫 문장에 그대로 넣습니다.\n형식은 '[동네] [메뉴], [시간·특징 한 가지]'.\n\n공식 순위 기준은 아니지만\n현업에서 효과를 본 방법입니다.\n\n예) 성수동 소금빵, 오전 11시에 갓 나와요",
+    "4. 2주 뒤 조회수를 비교하세요\n\n바꾼 뒤 게시물 3개와\n바꾸기 전 게시물을 인사이트에서 비교합니다.\n\n같은 요일·비슷한 시간대끼리 봐야\n태그와 첫 줄의 차이가 보입니다.\n\n예) 지난달 화요일 오전 게시물 vs 이번 주 화요일 오전 게시물",
+    "정리하면, 일반 태그는 지우고 5칸은 2·1·1·1, 나머지는 캡션 첫 줄입니다.\n\n주변 사장님께도 필요한 내용이면 저장·리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://later.com/blog/ultimate-guide-to-using-instagram-hashtags/",
+    "https://instantdm.com/blog/instagram-hashtags",
+    "https://www.digitaltrends.com/social-media/instagram-now-limits-you-to-five-hashtags-per-post/",
+    "https://www.socialmediatoday.com/news/instagram-implements-new-limits-on-hashtag-use/808309/",
+    "https://www.madtimes.co.kr/news/articleView.html?idxno=26211",
+    "https://www.i-boss.co.kr/ab-74668-5290",
+    "https://socialbiz.nhndata.com/post/blog_260115",
+    "https://personaxpand.com/blog/instagram-hashtag-limit",
+    "https://trypoststage.com/blog/instagram-hashtag-limit-2026",
+    "https://lab.studioplanc.com/instagram-hashtag-limit-5-content-strategy/",
+    "https://somako.co.kr/instagram-5-hashtag-limit-caption-keywords/",
+    "https://creatorlanehq.com/blog/instagram-5-hashtag-limit-2026"
+  ]
+}
