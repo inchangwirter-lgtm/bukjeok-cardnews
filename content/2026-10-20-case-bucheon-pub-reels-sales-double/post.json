@@ -1,0 +1,192 @@
+{
+  "topic": "부천역 근처 2층 한식주점 정훈 대표가 체험단·플레이스 위주 홍보에서 인스타그램 채널 본격 운영으로 방향을 틀어, 광고비 없이 릴스로 약 1년 만에 월매출 3천~4천만 원에서 월평균 6천~7천만 원대가 됐다",
+  "pillar": "국내 사례",
+  "problem": "체험단·플레이스만 돌리다 매출이 제자리인 사장님이, 광고비 없이 우리 가게 SNS 채널을 키워볼지 고민할 때 답이 되는 사례입니다.",
+  "slug": "bucheon-pub-reels-sales-double",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "국내 사례",
+      "title": "부천역 2층 주점이\n==월매출 2배 가까이==",
+      "image_prompt": "Realistic evening street photo near a busy Korean subway station, a cozy second-floor Korean pub with warm yellow light glowing through upstairs windows, a Korean man in his late 30s wearing a dark apron standing at the upstairs window looking down at the street with a determined expression, smartphone in hand, no readable signs or text, main subject in upper center, natural film-like color",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone on a mini tripod filming a sizzling Korean stir-fry on a pub table, blurred screen, warm light, no text",
+          "label": "광고비 없이"
+        },
+        {
+          "prompt": "Narrow staircase leading up to a second-floor restaurant door in Korea, warm light, no signs or text",
+          "label": "2층 가게"
+        },
+        {
+          "prompt": "Hand resting on a calculator next to a blank receipt roll on a wooden counter, no readable numbers",
+          "label": "월세 300 선"
+        }
+      ],
+      "body": "광고비 없이, 인스타그램 하나로 약 1년",
+      "teaser": "처음엔 다들 하는 그 방법이었죠",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "배경",
+      "title": "체험단도 했고\n==플레이스도 했는데==",
+      "image_prompt": "Realistic photo of a Korean pub owner in his 30s sitting alone at an empty wooden table before opening hours, chin on hand, looking at a smartphone with a worried expression, blurred screen, chairs still on tables, soft afternoon light, subject in upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "그 주점, 불황에 뭘 켰을까요?",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "체험단 돌리고 플레이스도 했어요"
+        },
+        {
+          "who": "client",
+          "text": "근데 매출이 딱 거기서 멈춰요"
+        },
+        {
+          "who": "us",
+          "text": "2층이면 지나가다 오는 손님도 적죠"
+        },
+        {
+          "who": "us",
+          "text": "부천역 2층 주점도 시작이 같았어요"
+        },
+        {
+          "who": "us",
+          "text": "체험단·플레이스로 월 3~4천 선"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 1",
+      "title": "경기 꺾일 때\n==오히려 채널을 켰다==",
+      "image_prompt": "Realistic photo of a Korean man in an apron standing behind a pub counter, holding a smartphone and setting up a social media profile, blurred screen, focused expression, bottles and warm lights blurred in background, subject upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a thumb tapping a smartphone profile page, completely blurred screen, warm bokeh",
+          "label": "본격 가동"
+        }
+      ],
+      "body": "경기가 계속 나빠지자 돌파구로 인스타그램 채널을 '본격' 운영. 남의 채널보다 우리 계정에 힘을 실은 걸로 보입니다.",
+      "teaser": "그럼 광고비는 얼마 썼을까요?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 2",
+      "title": "광고비 대신\n==릴스로 1년 쌓았다==",
+      "image_prompt": "Realistic photo inside a small Korean pub kitchen, the owner holding a smartphone vertically to film a staff member plating a Korean pancake, both smiling, steam rising, blurred screen, warm tungsten light, subject upper center",
+      "cutouts": [
+        {
+          "prompt": "Smartphone recording a plated Korean dish from above, blurred screen, warm light",
+          "label": "릴스 1년"
+        }
+      ],
+      "body": "따로 마케팅 비용 없이 릴스 콘텐츠로 약 1년. 핵심은 꾸준함으로 보입니다. 릴스 세부 기획은 기사에 안 나와요.",
+      "teaser": "1년 뒤 숫자, 확 와닿습니다",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "결과",
+      "title": "오픈 초 3~4천에서\n==월 6~7천만 원대로==",
+      "image_prompt": "Realistic photo of a busy second-floor Korean pub at night, tables filled with Korean customers in their 20s and 30s laughing and toasting, the owner carrying dishes with a satisfied smile, no readable text, subject upper center",
+      "cutouts": [],
+      "body": "월세는 매출의 5% 수준. 주변 상권이 침체된 중에도 매달 매출 기록을 새로 씀. ※기사 1건 기준, 교차 확인 전",
+      "teaser": "같은 2층인데 뭐가 달랐을까요?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "월 6~7천만 원대"
+    },
+    {
+      "type": "compare",
+      "sticker": "보통 가게 vs 이 가게",
+      "title": "같은 2층 가게\n==갈린 건 여기==",
+      "image_prompt": "Realistic photo of a quiet Korean alley at night, one dim empty upstairs window on the left and one bright busy second-floor pub window on the right, no readable signs, subject upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "우리 가게는 뭐부터 할까요?",
+      "items": [],
+      "chat": [],
+      "bad": "체험단·플레이스만 반복하다, 불황엔 홍보부터 줄이고 몇 달 만에 접음",
+      "good": "불황일 때 오히려 우리 계정을 본격 가동, 광고비 없이 약 1년 꾸준히",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "우리 가게 적용",
+      "title": "우리 가게라면\n==이렇게 시작==",
+      "image_prompt": "Realistic photo of a Korean small business owner in her 40s at a restaurant counter writing a plan in a notebook with a pen, smartphone beside her with blurred screen, morning light, focused smile, no readable handwriting, subject upper center",
+      "cutouts": [],
+      "body": "체험단·플레이스는 그대로 두고, 우리 계정 하나를 따로 키우는 구조로.",
+      "teaser": "1년 뒤 숫자, 지금 정해볼까요",
+      "items": [
+        "손님에게 어디서 알고 왔는지 묻기",
+        "광고비 0원, 가게 계정 하나 켜기",
+        "릴스 올리는 요일 정해 고정하기",
+        "매달 월세가 매출의 몇 %인지 기록"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 계정부터 켜기==",
+      "image_prompt": "Realistic photo of a Korean restaurant owner at the top of a second-floor staircase at dusk, holding a smartphone and opening the door to the pub, hopeful expression, warm light, no readable text, subject upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "체험단·플레이스 다 했는데 매출이 거기서 멈췄다면, 이 사례 보세요.\n\n부천역 근처 2층 한식주점, 오픈 초엔 체험단·플레이스로 월 3~4천만 원.\n경기가 꺾이자 인스타그램 채널을 본격 운영, 광고비 없이 릴스로 약 1년.\n지금은 월평균 6~7천만 원대, 월세는 매출의 5% 수준이 됐습니다.\n\n✔ STEP 1. 경기 나쁠 때 오히려 우리 채널 켜기\n✔ STEP 2. 광고비 대신 릴스로 1년 꾸준히\n✔ STEP 3. 매출과 월세 비중을 숫자로 기록\n\n우리 가게라면?\n체험단·플레이스는 그대로 두고, 가게 계정 하나를 따로 키우는 구조로 가세요.\n올리는 요일만 정해도 1년은 버틸 수 있습니다.\n\n오늘 할 일: 손님 3명에게 '어떻게 알고 오셨어요?' 물어보기\n\n1년 뒤 다시 꺼내보게 저장해두세요.\n\n출처: 인사이트 (유튜브 '깡대표' 영상 인용 보도, 기사 1건 기준)",
+  "hashtags": [
+    "자영업자마케팅",
+    "소상공인마케팅",
+    "인스타그램릴스",
+    "릴스마케팅",
+    "마케팅사례",
+    "부천사장님",
+    "부천자영업",
+    "술집마케팅",
+    "사장님마케팅"
+  ],
+  "threads": [
+    "체험단 돌리고 플레이스만 관리하면서\n매출이 몇 달째 같다면,\n남의 채널에만 기대고 계신 겁니다.\n\n부천역 근처 2층 한식주점도\n오픈 초엔 그렇게 월 3~4천만 원이었습니다.\n\n광고비 없이 우리 계정을 약 1년 키웠고\n지금은 월평균 6~7천만 원대입니다.\n\n어떻게 했는지 댓글에 순서대로 정리했습니다.\n저장해두세요.",
+    "1. 손님이 어디서 오는지부터 보세요\n\n이 주점도 오픈 초엔 블로그 체험단과\n네이버 플레이스로 홍보했습니다.\n\n2층이라 지나가다 들어오는 손님에\n기대기 어려운 자리였을 걸로 보입니다.\n\n예) 계산할 때 '어떻게 알고 오셨어요?' 묻고 적기",
+    "2. 경기가 나쁠 때 오히려 채널을 켜세요\n\n경기가 계속 꺾이자 정 대표는\n돌파구로 인스타그램 채널을 본격 운영했습니다.\n\n체험단·플레이스를 그만뒀는지는\n기사에 나오지 않습니다. 끊을 필요는 없습니다.\n\n예) 가게 계정 프로필에 위치·영업시간·대표 메뉴 3개 정리",
+    "3. 광고비 대신 릴스를 1년 쌓으세요\n\n따로 마케팅 비용 없이\n릴스 콘텐츠로 약 1년 운영했습니다.\n\n어떤 릴스를 몇 번 올렸는지는 확인되지 않아\n핵심은 꾸준함으로 보입니다.\n\n예) 매주 화·금 저녁, 대표 메뉴 조리 장면 15초 올리기",
+    "4. 결과는 숫자로 기록하세요\n\n오픈 초 월 3~4천만 원에서\n약 1년 뒤 월평균 6~7천만 원대.\n\n월세는 매출의 5% 수준이 됐고\n주변 상권이 침체된 중에도 매달 기록을 새로 썼다고 합니다.\n\n예) 매달 말일, 월세 ÷ 매출을 계산해 % 적어두기",
+    "체험단·플레이스는 두고, 우리 계정 하나를 1년 키우는 것. 이 사례의 핵심입니다.\n\n도움이 되셨다면 저장하고, 주변 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다.\n\n출처: 인사이트"
+  ],
+  "sources": [
+    "인사이트, 「자영업 폐업자 100만 시대... 인스타그램 릴스로 '매출 2배' 올린 사장의 생존법 (영상)」 https://www.insight.co.kr/news/562894"
+  ]
+}
