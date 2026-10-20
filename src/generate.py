@@ -60,7 +60,8 @@ CASES_PRINCIPLE = """[이번 게시물 = 자영업자 마케팅 '사례' 1개 �
 - 사실 규칙(가장 중요):
   · 가게·브랜드 이름, 지역, 시기, 수치는 리서치 메모의 출처에 있는 것만 쓴다. 없으면 '알려진 바로는' 없이 그냥 빼고 쓴다.
   · 추측은 '~로 보입니다'처럼 추측임을 드러낸다. 결과 수치를 부풀리거나 반올림해 과장하지 않는다.
-  · sources 에 실제 참고한 기사·공식 게시물 URL 을 2개 이상 넣는다 (1개뿐이면 그 사실을 problem 이 아닌 본문에서 조심스럽게).
+  · sources 에 실제 참고한 기사·공식 게시물 URL 을 2개 이상 넣는다.
+  · 카드·캡션·스레드에 '교차 확인 전', '미확인' 같은 작업 메모를 쓰지 않는다. 확인 안 된 내용은 아예 빼고 쓴다.
   · 기사 문장을 그대로 베끼지 않고 우리 말로 요약한다. 기사 사진·로고는 쓰지 않는다 (사진은 아래 규칙대로 새로 만든 연출 사진).
 - 해외 사례는 우리나라 동네 가게가 바로 따라 할 수 있는 형태로 바꿔 '우리 가게 적용' 장에 쓴다.
 
@@ -165,6 +166,9 @@ CASES_RESEARCH = """
 - 최근 30일 안의 기사·공식 게시물을 우선하고, 없으면 최근 6개월까지 넓힙니다.
 - 대기업 캠페인보다 동네 가게·작은 브랜드처럼 사장님이 따라 할 수 있는 규모를 고릅니다.
 - 믿을 만한 출처(언론 기사, 공식 계정·보도자료, 업계 매체) 2곳 이상에서 사실을 교차 확인합니다.
+  같은 원본(예: 유튜브 영상 하나)을 옮겨 적은 기사 여러 개는 1곳으로 칩니다.
+- 후보를 찾으면 web_fetch 로 기사 본문을 직접 읽고 확인합니다. 검색 결과 요약만 믿지 않습니다.
+- 서로 독립된 출처 2곳을 못 찾으면 그 사례는 버리고 다른 사례를 찾습니다. 출처 1곳짜리 사례로 쓰지 않습니다.
 메모에 꼭 넣을 것: 가게/브랜드명, 지역·나라, 시기, 무엇을 했는지(단계별), 결과(출처에 있는 수치만),
 각 사실의 출처 URL과 매체명·게재일, 확인되지 않은 부분은 '미확인'으로 표시.
 """
@@ -178,7 +182,9 @@ TIPS_RESEARCH = """
 def research(client: anthropic.Anthropic, config: dict, brief: str, series: str = "tips") -> str:
     """웹검색으로 주제 선정과 최신 사실 확인을 먼저 한다. 결과는 메모 텍스트."""
     messages = [{"role": "user", "content": brief + "\n" + (CASES_RESEARCH if series == "cases" else TIPS_RESEARCH)}]
-    tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 12 if series == "cases" else 6}]
+    tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 20 if series == "cases" else 6}]
+    if series == "cases":
+        tools.append({"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 12})
     for _ in range(5):  # pause_turn 이면 이어서 진행
         resp = client.messages.create(
             model=config["model"]["name"],
