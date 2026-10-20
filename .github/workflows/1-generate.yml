@@ -9,6 +9,11 @@ on:
         description: "주제 직접 지정 (비우면 Claude가 자동 기획)"
         required: false
         default: ""
+      series:
+        description: "tips = 고민 해결 / cases = 자영업자 마케팅 사례"
+        type: choice
+        options: [tips, cases]
+        default: tips
 
 permissions:
   contents: write
@@ -36,7 +41,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ inputs.topic }}
-        run: python -m src.generate --topic "$TOPIC"
+          SERIES: ${{ inputs.series || 'tips' }}
+        run: python -m src.generate --topic "$TOPIC" --series "$SERIES"
 
       - name: AI 사진 생성
         env:

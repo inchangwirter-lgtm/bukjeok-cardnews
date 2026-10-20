@@ -24,16 +24,7 @@ from .common import (
 )
 
 
-def system_prompt(config: dict) -> str:
-    c = config["content"]
-    b = config["brand"]
-    return f"""당신은 광고대행사 '{b['name']}'의 시니어 마케터이자 콘텐츠 에디터입니다.
-요즘 인스타그램에서 잘 퍼지는 카드뉴스와, 같은 내용을 스레드(Threads)용으로 풀어 쓴 연재 글을 만듭니다.
-
-독자: {c['audience']}
-말투: {c['voice']}
-
-[가장 중요한 원칙 — 게시물 1개 = 고민 1개 해결]
+TIPS_PRINCIPLE = """[가장 중요한 원칙 — 게시물 1개 = 고민 1개 해결]
 - 정해진 카테고리 안에서 사장님이 실제로 겪는 '구체적인 고민 하나'만 다룬다. (problem 필드에 한 문장으로)
   나쁜 예: '네이버 플레이스 잘하는 법'  좋은 예: '플레이스 등록했는데 동네 이름으로 검색하면 안 나와요'
 - 다 읽은 사장님이 "아 그래서 이거 이렇게 하면 되는구나" 하고 오늘 바로 따라 할 수 있어야 한다.
@@ -58,6 +49,48 @@ def system_prompt(config: dict) -> str:
   예: '플레이스 검색해도 안 나오면\n==대표키워드부터 바꾸세요=='  '리뷰 답글 매일 30분?\n==AI로 3분이면 끝=='
 - 숫자·시간을 넣어 '금방 해결된다'는 느낌을 준다 (5분, 3단계, 딱 4개).
 
+"""
+
+CASES_PRINCIPLE = """[이번 게시물 = 자영업자 마케팅 '사례' 1개 깊게 보기]
+- 리서치 메모에 있는 '실제로 있었던 사례' 하나만 다룬다. 사례를 지어내거나 여러 사례를 섞지 않는다.
+- problem 필드: 이 사례가 사장님들의 어떤 고민에 답이 되는지 한 문장. topic 에는 '누가 무엇을 해서 어떻게 됐나'.
+- 흐름: cover(사례의 결과·반전으로 후킹) → chat 또는 point(그 가게가 처음 겪던 상황) → point 2~3장('무엇을 했나' 단계별)
+  → stat 또는 point(결과. 출처에 나온 숫자만) → compare(보통 가게 vs 이 가게) → list('우리 가게라면 이렇게' 적용 3~4개) → cta.
+- sticker: 표지에는 '국내 사례' 또는 '해외 사례'. 본문은 '배경', '무엇을 했나 1', '결과', '우리 가게 적용' 같은 라벨.
+- 사실 규칙(가장 중요):
+  · 가게·브랜드 이름, 지역, 시기, 수치는 리서치 메모의 출처에 있는 것만 쓴다. 없으면 '알려진 바로는' 없이 그냥 빼고 쓴다.
+  · 추측은 '~로 보입니다'처럼 추측임을 드러낸다. 결과 수치를 부풀리거나 반올림해 과장하지 않는다.
+  · sources 에 실제 참고한 기사·공식 게시물 URL 을 2개 이상 넣는다 (1개뿐이면 그 사실을 problem 이 아닌 본문에서 조심스럽게).
+  · 기사 문장을 그대로 베끼지 않고 우리 말로 요약한다. 기사 사진·로고는 쓰지 않는다 (사진은 아래 규칙대로 새로 만든 연출 사진).
+- 해외 사례는 우리나라 동네 가게가 바로 따라 할 수 있는 형태로 바꿔 '우리 가게 적용' 장에 쓴다.
+
+[표지(cover) 후킹 — 사례]
+- 제목 2줄: 첫 줄은 누가/어디서(흰 글씨), 둘째 줄은 결과·반전을 ==둘째 줄 전체== 로. 한 줄 12자 안팎.
+  예: '동네 빵집 하나가\\n==줄 서는 집 된 이유==' / '광고비 0원 카페가\\n==예약 마감된 방법=='
+- 숫자는 출처에 있을 때만 제목에 쓴다.
+
+[캡션·스레드 — 사례 추가 규칙]
+- 인스타 캡션: 첫 줄 후킹 → 사례 3줄 요약 → '우리 가게라면' 2~3줄 → 마지막 줄 '출처: 매체명1, 매체명2'.
+- 스레드 첫 글: 사례의 반전·결과로 찌르고, '어떻게 했는지 댓글에 순서대로 정리했습니다' 류로 맺는다.
+- 스레드 댓글: 1. 배경 → 2~3. 무엇을 했나 → 결과 → 우리 가게 적용 → 마지막 댓글(요약·저장/리포스트·이벤트) 끝에 '출처: 매체명'.
+
+"""
+
+
+def principle(series: str) -> str:
+    return CASES_PRINCIPLE if series == "cases" else TIPS_PRINCIPLE
+
+
+def system_prompt(config: dict, series: str = "tips") -> str:
+    c = config["content"]
+    b = config["brand"]
+    return f"""당신은 광고대행사 '{b['name']}'의 시니어 마케터이자 콘텐츠 에디터입니다.
+요즘 인스타그램에서 잘 퍼지는 카드뉴스와, 같은 내용을 스레드(Threads)용으로 풀어 쓴 연재 글을 만듭니다.
+
+독자: {c['audience']}
+말투: {c['voice']}
+
+{principle(series)}
 [넘기게 만드는 장치]
 - cta 를 뺀 모든 장의 teaser 에 다음 장이 궁금해지는 한 줄 (답은 미리 말하지 않는다).
 - 2번째 장은 그 고민을 겪는 사장님과의 대화(chat) 또는 상황 묘사로 공감을 잡는다.
@@ -127,22 +160,30 @@ def pop_queued_topic() -> str | None:
     return topic
 
 
-def research(client: anthropic.Anthropic, config: dict, brief: str) -> str:
+CASES_RESEARCH = """
+위 조건에 맞는 '실제 자영업자·소상공인·작은 브랜드의 마케팅 사례' 하나를 웹검색으로 찾아 주세요.
+- 최근 30일 안의 기사·공식 게시물을 우선하고, 없으면 최근 6개월까지 넓힙니다.
+- 대기업 캠페인보다 동네 가게·작은 브랜드처럼 사장님이 따라 할 수 있는 규모를 고릅니다.
+- 믿을 만한 출처(언론 기사, 공식 계정·보도자료, 업계 매체) 2곳 이상에서 사실을 교차 확인합니다.
+메모에 꼭 넣을 것: 가게/브랜드명, 지역·나라, 시기, 무엇을 했는지(단계별), 결과(출처에 있는 수치만),
+각 사실의 출처 URL과 매체명·게재일, 확인되지 않은 부분은 '미확인'으로 표시.
+"""
+
+TIPS_RESEARCH = """
+위 조건으로 이번 카드뉴스 주제를 하나 정하고, 웹검색으로 최신 정보와 근거를 확인해 작성에 쓸 리서치 메모를 만들어 주세요.
+메모에는 확정한 주제, 핵심 포인트, 쓸 수 있는 수치와 출처 URL을 포함합니다.
+"""
+
+
+def research(client: anthropic.Anthropic, config: dict, brief: str, series: str = "tips") -> str:
     """웹검색으로 주제 선정과 최신 사실 확인을 먼저 한다. 결과는 메모 텍스트."""
-    messages = [
-        {
-            "role": "user",
-            "content": brief
-            + "\n\n위 조건으로 이번 카드뉴스 주제를 하나 정하고, 웹검색으로 최신 정보와 근거를 확인해"
-            " 작성에 쓸 리서치 메모를 만들어 주세요. 메모에는 확정한 주제, 핵심 포인트, 쓸 수 있는 수치와 출처 URL을 포함합니다.",
-        }
-    ]
-    tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}]
+    messages = [{"role": "user", "content": brief + "\n" + (CASES_RESEARCH if series == "cases" else TIPS_RESEARCH)}]
+    tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 12 if series == "cases" else 6}]
     for _ in range(5):  # pause_turn 이면 이어서 진행
         resp = client.messages.create(
             model=config["model"]["name"],
             max_tokens=16000,
-            system=system_prompt(config),
+            system=system_prompt(config, series),
             thinking={"type": "adaptive"},
             output_config={"effort": config["model"]["effort"]},
             tools=tools,
@@ -156,7 +197,8 @@ def research(client: anthropic.Anthropic, config: dict, brief: str) -> str:
     return "\n".join(b.text for b in resp.content if b.type == "text")
 
 
-def write_post(client: anthropic.Anthropic, config: dict, brief: str, notes: str | None) -> Post:
+def write_post(client: anthropic.Anthropic, config: dict, brief: str, notes: str | None,
+               series: str = "tips") -> Post:
     content = brief
     if notes:
         content += f"\n\n[리서치 메모]\n{notes}"
@@ -164,7 +206,7 @@ def write_post(client: anthropic.Anthropic, config: dict, brief: str, notes: str
     resp = client.messages.parse(
         model=config["model"]["name"],
         max_tokens=16000,
-        system=system_prompt(config),
+        system=system_prompt(config, series),
         thinking={"type": "adaptive"},
         output_config={"effort": config["model"]["effort"]},
         messages=[{"role": "user", "content": content}],
@@ -184,11 +226,26 @@ def next_category() -> dict:
     return max(cats, key=last_used)
 
 
-def build_brief(config: dict, forced_topic: str | None) -> str:
+def next_case_region() -> str:
+    """사례 시리즈는 국내/해외를 번갈아 다룬다."""
+    for d in sorted(CONTENT_DIR.glob("*/"), reverse=True):
+        p = read_json(d / "post.json", {}).get("pillar")
+        if p in ("국내 사례", "해외 사례"):
+            return "해외 사례" if p == "국내 사례" else "국내 사례"
+    return "국내 사례"
+
+
+def build_brief(config: dict, forced_topic: str | None, series: str = "tips") -> str:
     recent = "\n".join(f"- {t}" for t in recent_topics()) or "(없음)"
     today = now(config).strftime("%Y-%m-%d")
     names = ", ".join(c["name"] for c in load_topics().get("categories", []))
-    if forced_topic:
+    if series == "cases":
+        region = next_case_region()
+        where = "대한민국" if region == "국내 사례" else "한국 외 해외(미국·일본·유럽 등)"
+        topic_line = (f"이번 시리즈: 자영업자 마케팅 사례 — 「{region}」 (pillar 필드에 이 이름을 그대로 쓰세요)\n"
+                      f"{where}의 실제 사례 하나를 골라 깊게 분석하세요."
+                      + (f"\n지정 키워드: 「{forced_topic}」" if forced_topic else ""))
+    elif forced_topic:
         topic_line = (f"이번 주제는 지정되어 있습니다: 「{forced_topic}」\n"
                       f"pillar 에는 가장 가까운 카테고리({names}) 이름을 그대로 쓰세요.")
     else:
@@ -217,21 +274,25 @@ def schedule_publish_at(config: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--topic", default="", help="주제를 직접 지정")
+    ap.add_argument("--series", default="tips", choices=["tips", "cases"], help="tips=고민 해결 / cases=마케팅 사례")
     args = ap.parse_args()
+    series = args.series
 
     config = load_config()
     client = anthropic.Anthropic()
 
-    forced = args.topic.strip() or pop_queued_topic()
-    brief = build_brief(config, forced)
-    notes = research(client, config, brief) if config["content"].get("use_web_search") else None
-    post = write_post(client, config, brief, notes)
+    forced = args.topic.strip() or (None if series == "cases" else pop_queued_topic())
+    brief = build_brief(config, forced, series)
+    use_web = series == "cases" or config["content"].get("use_web_search")  # 사례는 항상 리서치
+    notes = research(client, config, brief, series) if use_web else None
+    post = write_post(client, config, brief, notes, series)
 
     slug = re.sub(r"[^a-z0-9-]+", "-", post.slug.lower()).strip("-")[:40] or "post"
-    post_dir = CONTENT_DIR / f"{now(config):%Y-%m-%d}-{slug}"
+    prefix = "case-" if series == "cases" else ""
+    post_dir = CONTENT_DIR / f"{now(config):%Y-%m-%d}-{prefix}{slug}"
     post_dir.mkdir(parents=True, exist_ok=True)
     (post_dir / "post.json").write_text(post.model_dump_json(indent=2), encoding="utf-8")
-    write_json(post_dir / "meta.json", {"publish_at": schedule_publish_at(config)})
+    write_json(post_dir / "meta.json", {"publish_at": schedule_publish_at(config), "series": series})
     if notes:
         (post_dir / "research.md").write_text(notes, encoding="utf-8")
 

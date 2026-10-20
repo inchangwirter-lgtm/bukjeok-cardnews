@@ -66,6 +66,7 @@ def review_mail(post_dir, pr: str, revised: bool) -> None:
   <pre style="white-space:pre-wrap;background:#f5f5f5;padding:14px;border-radius:10px;font-family:inherit">{escape(post.instagram_caption)}</pre>
   <h3>🧵 스레드 첫 글</h3>
   <pre style="white-space:pre-wrap;background:#f5f5f5;padding:14px;border-radius:10px;font-family:inherit">{escape(threads_texts(post, load_config())[0])}</pre>
+  {('<p style="font-size:13px;color:#666"><b>출처</b><br>' + '<br>'.join(escape(x) for x in post.sources) + '</p>') if post.sources else ''}
   <div style="margin:22px 0">{action}</div>
   <div style="background:#f7f7f7;border-radius:10px;padding:14px;font-size:14px;line-height:1.8">
     버튼을 누르면 GitHub 검수 화면이 열려요.<br>

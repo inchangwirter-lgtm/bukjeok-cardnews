@@ -9,7 +9,7 @@ from pathlib import Path
 
 import anthropic
 
-from .common import ROOT, Post, load_config, read_post
+from .common import ROOT, Post, load_config, read_json, read_post
 from .generate import system_prompt
 
 
@@ -22,7 +22,7 @@ def main() -> None:
     resp = anthropic.Anthropic().messages.parse(
         model=config["model"]["name"],
         max_tokens=16000,
-        system=system_prompt(config),
+        system=system_prompt(config, read_json(post_dir / "meta.json", {}).get("series", "tips")),
         thinking={"type": "adaptive"},
         output_config={"effort": config["model"]["effort"]},
         messages=[

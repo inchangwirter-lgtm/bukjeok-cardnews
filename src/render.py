@@ -49,6 +49,17 @@ def slide_images(post, post_dir) -> dict:
     return imgs
 
 
+def source_labels(sources: list[str]) -> list[str]:
+    """출처를 카드에 짧게: URL 은 도메인만, 최대 3개."""
+    out = []
+    for src in sources:
+        m = re.match(r"https?://(?:www\.)?([^/]+)", src.strip())
+        label = m.group(1) if m else src.strip()[:30]
+        if label and label not in out:
+            out.append(label)
+    return out[:3]
+
+
 def render_html(post, config, post_dir) -> str:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
     env.filters["fmt"] = fmt
@@ -56,7 +67,7 @@ def render_html(post, config, post_dir) -> str:
     env.filters["title_size"] = title_size
     return env.get_template("cards.html").render(
         slides=post.slides, brand=config["brand"], c=config["brand"]["colors"],
-        imgs=slide_images(post, post_dir),
+        imgs=slide_images(post, post_dir), sources=source_labels(post.sources),
     )
 
 

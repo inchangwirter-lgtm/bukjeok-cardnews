@@ -97,6 +97,7 @@
   .act.on { background: var(--accent); color: #111; border-color: var(--accent); }
   .handle { margin-top: 36px; font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 44px; }
 
+  .srcline { position: absolute; left: 80px; right: 80px; bottom: 50px; font-size: 24px; color: rgba(255,255,255,.6); }
   /* ── 하단 티저 ── */
   .teaser { position: absolute; left: 80px; right: 80px; bottom: 58px; display: flex; justify-content: space-between; align-items: center;
             font-size: 34px; font-weight: 600; color: rgba(255,255,255,.75); }
@@ -156,6 +157,9 @@
     {% endif %}
   </div>
 
+  {% if s.type == 'cta' and sources %}
+    <div class="srcline">출처: {{ sources | join(' · ') }}</div>
+  {% endif %}
   {% if s.type != 'cta' %}
     <div class="teaser"><span>{{ s.teaser | fmt }}</span><span class="go">넘겨보기 ›</span></div>
   {% endif %}
