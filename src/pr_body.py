@@ -24,10 +24,10 @@ def main() -> None:
 
     out = [
         f"## 📌 {post.topic}",
-        f"**카테고리:** {post.pillar}",
+        f"**발행 예약:** {at}  ·  **카테고리:** {post.pillar}",
         f"**해결하는 고민:** {post.problem}",
         "",
-        "> ✅ **승인** → 아래 **Merge pull request → Confirm merge** 를 누르면 1~2분 뒤 인스타그램·스레드에 바로 올라갑니다.",
+        f"> ✅ **승인** → 아래 **Merge pull request → Confirm merge** 를 눌러두면 **{at}** 에 인스타그램·스레드에 자동으로 올라갑니다. (시각이 지난 뒤 승인하면 바로 올라가요)",
         "> ✏️ **수정 요청** → 댓글로 `/수정 3번 카드를 더 구체적으로` 처럼 남기면 Claude가 고쳐서 다시 올립니다.",
         "> ❌ **반려** → 맨 아래 **Close pull request** 를 누르세요.",
         "",

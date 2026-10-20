@@ -10,6 +10,7 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime
 import smtplib
 import sys
 from email.mime.multipart import MIMEMultipart
@@ -50,6 +51,9 @@ def send(subject: str, html: str) -> None:
 
 def review_mail(post_dir, pr: str, revised: bool) -> None:
     post = read_post(post_dir)
+    meta = read_json(post_dir / "meta.json", {})
+    at = datetime.fromisoformat(meta["publish_at"]).strftime("%m월 %d일 %H:%M") if meta.get("publish_at") else "-"
+    kind = "📰 마케팅 사례" if meta.get("series") == "cases" else "💡 마케팅 꿀팁"
     urls = card_urls(post_dir)
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     pr_url = f"https://github.com/{repo}/pull/{pr}"
@@ -58,7 +62,7 @@ def review_mail(post_dir, pr: str, revised: bool) -> None:
     html = f"""<div style="font-family:Apple SD Gothic Neo,Malgun Gothic,sans-serif;max-width:640px;margin:auto;color:#111">
   <p style="font-size:14px;color:#888">{'✏️ 수정본이 도착했어요' if revised else '📬 오늘의 카드뉴스가 도착했어요'}</p>
   <h2 style="margin:4px 0 6px">{escape(post.topic)}</h2>
-  <p style="margin:0 0 4px"><b>카테고리</b> {escape(post.pillar)}</p>
+  <p style="margin:0 0 4px">{kind} · <b>{escape(post.pillar)}</b> · <b>발행 예약 {at}</b></p>
   <p style="margin:0 0 18px;color:#555"><b>해결하는 고민</b> {escape(post.problem)}</p>
   <div style="margin:0 0 22px">{action}</div>
   <div>{thumbs}</div>
@@ -70,12 +74,12 @@ def review_mail(post_dir, pr: str, revised: bool) -> None:
   <div style="margin:22px 0">{action}</div>
   <div style="background:#f7f7f7;border-radius:10px;padding:14px;font-size:14px;line-height:1.8">
     버튼을 누르면 GitHub 검수 화면이 열려요.<br>
-    🚀 <b>바로 올리기</b>: 아래로 내려 <b>Merge pull request → Confirm merge</b> (1~2분 뒤 인스타·스레드에 올라가요)<br>
+    ✅ <b>승인</b>: 아래로 내려 <b>Merge pull request → Confirm merge</b> → <b>{at}</b>에 인스타·스레드에 자동으로 올라가요<br>
     ✏️ <b>고치기</b>: 댓글에 <code>/수정 고칠 내용</code> 을 쓰고 Comment (고친 버전을 메일로 다시 보내드려요)<br>
     ❌ <b>안 올리기</b>: 맨 아래 <b>Close pull request</b>
   </div>
 </div>"""
-    prefix = "[수정본]" if revised else "[검수]"
+    prefix = ("[수정본]" if revised else "[검수]") + ("[사례]" if meta.get("series") == "cases" else "[꿀팁]")
     send(f"{prefix} {post.topic}", html)
 
 

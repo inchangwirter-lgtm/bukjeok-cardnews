@@ -2,9 +2,9 @@ name: 3. 승인된 게시물 자동 발행
 
 on:
   pull_request:
-    types: [closed] # 검수 PR 을 Merge(승인)하는 순간 바로 발행
+    types: [closed] # 승인(Merge) 직후 한 번 확인 — 예약 시각이 이미 지났으면 바로 발행
   schedule:
-    - cron: "*/15 * * * *" # 실패한 발행 재시도용
+    - cron: "*/15 * * * *" # 15분마다 예약 시각이 된 승인 게시물 발행 (실패 시 재시도 포함)
   workflow_dispatch:
     inputs:
       only:
@@ -39,16 +39,6 @@ jobs:
 
       - run: pip install requests pyyaml pydantic
 
-      - name: 승인된 게시물 찾기
-        id: target
-        if: github.event_name == 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          DIR=$(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[].path' | grep 'post.json$' | head -1 | xargs dirname)
-          echo "post_dir=$DIR" >> "$GITHUB_OUTPUT"
-          echo "승인된 게시물: $DIR"
-
       - name: 발행
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -59,7 +49,7 @@ jobs:
           NAVER_EMAIL: ${{ secrets.NAVER_EMAIL }}
           NAVER_PASSWORD: ${{ secrets.NAVER_PASSWORD }}
           NOTIFY_TO: ${{ vars.NOTIFY_TO }}
-          ONLY: ${{ steps.target.outputs.post_dir || inputs.only }}
+          ONLY: ${{ inputs.only }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           ARGS=()

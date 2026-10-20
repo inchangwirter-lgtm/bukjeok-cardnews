@@ -293,9 +293,10 @@ def build_brief(config: dict, forced_topic: str | None, series: str = "tips") ->
 {recent}"""
 
 
-def schedule_publish_at(config: dict) -> str:
+def schedule_publish_at(config: dict, series: str = "tips") -> str:
     s = config["schedule"]
-    hh, mm = map(int, s["publish_time"].split(":"))
+    t = s["publish_time"]
+    hh, mm = map(int, (t.get(series) or t.get("tips") if isinstance(t, dict) else t).split(":"))
     at = (now(config) + timedelta(days=s["publish_delay_days"])).replace(
         hour=hh, minute=mm, second=0, microsecond=0
     )
@@ -332,7 +333,7 @@ def main() -> None:
     post_dir = CONTENT_DIR / f"{now(config):%Y-%m-%d}-{prefix}{slug}"
     post_dir.mkdir(parents=True, exist_ok=True)
     (post_dir / "post.json").write_text(post.model_dump_json(indent=2), encoding="utf-8")
-    write_json(post_dir / "meta.json", {"publish_at": schedule_publish_at(config), "series": series})
+    write_json(post_dir / "meta.json", {"publish_at": schedule_publish_at(config, series), "series": series})
     if notes:
         (post_dir / "research.md").write_text(notes, encoding="utf-8")
 

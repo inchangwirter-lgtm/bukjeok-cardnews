@@ -45,8 +45,11 @@ model:
 
 schedule:
   timezone: "Asia/Seoul"
-  publish_time: "13:00"     # (참고용) 이제는 메일에서 승인(Merge)하는 즉시 올라갑니다
-  publish_delay_days: 1     # 생성 다음 날 발행 (검수 시간 확보)
+  # 승인(Merge)해 두면 다음 날 이 시각에 올라갑니다. 시각이 지난 뒤 승인하면 바로 올라갑니다.
+  publish_time:
+    cases: "09:00"   # 마케팅 사례
+    tips: "13:00"    # 마케팅 꿀팁
+  publish_delay_days: 1     # 생성 다음 날 발행 (저녁에 만들고 → 밤·아침에 검수)
 
 publish:
   instagram: true
