@@ -107,7 +107,6 @@
     <span class="brand heavy">{{ brand.name }} 사례 수집</span>
     <span class="pg mono">{{ n }}/{{ slides|length }}</span>
   </div>
-  {% if imgs[n].bg %}<div class="staged mono">AI 연출 이미지</div>{% endif %}
 
   {% set has_photo = imgs[n].bg and s.type not in ['list', 'compare', 'chat', 'copy'] %}
   {% if has_photo %}

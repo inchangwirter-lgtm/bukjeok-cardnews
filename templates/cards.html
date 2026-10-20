@@ -113,7 +113,6 @@
   <div class="shade"></div>
   <div class="grain"></div>
   <div class="brand g">{{ brand.name }}</div>
-  {% if staged and imgs[n].bg %}<div class="staged">AI 연출 이미지</div>{% endif %}
 
   {% for cut in imgs[n].cuts %}
     <div class="cut p{{ loop.index0 }}"><img src="{{ cut.src }}">{% if cut.label %}<span class="tag">{{ cut.label }}</span>{% endif %}</div>
