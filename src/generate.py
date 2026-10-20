@@ -167,10 +167,20 @@ CASES_RESEARCH = """
 - 대기업 캠페인보다 동네 가게·작은 브랜드처럼 사장님이 따라 할 수 있는 규모를 고릅니다.
 - 믿을 만한 출처(언론 기사, 공식 계정·보도자료, 업계 매체) 2곳 이상에서 사실을 교차 확인합니다.
   같은 원본(예: 유튜브 영상 하나)을 옮겨 적은 기사 여러 개는 1곳으로 칩니다.
+  인정되는 조합: ①서로 다른 언론사 기사 2곳, 또는 ②언론 기사 1곳 + 그 가게·브랜드의 공식 계정/홈페이지 게시물.
 - 후보를 찾으면 web_fetch 로 기사 본문을 직접 읽고 확인합니다. 검색 결과 요약만 믿지 않습니다.
 - 서로 독립된 출처 2곳을 못 찾으면 그 사례는 버리고 다른 사례를 찾습니다. 출처 1곳짜리 사례로 쓰지 않습니다.
 메모에 꼭 넣을 것: 가게/브랜드명, 지역·나라, 시기, 무엇을 했는지(단계별), 결과(출처에 있는 수치만),
 각 사실의 출처 URL과 매체명·게재일, 확인되지 않은 부분은 '미확인'으로 표시.
+메모의 맨 마지막 줄에는 반드시 아래 둘 중 하나만 그대로 씁니다.
+VERDICT: OK      (위 조합의 출처로 확인된 사례를 찾음)
+VERDICT: NONE    (찾지 못함)
+"""
+
+CASES_RETRY = """
+첫 조사에서는 조건을 만족하는 사례를 찾지 못했습니다. 이번에는 다른 각도로 찾아 주세요:
+업종을 바꿔서(카페·베이커리·미용실·꽃집·공방·학원·헬스장·숙박 등), 또는 지역 언론·업계 매체·지자체 소상공인 지원 사례·
+공식 보도자료처럼 다른 종류의 출처에서. 앞에서 탈락한 사례는 다시 고르지 않습니다.
 """
 
 TIPS_RESEARCH = """
@@ -179,9 +189,9 @@ TIPS_RESEARCH = """
 """
 
 
-def research(client: anthropic.Anthropic, config: dict, brief: str, series: str = "tips") -> str:
+def research(client: anthropic.Anthropic, config: dict, brief: str, series: str = "tips", extra: str = "") -> str:
     """웹검색으로 주제 선정과 최신 사실 확인을 먼저 한다. 결과는 메모 텍스트."""
-    messages = [{"role": "user", "content": brief + "\n" + (CASES_RESEARCH if series == "cases" else TIPS_RESEARCH)}]
+    messages = [{"role": "user", "content": brief + "\n" + (CASES_RESEARCH if series == "cases" else TIPS_RESEARCH) + extra}]
     tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 20 if series == "cases" else 6}]
     if series == "cases":
         tools.append({"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 12})
@@ -200,7 +210,15 @@ def research(client: anthropic.Anthropic, config: dict, brief: str, series: str 
         messages.append({"role": "assistant", "content": resp.content})
     if resp.stop_reason == "refusal":
         raise RuntimeError("Claude가 리서치 요청을 거절했습니다.")
+    stu = getattr(resp.usage, "server_tool_use", None)
+    if stu:
+        print(f"  리서치 도구 사용: 검색 {getattr(stu, 'web_search_requests', 0)}회, 본문 읽기 {getattr(stu, 'web_fetch_requests', 0)}회")
     return "\n".join(b.text for b in resp.content if b.type == "text")
+
+
+def case_found(notes: str) -> bool:
+    tail = notes.strip().splitlines()[-3:] if notes.strip() else []
+    return any("VERDICT: OK" in line for line in tail)
 
 
 def write_post(client: anthropic.Anthropic, config: dict, brief: str, notes: str | None,
@@ -291,6 +309,15 @@ def main() -> None:
     brief = build_brief(config, forced, series)
     use_web = series == "cases" or config["content"].get("use_web_search")  # 사례는 항상 리서치
     notes = research(client, config, brief, series) if use_web else None
+    if series == "cases" and not case_found(notes):
+        print("⚠️ 1차 조사: 출처가 확인된 사례 없음 → 다른 각도로 다시 조사")
+        first = notes
+        notes = research(client, config, brief, series,
+                         extra=CASES_RETRY + "\n[1차 조사 메모]\n" + first[-3000:])
+        if not case_found(notes):
+            print("⛔ 2차 조사도 실패: 오늘 사례 게시물은 만들지 않습니다 (사실 확인 안 된 글은 올리지 않음).")
+            set_output("post_dir", "")
+            return
     post = write_post(client, config, brief, notes, series)
 
     slug = re.sub(r"[^a-z0-9-]+", "-", post.slug.lower()).strip("-")[:40] or "post"

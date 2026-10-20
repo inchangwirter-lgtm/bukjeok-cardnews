@@ -45,6 +45,7 @@ jobs:
         run: python -m src.generate --topic "$TOPIC" --series "$SERIES"
 
       - name: AI 사진 생성
+        if: steps.gen.outputs.post_dir != ''
         env:
           HF_KEY: ${{ secrets.HF_KEY }}
           HF_API_KEY: ${{ secrets.HF_API_KEY }}
@@ -54,9 +55,11 @@ jobs:
         run: python -m src.images "${{ steps.gen.outputs.post_dir }}"
 
       - name: 카드 이미지 렌더링
+        if: steps.gen.outputs.post_dir != ''
         run: python -m src.render "${{ steps.gen.outputs.post_dir }}"
 
       - name: 검수용 PR 생성
+        if: steps.gen.outputs.post_dir != ''
         env:
           GH_TOKEN: ${{ github.token }}
           POST_DIR: ${{ steps.gen.outputs.post_dir }}
