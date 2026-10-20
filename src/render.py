@@ -11,7 +11,7 @@ from jinja2 import Environment, FileSystemLoader
 from markupsafe import Markup, escape
 from playwright.sync_api import sync_playwright
 
-from .common import ROOT, load_config, read_post
+from .common import ROOT, load_config, read_json, read_post
 from .images import image_file
 
 
@@ -73,6 +73,7 @@ def render_html(post, config, post_dir) -> str:
     return env.get_template("cards.html").render(
         slides=post.slides, brand=config["brand"], c=config["brand"]["colors"],
         imgs=slide_images(post, post_dir), sources=source_labels(post.sources),
+        staged=read_json(post_dir / "meta.json", {}).get("series") == "cases",
     )
 
 

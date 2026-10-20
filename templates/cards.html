@@ -97,6 +97,7 @@
   .act.on { background: var(--accent); color: #111; border-color: var(--accent); }
   .handle { margin-top: 36px; font-family: "GmarketSans", sans-serif; font-weight: 700; font-size: 44px; }
 
+  .staged { position: absolute; top: 76px; right: 40px; font-size: 20px; color: rgba(255,255,255,.55); }
   .srcline { position: absolute; left: 80px; right: 80px; bottom: 50px; font-size: 24px; color: rgba(255,255,255,.6); }
   /* ── 하단 티저 ── */
   .teaser { position: absolute; left: 80px; right: 80px; bottom: 58px; display: flex; justify-content: space-between; align-items: center;
@@ -112,6 +113,7 @@
   <div class="shade"></div>
   <div class="grain"></div>
   <div class="brand g">{{ brand.name }}</div>
+  {% if staged and imgs[n].bg %}<div class="staged">AI 연출 이미지</div>{% endif %}
 
   {% for cut in imgs[n].cuts %}
     <div class="cut p{{ loop.index0 }}"><img src="{{ cut.src }}">{% if cut.label %}<span class="tag">{{ cut.label }}</span>{% endif %}</div>
