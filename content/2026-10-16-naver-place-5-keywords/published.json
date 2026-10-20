@@ -4,7 +4,12 @@
     "permalink": "https://www.instagram.com/p/DejLWLSljLF/",
     "at": "2026-10-16T18:09:17.619988+09:00"
   },
-  "threads_progress": [
-    "18113602955034999"
-  ]
+  "threads": {
+    "ids": [
+      "18113602955034999"
+    ],
+    "permalink": null,
+    "note": "첫 글만 발행(옛 형식). 답글 재시도 중단",
+    "at": "2026-10-20"
+  }
 }
