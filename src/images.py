@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 
-from .common import ROOT, load_config, read_post
+from .common import ROOT, load_config, read_json, read_post
 
 KINDS = {"bg": "4:5", "cut": "1:1"}
 
@@ -116,10 +116,14 @@ def main() -> None:
     (post_dir / "images").mkdir(exist_ok=True)
 
     jobs = []
-    for s in post.slides:
+    # 마케팅 사례는 표지 사진 한 장만 쓴다 (나머지 장은 글자 중심 디자인)
+    cases = read_json(post_dir / "meta.json", {}).get("series") == "cases"
+    slides = post.slides[:1] if cases else post.slides
+    for s in slides:
         if s.image_prompt:
             jobs.append((s.image_prompt, "bg"))
-        jobs += [(c.prompt, "cut") for c in s.cutouts]
+        if not cases:
+            jobs += [(c.prompt, "cut") for c in s.cutouts]
 
     keep = set()
     for prompt, kind in jobs:
