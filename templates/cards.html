@@ -127,7 +127,7 @@
       {% endif %}
     {% endif %}
 
-    {% if s.type == 'stat' %}<div class="stat-num">{{ s.stat }}</div>{% endif %}
+    {% if s.type == 'stat' %}<div class="stat-num" style="font-size:{{ s.stat | title_size(230) }}px">{{ s.stat }}</div>{% endif %}
 
     {% if s.type in ['cover', 'cta'] %}<h1 style="font-size:{{ s.title | title_size(100) }}px">{{ s.title | fmt }}</h1>
     {% else %}<h2 style="font-size:{{ s.title | title_size(80) }}px">{{ s.title | fmt }}</h2>{% endif %}
