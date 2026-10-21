@@ -1,0 +1,226 @@
+{
+  "topic": "스레드 공감 댓글을 실제 방문으로 잇는 프로필·고정글·고정 답글 동선 20분 정리",
+  "pillar": "스레드",
+  "problem": "스레드 글에 공감 댓글은 달리는데, 가게 예약이나 방문으로는 하나도 안 이어져요",
+  "slug": "threads-profile-pin-to-store-visit",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "스레드",
+      "title": "스레드 댓글 30개, 예약 0?\n==20분 동선 정리로 끝==",
+      "image_prompt": "A Korean small restaurant owner in her 30s wearing an apron, standing behind a wooden counter of a cozy neighborhood pasta shop, looking at her smartphone with a puzzled expression, phone screen blurred with no readable text, warm afternoon light, empty tables in the background, realistic candid photo, subject in upper-center of frame",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone showing a blurred social media feed with many comment bubbles, no readable text, soft natural light",
+          "label": "댓글 30개"
+        },
+        {
+          "prompt": "Close-up of an open paper reservation notebook on a wooden counter with empty lines, pen resting on it, no readable text",
+          "label": "예약 0건"
+        },
+        {
+          "prompt": "Close-up of a small sticky note on a shop counter with hand-drawn tally marks, warm lighting, no letters",
+          "label": "20분 정리"
+        }
+      ],
+      "body": "",
+      "teaser": "이거 나만 그런 거 아님",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 고민",
+      "title": "댓글은 30개인데\n==예약은 0건이에요==",
+      "image_prompt": "A Korean male cafe owner in his 40s sitting at a small table in his quiet cafe after closing, scrolling his phone with a tired, slightly frustrated face, phone screen blurred, chairs stacked in the background, realistic documentary style photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "왜 안 오는지, 원인은 하나예요",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "스레드 글에 공감 댓글은 꽤 달려요"
+        },
+        {
+          "who": "us",
+          "text": "프로필 들어가면 뭐가 보여요?"
+        },
+        {
+          "who": "client",
+          "text": "음… 소개 한 줄이랑 인스타 링크요"
+        },
+        {
+          "who": "us",
+          "text": "그럼 손님이 올 길이 없는 거예요"
+        },
+        {
+          "who": "client",
+          "text": "아 그게 문제였구나…"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "원인",
+      "title": "손님은 링크 말고\n==프로필을 한 번 봐요==",
+      "image_prompt": "Over-the-shoulder shot of a young Korean woman on a subway seat tapping a profile on her smartphone, screen blurred with no readable text, commuters softly out of focus, natural light, realistic candid photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a thumb tapping a round profile picture on a blurred smartphone screen, no readable text",
+          "label": "프로필 클릭"
+        }
+      ],
+      "body": "스레드는 원래 링크 클릭이 적은 곳. 손님은 글 보고 프로필을 한 번 눌러봄. 고정글·최근 글 훑다가 비어 있으면 그냥 나가요.",
+      "teaser": "그럼 프로필 맨 위부터 고치기",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "프로필 소개는\n==딱 3줄이면 돼요==",
+      "image_prompt": "A Korean pasta shop owner in his 30s leaning on the counter, carefully typing on his smartphone with focused expression, screen blurred, fresh pasta dough and flour on the counter behind him, warm realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone with a blurred profile editing screen and a few link rows, no readable text, on a wooden table",
+          "label": "링크 1번=예약"
+        }
+      ],
+      "body": "프로필 편집 → 소개 3줄(현업 기준): 위치/대표메뉴/할 행동. 예) 성수역 3번 출구 2분/생면 파스타/예약은 첫 링크. 링크 1번=예약",
+      "teaser": "프로필 보러 온 손님이 제일 먼저 보는 것",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 2",
+      "title": "처음 온 손님용\n==고정글 1개 복사하세요==",
+      "image_prompt": "A Korean bakery owner in her 40s sitting at a corner table of her bakery, writing a post on her phone with a gentle smile, phone screen blurred, trays of bread softly blurred in background, morning light, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a finger pressing a three-dot menu icon on a blurred smartphone post, no readable text",
+          "label": "···→고정"
+        }
+      ],
+      "body": "[올린 뒤 ··· → 프로필에 고정]\n처음 오셨다면 이것만 보세요 👇\n○○동 ○○(업종), ○년째 하고 있어요\n대표 메뉴: ○○\n위치·예약: 프로필 첫 번째 링크\n매장에서 “스레드 보고 왔어요” 하시면 ○○ 드려요",
+      "teaser": "링크, 본문에 넣고 계셨다면 다음 장",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 3",
+      "title": "링크는 본문 말고\n==내 답글에 달고 고정==",
+      "image_prompt": "Two Korean friends in their 20s at a cafe table, one showing the other something on her phone and both smiling, screen blurred with no readable text, cozy neighborhood cafe interior, realistic candid photo",
+      "cutouts": [],
+      "body": "공식 기준은 아니지만 현업에서 효과 본 방법. 본문은 이야기로, 링크·위치는 내 첫 답글에 달고 맨 위에 고정.",
+      "teaser": "진짜 왔는지는 이렇게 확인함",
+      "items": [],
+      "chat": [],
+      "bad": "오늘도 맛있는 파스타 준비했어요~ 예약은 링크 클릭! (링크)",
+      "good": "본문: 생면 반죽 하루 3번 하는 이유 써봤어요… 위치는 고정 답글에 / 고정 답글: 성수역 3번 출구 2분 · 예약 링크 · “스레드 보고 왔어요” 하시면 음료 1잔",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "스레드 손님은\n==카운터에서 세세요==",
+      "image_prompt": "A smiling Korean customer in her 30s at a small restaurant counter talking to the owner, owner making a pen mark on a small paper note beside the register, warm evening light, realistic photo, no readable text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a paper note taped near a cash register with hand-drawn tally marks, no letters",
+          "label": "正자 2주"
+        }
+      ],
+      "body": "인사이트 화면은 개편이 잦아 숫자만 믿긴 애매. “스레드 보고 왔어요”에 음료 1잔 걸고, 카운터 메모지에 正자로 2주간 세기.",
+      "teaser": "오늘 할 일만 따로 모아둠",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장하고 체크\n==딱 20분이면 끝==",
+      "image_prompt": "A Korean small business owner in her 30s at her shop counter before opening, holding a coffee cup and checking items on a paper checklist with a pen, smartphone beside her with blurred screen, bright morning light, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "마지막 장에서 한 번 더 정리",
+      "items": [
+        "프로필 소개 3줄로 다시 쓰기",
+        "링크 1번 자리에 예약 링크",
+        "처음 오신 분 고정글 1개 올리기",
+        "다음 글부터 링크는 고정 답글로",
+        "카운터에 正자 메모지 붙이기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 프로필부터 바꾸기==",
+      "image_prompt": "A Korean restaurant owner in his 30s flipping the shop sign to open at the front door of a small neighborhood restaurant, confident smile, warm daylight, realistic photo, no readable text",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "스레드에 공감 댓글은 달리는데 예약은 0건이라면, 손님이 올 길이 안 깔려 있는 거예요.\n\n손님은 글 보고 바로 링크 안 누름. 프로필을 한 번 눌러보고 거기서 판단해요.\n\n✔ STEP 1 프로필 소개 3줄: 위치 / 대표 메뉴 / 할 행동 + 링크 1번은 예약\n✔ STEP 2 '처음 오신 분' 고정글 1개 (··· → 프로필에 고정)\n✔ STEP 3 링크는 본문 말고 내 첫 답글에 달고 고정\n✔ STEP 4 “스레드 보고 왔어요” 혜택 걸고 카운터에서 正자로 2주 세기\n\n오늘 할 일: 소개 3줄 고치고, 고정글 1개 올리기. 딱 20분이면 끝나요.\n\n까먹기 전에 저장해두고 오늘 마감 전에 바로 바꿔보세요.",
+  "hashtags": [
+    "스레드",
+    "스레드마케팅",
+    "스레드운영",
+    "자영업자마케팅",
+    "소상공인마케팅",
+    "사장님마케팅",
+    "동네가게홍보",
+    "매장홍보",
+    "지역마케팅"
+  ],
+  "threads": [
+    "글 끝에 링크 붙이고\n'예약은 링크 클릭'으로 끝내셨다면\n그 링크는 거의 안 눌립니다.\n\n손님은 링크 대신\n프로필을 한 번 눌러봅니다.\n그 프로필이 비어 있으면 그냥 나가요.\n\n프로필·고정글·답글을 20분만 정리하면\n공감 댓글이 예약으로 이어질 길이 생깁니다.\n\n방법은 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 프로필 소개를 3줄로 바꾸세요\n\n'프로필 편집'에서 소개를\n위치 / 대표 메뉴 / 할 행동 3줄로 씁니다.\n\n링크는 최대 5개까지 됩니다.\n1번 자리는 예약, 그다음 길찾기·인스타 순.\n(공식 기준이 아닌 현업 기준입니다)\n\n예) 성수역 3번 출구 2분 / 생면 파스타 / 예약은 첫 번째 링크",
+    "2. '처음 오신 분' 고정글을 1개 올리세요\n\n프로필 보러 온 사람은 고정글부터 봅니다.\n글을 올린 뒤 ··· 메뉴에서\n'프로필에 고정'을 누르면 됩니다.\n\n여러 개 말고 1개만 제대로 쓰세요.\n\n예) 처음 오셨다면 이것만 보세요 / 성수동 파스타집, 3년째 / 위치·예약은 프로필 첫 번째 링크",
+    "3. 링크는 본문 말고 내 답글에 다세요\n\n공식 기준은 아니지만 현업에서 효과 본 방법입니다.\n본문은 가게 이야기로 끝내고\n링크·위치는 첫 답글에 달아 맨 위에 고정하세요.\n\n예) 성수역 3번 출구 2분 / 예약 링크 / “스레드 보고 왔어요” 하시면 음료 1잔",
+    "4. 스레드 손님은 카운터에서 세세요\n\n인사이트 화면은 개편이 잦아서\n숫자만 믿고 판단하기 어렵습니다.\n\n확인 문구에 작은 혜택을 걸고\n카운터 메모지에 正자로 2주간 세보세요.\n\n예) 2주 동안 正 3개면 스레드 보고 온 손님이 15팀입니다.",
+    "공감 댓글은 프로필, 고정글, 고정 답글을 지나야 예약이 됩니다.\n\n도움 되셨다면 저장, 주변 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://www.engadget.com/social-media/threads-users-still-barely-click-links-170139103.html",
+    "https://www.socialmediatoday.com/news/meta-says-link-posts-ranked-properly-threads-reach/750126/",
+    "https://techcrunch.com/2025/05/15/threads-now-lets-creators-add-up-to-5-links-to-profiles-track-clicks",
+    "https://www.socialmediatoday.com/news/threads-adds-multiple-profile-links-analytics/748280/",
+    "https://www.threads.com/@threads/post/DCPy_FERojI",
+    "https://www.hardreset.info/devices/apps/apps-threads/pin-post/",
+    "https://momentumhive.app/blog/threads-profile-optimization-2026",
+    "https://www.zolyp.com/blog/threads-analytics-guide",
+    "https://kompozy.io/reviews/threads-insights",
+    "https://about.fb.com/news/2026/06/meta-launching-new-features-500-million-monthly-threads-users/"
+  ]
+}
