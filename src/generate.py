@@ -295,12 +295,15 @@ def build_brief(config: dict, forced_topic: str | None, series: str = "tips") ->
 
 
 def schedule_publish_at(config: dict, series: str = "tips") -> str:
+    """다음 발행 시각: 지금부터 최소 검수 시간(min_review_hours) 뒤에 오는 가장 가까운 발행 시각.
+    (GitHub 예약 실행이 늦어져 자정을 넘겨도 하루가 밀리지 않게, '날짜+1' 대신 이렇게 계산)"""
     s = config["schedule"]
     t = s["publish_time"]
     hh, mm = map(int, (t.get(series) or t.get("tips") if isinstance(t, dict) else t).split(":"))
-    at = (now(config) + timedelta(days=s["publish_delay_days"])).replace(
-        hour=hh, minute=mm, second=0, microsecond=0
-    )
+    earliest = now(config) + timedelta(hours=s.get("min_review_hours", 4))
+    at = earliest.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    if at < earliest:
+        at += timedelta(days=1)
     return at.isoformat()
 
 

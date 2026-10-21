@@ -49,7 +49,7 @@ schedule:
   publish_time:
     cases: "09:00"   # 마케팅 사례
     tips: "13:00"    # 마케팅 꿀팁
-  publish_delay_days: 1     # 생성 다음 날 발행 (저녁에 만들고 → 밤·아침에 검수)
+  min_review_hours: 4       # 생성 후 최소 이만큼은 검수 시간을 두고, 그다음 오는 발행 시각에 예약
 
 publish:
   instagram: true
