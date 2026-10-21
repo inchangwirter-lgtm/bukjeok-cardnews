@@ -15,6 +15,18 @@ on:
         type: choice
         options: [tips, cases]
         default: tips
+      avoid:
+        description: "(다시 만들기) 피할 주제"
+        required: false
+        default: ""
+      skip_category:
+        description: "(다시 만들기) 피할 카테고리"
+        required: false
+        default: ""
+      publish_at:
+        description: "발행 시각 직접 지정 (예: 2026-10-21T13:00:00+09:00). 비우면 자동"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -43,7 +55,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ inputs.topic }}
           SERIES: ${{ github.event.schedule == '30 11 * * *' && 'cases' || inputs.series || 'tips' }}
-        run: python -m src.generate --topic "$TOPIC" --series "$SERIES"
+          AVOID: ${{ inputs.avoid }}
+          SKIP_CATEGORY: ${{ inputs.skip_category }}
+          PUBLISH_AT: ${{ inputs.publish_at }}
+        run: python -m src.generate --topic "$TOPIC" --series "$SERIES" --avoid "$AVOID" --skip-category "$SKIP_CATEGORY" --publish-at "$PUBLISH_AT"
 
       - name: AI 사진 생성
         if: steps.gen.outputs.post_dir != ''

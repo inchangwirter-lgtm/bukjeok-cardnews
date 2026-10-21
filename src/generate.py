@@ -249,9 +249,9 @@ def write_post(client: anthropic.Anthropic, config: dict, brief: str, notes: str
     return resp.parsed_output
 
 
-def next_category() -> dict:
+def next_category(skip: str = "") -> dict:
     """최근 게시물에 가장 오래 안 나온 카테고리를 고른다."""
-    cats = load_topics().get("categories", [])
+    cats = [c for c in load_topics().get("categories", []) if c["name"] != skip] or load_topics().get("categories", [])
     recent = [read_json(d / "post.json", {}).get("pillar") for d in sorted(CONTENT_DIR.glob("*/"), reverse=True)]
     def last_used(cat):
         return recent.index(cat["name"]) if cat["name"] in recent else 10**6
@@ -267,8 +267,9 @@ def next_case_region() -> str:
     return "국내 사례"
 
 
-def build_brief(config: dict, forced_topic: str | None, series: str = "tips") -> str:
-    recent = "\n".join(f"- {t}" for t in recent_topics()) or "(없음)"
+def build_brief(config: dict, forced_topic: str | None, series: str = "tips", avoid: str = "",
+                skip_category: str = "") -> str:
+    recent = "\n".join(f"- {t}" for t in ([avoid] if avoid else []) + recent_topics()) or "(없음)"
     today = now(config).strftime("%Y-%m-%d")
     names = ", ".join(c["name"] for c in load_topics().get("categories", []))
     if series == "cases":
@@ -281,7 +282,7 @@ def build_brief(config: dict, forced_topic: str | None, series: str = "tips") ->
         topic_line = (f"이번 주제는 지정되어 있습니다: 「{forced_topic}」\n"
                       f"pillar 에는 가장 가까운 카테고리({names}) 이름을 그대로 쓰세요.")
     else:
-        cat = next_category()
+        cat = next_category(skip_category)
         examples = "\n".join(f"- {e}" for e in cat.get("examples", []))
         topic_line = (f"이번 카테고리: 「{cat['name']}」 (pillar 필드에 이 이름을 그대로 쓰세요)\n"
                       "이 카테고리에서 사장님이 실제로 겪는 구체적인 고민 하나를 골라 그것만 해결하세요.\n"
@@ -311,6 +312,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--topic", default="", help="주제를 직접 지정")
     ap.add_argument("--series", default="tips", choices=["tips", "cases"], help="tips=고민 해결 / cases=마케팅 사례")
+    ap.add_argument("--avoid", default="", help="이번에 피할 주제 (다시 만들기용)")
+    ap.add_argument("--skip-category", default="", help="이번에 피할 카테고리")
+    ap.add_argument("--publish-at", default="", help="발행 시각 직접 지정 (예: 2026-10-21T13:00:00+09:00)")
     args = ap.parse_args()
     series = args.series
 
@@ -318,7 +322,7 @@ def main() -> None:
     client = anthropic.Anthropic()
 
     forced = args.topic.strip() or (None if series == "cases" else pop_queued_topic())
-    brief = build_brief(config, forced, series)
+    brief = build_brief(config, forced, series, args.avoid, args.skip_category)
     use_web = series == "cases" or config["content"].get("use_web_search")  # 사례는 항상 리서치
     notes = research(client, config, brief, series) if use_web else None
     if series == "cases" and not case_found(notes):
@@ -337,7 +341,7 @@ def main() -> None:
     post_dir = CONTENT_DIR / f"{now(config):%Y-%m-%d}-{prefix}{slug}"
     post_dir.mkdir(parents=True, exist_ok=True)
     (post_dir / "post.json").write_text(post.model_dump_json(indent=2), encoding="utf-8")
-    write_json(post_dir / "meta.json", {"publish_at": schedule_publish_at(config, series), "series": series})
+    write_json(post_dir / "meta.json", {"publish_at": args.publish_at or schedule_publish_at(config, series), "series": series})
     if notes:
         (post_dir / "research.md").write_text(notes, encoding="utf-8")
 
