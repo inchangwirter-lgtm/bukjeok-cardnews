@@ -1,0 +1,219 @@
+{
+  "topic": "인스타 해시태그 30개 복붙 대신, 5칸 공식과 캡션 첫 줄·프로필 이름 칸으로 검색어 옮기기",
+  "pillar": "인스타그램",
+  "problem": "메모장에 저장해둔 해시태그 30개를 붙이면 안 올라가거나 무시되는데, 5개만 남기라니 뭘 남겨야 할지 모르겠어요.",
+  "slug": "instagram-hashtag-5-limit-caption-keywords",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "인스타그램",
+      "title": "해시태그 30개 복붙 중?\n==5칸 공식, 15분 컷==",
+      "image_prompt": "A Korean bakery owner in her 30s wearing an apron, sitting at the counter of a small neighborhood bakery in the morning, frowning slightly while looking at her smartphone with a blurred screen, fresh salt bread on trays behind her, warm natural light, candid documentary photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone showing a blurred notes app with long blocks of unreadable text, soft focus, no readable letters",
+          "label": "메모장 30개"
+        },
+        {
+          "prompt": "Close-up of freshly baked Korean salt bread rolls on a wooden tray, golden crust, top-down view",
+          "label": "5개면 충분"
+        },
+        {
+          "prompt": "Close-up of a small kitchen timer on a cafe counter, shallow depth of field",
+          "label": "15분 컷"
+        }
+      ],
+      "body": "",
+      "teaser": "왜 갑자기 안 올라갈까?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 실제 고민",
+      "title": "메모장 30개 그대로\n==이제 안 먹힘==",
+      "image_prompt": "A Korean cafe owner in his 40s leaning on the counter of a small cafe, scratching his head while looking at a smartphone with a blurred screen, confused expression, afternoon light through the window, realistic candid photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "30개가 안 먹히는 진짜 이유",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "해시태그 붙였는데 글이 안 올라가요"
+        },
+        {
+          "who": "us",
+          "text": "혹시 메모장에 30개 묶음 있으세요?"
+        },
+        {
+          "who": "client",
+          "text": "네, 그거 매번 그대로 복붙하죠"
+        },
+        {
+          "who": "us",
+          "text": "이제 5개까지만 쓸 수 있어요"
+        },
+        {
+          "who": "client",
+          "text": "그럼 뭘 남겨요…?"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "왜 그런데요?",
+      "title": "30개 → 5개로\n==해시태그는 분류표==",
+      "image_prompt": "A Korean small shop owner sorting labeled paper tags into a few small boxes on a wooden table in a cozy store backroom, focused expression, tags have no readable text, natural light, realistic photo",
+      "cutouts": [],
+      "body": "2025년 12월부터 피드·릴스 해시태그 최대 5개. 인스타 대표도 '검색엔 도움, 도달은 별개'라고 함. 많이 붙인다고 더 퍼지지 않아요.",
+      "teaser": "그럼 뭐부터 지워요?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "메모장 열고\n==일반 태그부터 삭제==",
+      "image_prompt": "Close-up of a Korean woman's thumb swiping to delete items on a smartphone with a blurred screen, sitting at a small restaurant table after closing, a cup of coffee nearby, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a pink eraser rubbing out pencil marks on a white notepad, no readable letters",
+          "label": "#소통 삭제"
+        }
+      ],
+      "body": "우리 가게 아니어도 붙는 태그는 지우세요. #소통 #일상 #맞팔 #좋아요 같은 거요. 무차별 태그는 스팸으로 보일 수 있어요.",
+      "teaser": "남길 5칸, 순서 있어요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 2",
+      "title": "남길 5칸은\n==이 순서로 채우기==",
+      "image_prompt": "A Korean bakery owner writing on a small notepad next to a tray of salt bread on the counter, smiling slightly, morning light, notepad text not readable, realistic candid photo",
+      "cutouts": [],
+      "body": "#[동네][업종] #[동네][메뉴] #[메뉴] #[동네][상황] #[가게명]\n\n예) #성수카페 #성수소금빵 #소금빵 #성수데이트 #가게명\n\n※ 공식 기준은 아니지만 현업에서 효과 본 구성",
+      "teaser": "빠진 25개는 어디로?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 3",
+      "title": "빠진 25개 몫은\n==캡션 첫 줄로==",
+      "image_prompt": "A Korean young man typing a caption on his smartphone with a blurred screen while standing outside a small bakery near a subway exit in the morning, salt bread bag in hand, realistic street photo",
+      "cutouts": [],
+      "body": "'더 보기' 전엔 약 125자만 보여요. 여기에 손님이 검색하는 동네+메뉴를 자연스러운 문장으로 넣으세요.",
+      "teaser": "검색 걸리는 자리 하나 더",
+      "items": [],
+      "chat": [],
+      "bad": "오늘도 열심히 구웠어요🥐 #소통 #일상 #맞팔 #좋아요 …(30개)",
+      "good": "성수역 3번 출구, 아침 8시에 나오는 소금빵 이야기 + 태그 5개",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "프로필 이름 칸에\n==동네+메뉴 넣기==",
+      "image_prompt": "A Korean cafe owner in her 30s sitting by the window of her small cafe, editing her profile on a smartphone with a blurred screen, calm focused expression, plants and coffee cups in background, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone map pin icon style location marker made of paper placed on a wooden cafe table, no text",
+          "label": "위치 추가"
+        }
+      ],
+      "body": "프로필 편집 → '이름' 칸(아이디 말고)에 '성수 소금빵 | 가게명'. 소개글엔 위치, 게시물마다 위치 추가. 구글 검색 노출에도 쓰여요.",
+      "teaser": "15분 체크리스트 정리",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일 15분",
+      "title": "이것만 하면\n==해시태그 정리 끝==",
+      "image_prompt": "A Korean shop owner checking off items on a paper checklist with a pen at a small store counter, satisfied smile, smartphone with blurred screen beside, warm light, checklist text not readable, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장 안 하면 또 복붙함",
+      "items": [
+        "메모장 30개 중 일반 태그 삭제",
+        "5칸 공식으로 태그 세트 1개 저장",
+        "다음 게시물 첫 줄에 동네+메뉴",
+        "프로필 이름 칸에 키워드 넣기",
+        "올릴 때마다 위치 추가"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==다음 게시물부터 5개==",
+      "image_prompt": "A Korean bakery owner smiling and placing fresh salt bread on the display shelf of a bright neighborhood bakery, customers blurred in background, cheerful morning atmosphere, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "메모장에 저장해둔 해시태그 30개, 아직도 그대로 복붙하고 계신가요?\n\n인스타는 2025년 12월부터 피드·릴스 해시태그를 5개까지만 받아요. 25개는 이제 소용없음. 대신 이렇게 옮기면 됩니다.\n\n✔ STEP 1. #소통 #일상 #맞팔처럼 아무 데나 붙는 태그부터 삭제\n✔ STEP 2. 5칸은 동네+업종 / 동네+메뉴 / 메뉴 / 상황 / 가게명 순서로 (공식 기준은 아니지만 현업에서 효과 본 구성)\n✔ STEP 3. 빠진 키워드는 캡션 첫 줄(약 125자 안)에 '동네+메뉴' 문장으로\n✔ STEP 4. 프로필 '이름' 칸에 동네+메뉴, 게시물마다 위치 추가\n\n📌 오늘 할 일: 메모장 열고 30개 → 5개 세트로 바꿔 저장하기. 15분이면 끝나요.\n\n다음 게시물 올리기 전에 꺼내 보게 저장해두세요.",
+  "hashtags": [
+    "인스타그램마케팅",
+    "인스타해시태그",
+    "해시태그5개",
+    "인스타운영",
+    "소상공인마케팅",
+    "자영업자마케팅",
+    "사장님마케팅",
+    "카페사장님",
+    "동네가게"
+  ],
+  "threads": [
+    "메모장에 저장해둔 해시태그 30개,\n아직 그대로 복붙하고 계시다면\n25개는 헛수고입니다.\n\n인스타는 작년 12월부터\n해시태그를 5개까지만 받습니다.\n\n5칸을 순서대로 채우고\n나머지는 캡션 첫 줄로 옮기면\n15분이면 정리됩니다.\n\n방법은 댓글에 순서대로 정리했습니다.\n저장해두세요.",
+    "1. 아무 데나 붙는 태그부터 지우세요\n\n메모장 해시태그 묶음을 열고\n우리 가게가 아니어도 붙일 수 있는\n태그는 전부 삭제합니다.\n\n관련 없는 태그를 잔뜩 다는 건\n스팸으로 보일 수 있습니다.\n\n예) #소통 #일상 #맞팔 #좋아요 → 삭제",
+    "2. 남길 5칸은 순서대로 채우세요\n\n①동네+업종 ②동네+메뉴 ③메뉴\n④상황·용도 ⑤가게명 순서입니다.\n\n공식 기준은 아니지만\n현업에서 효과 본 구성입니다.\n세트로 만들어 메모장에 저장하세요.\n\n예) #성수카페 #성수소금빵 #소금빵 #성수데이트 #가게명",
+    "3. 빠진 키워드는 캡션 첫 줄로 옮기세요\n\n캡션은 '더 보기' 전에\n약 125자까지만 보입니다.\n\n이 안에 손님이 검색하는\n'동네+메뉴'를 문장으로 넣습니다.\n프로페셔널 계정 공개 게시물은\n구글 검색에도 노출됩니다.\n\n예) 성수역 3번 출구, 아침 8시에 나오는 소금빵 이야기",
+    "4. 프로필 이름 칸과 위치를 채우세요\n\n프로필 편집에서 아이디 말고\n'이름' 칸에 대표 키워드를 넣습니다.\n\n소개글에는 위치를 적고\n게시물 올릴 때마다 위치를 추가합니다.\n\n예) 이름 칸: 성수 소금빵 | 가게명",
+    "해시태그는 5칸,\n검색어는 캡션 첫 줄과 프로필 이름 칸에.\n\n도움 되셨다면 저장하고\n리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://www.socialmediatoday.com/news/instagram-implements-new-limits-on-hashtag-use/808309/",
+    "https://www.storycut.com/blog/instagram-hashtag-limit",
+    "https://news.nate.com/view/20251219n09334",
+    "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614458",
+    "https://www.madtimes.co.kr/news/articleView.html?idxno=26211",
+    "https://www.i-boss.co.kr/ab-74668-5290",
+    "https://lab.studioplanc.com/instagram-hashtag-limit-5-content-strategy/",
+    "https://somako.co.kr/instagram-5-hashtag-limit-caption-keywords/",
+    "https://creatorlanehq.com/blog/instagram-5-hashtag-limit-2026",
+    "https://sociality.io/blog/instagram-search-features/",
+    "https://www.lyfemarketing.com/blog/instagram-google-indexing/",
+    "https://www.kontentino.com/q-and-a/instagram-search-seo/",
+    "https://wordscalculator.net/blog/instagram-character-limits"
+  ]
+}
