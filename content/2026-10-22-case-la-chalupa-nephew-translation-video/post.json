@@ -1,0 +1,184 @@
+{
+  "topic": "美 뉴저지 가족 식당 La Chalupa가 이모의 메뉴 설명을 10살 조카가 쉬운 말로 통역하는 대본 없는 영상으로 인스타·틱톡 조회수 수백만을 기록하고, 영상을 보고 찾아오는 손님이 늘어난 사례",
+  "pillar": "해외 사례",
+  "problem": "SNS를 해야 하는 건 알지만 뭘 찍어야 할지 모르겠고, 대본을 짜서 잘 찍어야만 뜬다고 생각해 영상을 계속 미루는 사장님의 고민에 답한다.",
+  "slug": "la-chalupa-nephew-translation-video",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "해외 사례",
+      "title": "뉴저지 가족 식당,\n==10살 통역사가 띄웠다==",
+      "image_prompt": "A cozy small family-run Mexican restaurant interior, warm afternoon light, hands only placing a plate of fresh tacos and salsa on a wooden counter, a smartphone on a small tripod in the foreground with blurred screen, colorful decorations softly out of focus in the background, no faces, no readable text, no logos, realistic candid photo, main subject upper-center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "대본도 없이 찍었다는데?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "배경",
+      "title": "뭘 찍지?\n==고민은 똑같았다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "뉴저지 오렌지의 가족 식당 La Chalupa. 이 집도 SNS를 더 해보려던 참이었어요.",
+      "teaser": "그래서 뭘 찍었냐면",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "SNS 해야 하는 건 아는데요"
+        },
+        {
+          "who": "client",
+          "text": "뭘 찍어야 할지 모르겠어요"
+        },
+        {
+          "who": "us",
+          "text": "이 식당도 이제 막 해보려던 참이었어요"
+        },
+        {
+          "who": "client",
+          "text": "대본 짜고 잘 찍어야 뜨잖아요"
+        },
+        {
+          "who": "us",
+          "text": "이 집은 대본이 아예 없었어요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 1",
+      "title": "이모는 길게\n==조카는 한 줄로==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "이모가 스페인어로 메뉴를 자세히 설명하면, 10살 조카가 짧고 쉬운 영어로 옮겨요. 영상은 이게 전부.",
+      "teaser": "근데 이게 왜 먹혔을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 2",
+      "title": "연출 없이\n==평소 모습 그대로==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "가족은 짠 게 아니라고 분명히 했어요. SNS 속 모습이 진짜 우리 모습이라고.",
+      "teaser": "이 영상, 어디까지 퍼졌냐면",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "결과",
+      "title": "인스타·틱톡 합쳐\n==조회수가 터졌다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "두 플랫폼 합쳐 수백만 회. 가족은 영상 보고 먹으러 온 손님이 많다고 했어요.",
+      "teaser": "실제로 온 손님 얘기는?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "수백만"
+    },
+    {
+      "type": "point",
+      "sticker": "결과",
+      "title": "이웃 동네 손님도\n==일부러 들렀다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "영상이 웃기고 귀여워서, 근처 온 김에 작은 가게 응원하러 왔대요. 가족도 반갑게 맞았고요.",
+      "teaser": "보통 가게랑 뭐가 달랐을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "비교",
+      "title": "보통 가게 vs\n==La Chalupa==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "우리 가게라면 이렇게",
+      "items": [],
+      "chat": [],
+      "bad": "대본 짜고 잘 찍을 때까지 미루다 결국 한 편도 못 올림",
+      "good": "평소 메뉴 설명하는 장면을 그대로 찍어서 올림",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "우리 가게 적용",
+      "title": "우리 가게라면\n==이렇게 찍는다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장 안 하면 또 미룹니다",
+      "items": [
+        "사장님 설명, 직원이 한 줄 요약",
+        "대본 없이 실제 주문 장면 찍기",
+        "같은 영상 인스타·틱톡에 같이",
+        "영상 보고 온 손님께 인사 한마디"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 한 편 찍기==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "뭘 찍을지 몰라서 SNS 미루고 계셨다면, 이 식당 보세요.\n\n미국 뉴저지의 가족 멕시코 식당 La Chalupa.\n이모가 스페인어로 메뉴를 길게 설명하면, 10살 조카가 한 줄 영어로 통역.\n대본 없는 이 영상이 인스타·틱톡 합쳐 수백만 회 퍼지고, 영상 보고 온 손님이 많아졌어요.\n\n우리 가게라면\n✔ 사장님 설명 + 직원 한 줄 요약\n✔ 대본 없이 실제 주문 장면 그대로\n✔ 같은 영상 인스타·틱톡에 같이 올리기\n✔ 영상 보고 온 손님께 인사 한마디\n\n오늘 할 일: 점심 피크 전에 메뉴 설명 30초 한 편 찍기.\n\n저장해두고 이번 주 안에 한 편 올려보세요.\n\n출처: PIX11 보도 기준",
+  "hashtags": [
+    "해외마케팅사례",
+    "자영업자마케팅",
+    "식당마케팅",
+    "숏폼마케팅",
+    "릴스마케팅",
+    "소상공인마케팅",
+    "동네가게사장님",
+    "음식점사장님",
+    "SNS마케팅"
+  ],
+  "threads": [
+    "메뉴 소개 영상, 대본 짜다가\n아직 한 편도 못 올리셨다면 손해입니다.\n\n미국 뉴저지의 가족 식당은\n이모 설명을 10살 조카가 통역한 영상으로\n조회수 수백만, 찾아오는 손님이 늘었습니다.\n\n대본은 없었습니다.\n\n어떻게 했는지 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 시작은 'SNS 좀 더 해보자'였습니다\n\n뉴저지 오렌지의 가족 멕시코 식당 La Chalupa.\n가족은 SNS 활동을 늘리려던 참이었다고 했습니다.\n거창한 계획보다 마음먹기가 먼저였던 셈입니다.\n\n예) 우리 가게로 치면 '이번 달엔 영상 좀 올려보자' 단계입니다.",
+    "2. 이모는 길게, 조카는 한 줄로\n\n이모가 스페인어로 메뉴를 자세히 설명하면\n10살 조카가 짧고 쉬운 영어로 옮깁니다.\n긴 설명과 한 줄 요약의 대비가 재미를 만든 것으로 보입니다.\n\n예) 사장님이 육수 얘기를 길게 하면, 알바생이 '한마디로 진해요'로 정리.",
+    "3. 대본 없이 평소 모습 그대로 찍으세요\n\n가족은 연출이 아니라고 분명히 했습니다.\nSNS에서 보이는 모습이 진짜 우리 모습이라고요.\n잘 찍으려고 미루지 않은 게 핵심으로 보입니다.\n\n예) 점심 피크 전, 실제 주문 받는 장면을 휴대폰으로 그대로 찍기.",
+    "4. 결과: 조회수 수백만, 영상 보고 온 손님\n\n인스타그램과 틱톡을 합쳐 조회수 수백만 회.\n가족은 영상을 보고 먹으러 온 손님이 많다고 했고\n찾아온 손님을 반갑게 맞았습니다.\n\n예) 이웃 동네 손님은 영상이 귀여워서, 작은 가게 응원하러 들렀다고 했습니다.",
+    "5. 우리 가게라면 이렇게 하세요\n\n사장님 설명 + 직원 한 줄 요약으로 30초.\n같은 영상을 인스타와 틱톡에 같이 올립니다.\n영상 보고 왔다는 손님께는 꼭 인사 한마디.\n\n예) '영상 보고 오셨어요? 그 메뉴 오늘 잘 나왔어요.'",
+    "대본보다 평소 모습 한 편이 먼저입니다.\n\n도움이 됐다면 저장하고 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다.\n\n출처: PIX11"
+  ],
+  "sources": [
+    "PIX11 | https://pix11.com/news/local-news/nj-restaurant-la-chalupa-sees-business-boost-from-viral-video/"
+  ]
+}
