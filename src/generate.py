@@ -155,6 +155,23 @@ def recent_topics(limit: int = 60) -> list[str]:
     return topics
 
 
+def rejected_topics(limit: int = 30) -> list[str]:
+    """사장님이 반려(병합 없이 닫음)한 검수 PR 제목 — 같은 주제를 다시 만들지 않기 위해."""
+    import os
+    import requests
+    repo, token = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GH_TOKEN")
+    if not repo or not token:
+        return []
+    try:
+        r = requests.get(f"https://api.github.com/repos/{repo}/pulls",
+                         params={"state": "closed", "per_page": limit},
+                         headers={"Authorization": f"Bearer {token}"}, timeout=20)
+        return [pr["title"].replace("[검수] ", "") for pr in r.json()
+                if not pr.get("merged_at") and pr["title"].startswith("[검수]")]
+    except Exception:
+        return []
+
+
 def pop_queued_topic() -> str | None:
     path = ROOT / "topics.yaml"
     data = load_topics()
@@ -270,6 +287,9 @@ def next_case_region() -> str:
 def build_brief(config: dict, forced_topic: str | None, series: str = "tips", avoid: str = "",
                 skip_category: str = "") -> str:
     recent = "\n".join(f"- {t}" for t in ([avoid] if avoid else []) + recent_topics()) or "(없음)"
+    rejected = rejected_topics()
+    if rejected:
+        recent += "\n\n[사장님이 반려한 주제 — 이 주제들과 비슷한 것도 절대 다시 고르지 마세요]\n" + "\n".join(f"- {t}" for t in rejected)
     today = now(config).strftime("%Y-%m-%d")
     names = ", ".join(c["name"] for c in load_topics().get("categories", []))
     if series == "cases":

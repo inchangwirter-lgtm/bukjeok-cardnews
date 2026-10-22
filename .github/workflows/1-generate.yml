@@ -53,6 +53,7 @@ jobs:
         id: gen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
           TOPIC: ${{ inputs.topic }}
           SERIES: ${{ github.event.schedule == '30 11 * * *' && 'cases' || inputs.series || 'tips' }}
           AVOID: ${{ inputs.avoid }}
