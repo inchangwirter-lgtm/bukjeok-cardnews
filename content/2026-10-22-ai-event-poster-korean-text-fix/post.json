@@ -1,0 +1,211 @@
+{
+  "topic": "AI 포스터 한글 깨짐, 문구 3줄 + 콕 집어 수정 요청으로 10분 만에 쓸 수 있는 포스터 만들기",
+  "pillar": "AI 활용",
+  "problem": "AI로 이벤트 포스터를 만들어 봤는데 한글이 외계어로 나오고 가격 숫자까지 틀려서 결국 못 썼어요",
+  "slug": "ai-event-poster-korean-text-fix",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "AI 활용",
+      "title": "AI 포스터 글자 깨져서 포기?\n==문구 3줄이면 해결==",
+      "image_prompt": "A Korean woman in her 30s, owner of a small neighborhood cafe, sitting at a wooden counter with a laptop, looking at the blurred screen with a puzzled then relieved expression, warm autumn afternoon light, coffee cups and a small potted plant nearby, realistic candid photo, subject in upper-center of frame",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a printed cafe event poster on a table with smeared abstract letter-like shapes, completely unreadable, autumn leaf illustrations, realistic photo",
+          "label": "한글 깨짐"
+        },
+        {
+          "prompt": "Close-up of a hand holding a smartphone showing a blurred notes app screen with three short lines, no readable text, cafe background",
+          "label": "문구 딱 3줄"
+        },
+        {
+          "prompt": "Two iced americanos side by side on a cafe counter with autumn decorations, realistic product photo",
+          "label": "10분 완성"
+        }
+      ],
+      "body": "",
+      "teaser": "예전에 해봤다가 접으셨죠?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 고민",
+      "title": "해봤는데 외계어 나와서\n==그냥 접었어요==",
+      "image_prompt": "A Korean male cafe owner in his 40s in an apron, sighing and rubbing his forehead while looking at a blurred laptop screen in a small cafe kitchen corner, realistic candid photo",
+      "cutouts": [],
+      "body": "소상공인 83.3%가 디지털 도구를 기초 수준으로만 쓴대요. 포기한 게 사장님만은 아니에요.",
+      "teaser": "근데 왜 글자만 깨질까요?",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "AI로 가을 이벤트 포스터 해봤어요"
+        },
+        {
+          "who": "client",
+          "text": "근데 한글이 외계어로 나와요"
+        },
+        {
+          "who": "client",
+          "text": "가격도 4,500원이 4,800원 됨"
+        },
+        {
+          "who": "us",
+          "text": "문구 한 번에 길게 넣으셨죠?"
+        },
+        {
+          "who": "us",
+          "text": "순서만 바꾸면 이제 됩니다"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "원인",
+      "title": "AI는 글자를 읽지 않고\n==그림처럼 흉내 내요==",
+      "image_prompt": "Close-up of a Korean person's hands sketching abstract shapes on paper at a cafe table, pencil and eraser crumbs, soft natural light, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of scattered wooden letter blocks with abstract shapes on a table, no readable characters, realistic photo",
+          "label": "11,172종"
+        }
+      ],
+      "body": "한글 음절은 11,172종, 영어는 26자. 문구가 길수록 더 깨져요. 그래도 요즘 모델은 한글 메뉴판 수준까지 왔어요.",
+      "teaser": "AI 켜기 전에 할 일 하나",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "AI 켜기 전에\n==글자 3줄부터 확정==",
+      "image_prompt": "A Korean woman cafe owner typing short notes on her smartphone at the counter before opening, blurred screen, calm focused expression, morning light, realistic photo",
+      "cutouts": [],
+      "body": "메모장에 제목·혜택·기간 딱 3줄. 줄마다 10자 안팎. 예) 가을 한정 1+1 / 아메리카노 2잔 4,500원 / 10/25~10/31",
+      "teaser": "이 3줄, 이렇게 넣으세요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 2",
+      "title": "ChatGPT·제미나이에\n==이대로 붙여넣기==",
+      "image_prompt": "Over-the-shoulder view of a Korean cafe owner using a laptop on a small table, blurred screen, latte beside the keyboard, cozy neighborhood cafe interior, realistic photo",
+      "cutouts": [],
+      "body": "동네 카페 가을 이벤트 포스터, 세로 4:5.\n아래 글자만 정확히 넣어줘.\n제목: \"가을 한정 1+1\"\n혜택: \"아메리카노 2잔 4,500원\"\n기간: \"10/25~10/31\"\n굵은 고딕체, 제목은 위쪽 가운데 크게.\n철자·숫자 그대로, 다른 글자·로고는 넣지 마.",
+      "teaser": "그래도 한 글자 틀리면?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 3",
+      "title": "틀린 글자는\n==그 글자만 콕 집기==",
+      "image_prompt": "A Korean woman pointing her finger at a specific spot on a printed poster draft on a cafe table, focused expression, red pen nearby, realistic photo, no readable text",
+      "cutouts": [],
+      "body": "'다시 그려줘'는 아예 다른 그림이 나와요. 틀린 글자 위치를 짚어야 나머지가 살아요.",
+      "teaser": "가격이 또 틀리면 끝일까요?",
+      "items": [],
+      "chat": [],
+      "bad": "포스터 별로야. 다시 그려줘.",
+      "good": "'아메리카노'의 '메'가 깨졌어. 그 글자만 고치고 나머지는 그대로 둬.",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 4",
+      "title": "가격·날짜는\n==미리캔버스에서 직접==",
+      "image_prompt": "A Korean male shop owner editing a poster layout on a laptop with a blurred design tool screen, notepad with numbers beside him, small store back office, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a laptop showing a blurred poster design with an empty space at the top, no readable text",
+          "label": "위 1/3 비우기"
+        }
+      ],
+      "body": "AI엔 '글자 다 빼고 위쪽 1/3 비워줘'로 비슷한 배경만. 가격·날짜·전화번호는 미리캔버스 무료 플랜에서 직접 입력.",
+      "teaser": "오늘 할 일만 모았어요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "포스터 올리기 전\n==이 5개만 체크==",
+      "image_prompt": "A Korean cafe owner taping a freshly printed autumn event poster on a glass door of a neighborhood cafe, smiling, poster shown from behind or blurred, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장 안 하면 또 까먹어요",
+      "items": [
+        "넣을 문구 3줄 메모장에 쓰기",
+        "따옴표 + '다른 글자 금지' 붙이기",
+        "틀린 글자는 그 글자만 수정 요청",
+        "가격·날짜는 미리캔버스에서 얹기",
+        "올리기 전 숫자 소리 내서 읽기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==이번 주 포스터 만들기==",
+      "image_prompt": "A cheerful Korean cafe owner holding a smartphone and showing a satisfied smile at the counter, autumn decorations, warm light, blurred screen, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "AI 포스터, 한글 외계어 나와서 접으셨다면 지금 다시 해볼 때예요.\n\n요즘 모델은 한글 메뉴판 수준까지 왔어요. 순서만 바꾸면 됩니다.\n\n✔ STEP 1. AI 켜기 전, 메모장에 제목·혜택·기간 3줄 확정 (줄마다 10자 안팎)\n✔ STEP 2. 문구는 따옴표에 넣고 '다른 글자·로고 넣지 마' 붙이기 + 세로 4:5\n✔ STEP 3. 틀리면 '다시 그려줘' 말고 그 글자만 콕 집어서 수정 요청\n✔ STEP 4. 가격·날짜·전화번호는 미리캔버스에서 직접 얹기\n\n오늘 할 일: 이번 주 이벤트 문구 3줄부터 메모장에 써보기.\n올리기 전엔 숫자를 꼭 소리 내서 한 번 읽어보세요.\n\n프롬프트 장 저장해두고 그대로 붙여넣어 쓰세요.",
+  "hashtags": [
+    "AI활용",
+    "AI포스터",
+    "챗GPT활용",
+    "제미나이",
+    "미리캔버스",
+    "소상공인마케팅",
+    "사장님마케팅",
+    "카페사장님",
+    "동네가게"
+  ],
+  "threads": [
+    "AI로 이벤트 포스터 만들다가\n한글이 외계어로 나와서 접으셨다면\n지금 다시 해볼 때입니다.\n\n그때 깨진 건 문구를\n한 번에 길게 넣었기 때문이에요.\n\n문구 3줄과 수정 요청법만 바꾸면\n10분 안팎으로 쓸 포스터가 나옵니다.\n\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. AI 켜기 전에 글자 3줄부터 정하세요\n\n메모장에 제목, 혜택, 기간\n딱 3줄만 씁니다.\n줄마다 10자 안팎이 기준입니다.\n\n문구가 길수록 글자가 깨질\n가능성이 커지기 때문입니다.\n\n예) 가을 한정 1+1 / 아메리카노 2잔 4,500원 / 10/25~10/31",
+    "2. 문구는 따옴표에 넣고 다른 글자를 막으세요\n\nChatGPT 채팅창이나\n제미나이 '이미지 생성'에서 요청합니다.\n\n문구는 따옴표로 분리하고\n글꼴, 위치, 세로 4:5를 지정한 뒤\n'다른 글자·로고는 넣지 마'를 붙입니다.\n\n예) 제목: \"가을 한정 1+1\" 굵은 고딕체, 위쪽 가운데 크게",
+    "3. 틀린 글자는 그 글자만 짚으세요\n\n'다시 그려줘'라고 하면\n아예 다른 그림이 나옵니다.\n\n어느 단어의 어느 글자가 틀렸는지\n정확히 짚고 나머지는 두라고 하세요.\n\n예) '아메리카노'의 '메'가 깨졌어. 그 글자만 고치고 나머지는 그대로 둬.",
+    "4. 가격·날짜는 직접 얹으세요\n\n어떤 모델도 한글 오탈자 0%는\n보장하지 않습니다.\n\nAI에는 글자 없는 비슷한 배경만 받고\n가격, 날짜, 전화번호는\n미리캔버스 무료 플랜에서 직접 입력합니다.\n\n예) 같은 분위기로 글자는 전부 빼고, 위쪽 1/3은 빈 공간으로 비워줘.",
+    "글자는 3줄로, 따옴표로, 틀린 건 콕 집어서, 숫자는 직접. 이 순서면 됩니다.\n\n도움이 되셨다면 저장과 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "imagefactory.co.kr/blog/why-ai-breaks-korean-text (한글 음절 11,172종)",
+    "gpters.org/news/post/complete-summary-how-use-WkjQ6RAPyn0spjQ (ChatGPT Images 2.0, gpt-image-2 2026.4.21 공개)",
+    "중소기업중앙회 소상공인 500개사 설문 — sisajournal.com/news/articleView.html?idxno=375810",
+    "g-enews.com/article/General-News/2026/08/202608271119187338fbfc802b3_1",
+    "미리캔버스 Free 플랜 안내"
+  ]
+}
