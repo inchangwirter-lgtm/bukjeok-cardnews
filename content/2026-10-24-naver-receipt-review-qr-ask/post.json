@@ -1,0 +1,204 @@
+{
+  "topic": "영수증 리뷰 부탁이 어색하고 안 써질 때, QR 1장·놓는 자리·멘트 1줄로 계산하는 순간 바로 쓰게 만들기",
+  "pillar": "네이버 플레이스",
+  "problem": "영수증 리뷰 부탁하려니 어색하고, 말해도 손님이 '이따 쓸게요' 하고 안 써요",
+  "slug": "naver-receipt-review-qr-ask",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "네이버 플레이스",
+      "title": "리뷰 부탁 매번 어색하면\n==QR 1장+멘트 1줄==",
+      "image_prompt": "Warm candid photo of a Korean neighborhood restaurant counter at evening, a Korean female owner in an apron handing a paper receipt to a smiling customer, small acrylic stand beside the card terminal, soft warm lighting, shallow depth of field, main subjects in upper center, no readable text",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone scanning a QR code on a small acrylic stand on a wooden counter, blurred screen, no readable text",
+          "label": "찍으면 바로"
+        },
+        {
+          "prompt": "Close-up of a crumpled paper receipt on a restaurant tray next to a card terminal, no readable text",
+          "label": "버리기 전에"
+        },
+        {
+          "prompt": "Close-up of a Korean customer's thumb typing a short message on a smartphone, blurred screen, cafe background",
+          "label": "메뉴 한 줄"
+        }
+      ],
+      "body": "",
+      "teaser": "'이따 쓸게요'의 진짜 뜻은?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 공감",
+      "title": "부탁은 했는데\n==리뷰는 0개==",
+      "image_prompt": "Candid photo of a Korean male restaurant owner in his 40s standing behind a counter, looking at his phone with a slightly disappointed expression after customers left, empty tables in background, blurred screen, warm indoor light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "손님이 나빠서가 아닙니다",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "계산할 때 리뷰 부탁은 꼭 하거든요"
+        },
+        {
+          "who": "us",
+          "text": "뭐라고 말씀하세요?"
+        },
+        {
+          "who": "client",
+          "text": "'리뷰 좀 부탁드려요~' 하면 다 네~ 해요"
+        },
+        {
+          "who": "client",
+          "text": "근데 실제로 올라오는 건 거의 없어요"
+        },
+        {
+          "who": "us",
+          "text": "그 '네~'는 '이따가'라는 뜻이에요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "원인",
+      "title": "손님이 안 쓰는 이유\n==단계가 너무 많아서==",
+      "image_prompt": "Candid photo of a Korean young woman walking out of a small restaurant onto a neighborhood street at night, putting a receipt into her coat pocket while looking at her phone, blurred screen, street lights bokeh",
+      "cutouts": [],
+      "body": "손님이 직접 쓰려면 검색 → 마이플레이스 접속 → 영수증 인식 → 리뷰 작성. 가게 문 나서는 순간 '이따가'가 되고 끝남.",
+      "teaser": "단계를 확 줄이는 첫 번째 방법",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "4단계"
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "말 대신 QR로\n==리뷰창까지 한 번에==",
+      "image_prompt": "Candid photo of a Korean female cafe owner at a small office desk behind the shop, using a laptop with blurred screen and holding her smartphone up to check a printed QR card, focused expression, daylight",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a freshly printed QR code card next to a smartphone on a desk, blurred screen, no readable text",
+          "label": "내 폰 테스트"
+        }
+      ],
+      "body": "무료 QR 생성 사이트에 m.place.naver.com/my/checkin 입력 → 다운로드. 출력 전 사장님 폰으로 찍어 리뷰창 뜨는지 꼭 확인.",
+      "teaser": "근데 어디 붙이냐가 더 중요함",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 2",
+      "title": "벽 말고\n==영수증 건네는 자리==",
+      "image_prompt": "Close candid photo of a Korean restaurant counter, a small acrylic stand placed right next to the card terminal and receipt tray, staff hand placing a receipt on the tray, customer's hand reaching, warm light, no readable text",
+      "cutouts": [],
+      "body": "공식 기준은 아니지만 현업에서 효과 본 자리. 카운터 뒤 벽은 안 보임. 계산 트레이·카드단말기 옆, 손님 손이 가는 곳에 세워두기.",
+      "teaser": "여기에 멘트 1줄을 얹으면 끝",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "STEP 3",
+      "title": "영수증 든 그 순간\n==멘트를 이렇게 바꾸기==",
+      "image_prompt": "Candid photo of a smiling Korean male staff member in his 20s handing a receipt to a Korean customer at a bakery counter, both looking at a small stand beside the register, friendly moment, warm lighting",
+      "cutouts": [],
+      "body": "네이버 고객센터도 당일·최근 영수증 인증을 안내함. 그래서 받은 그 자리가 제일 확실.",
+      "teaser": "안내판에 그대로 쓸 문구 드림",
+      "items": [],
+      "chat": [],
+      "bad": "\"리뷰 좀 부탁드려요~\"",
+      "good": "\"영수증 나온 김에 이거 찍으시면 바로 리뷰창 떠요. 드신 메뉴 한 줄이면 충분해요\"",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "복붙해서 쓰기",
+      "title": "안내판·직원 멘트\n==그대로 쓰세요==",
+      "image_prompt": "Candid photo of a Korean owner printing a small card at a printer in a shop back room, holding the warm printed sheet, cozy small business space, no readable text",
+      "cutouts": [],
+      "body": "[안내판]\n오늘 영수증, 버리기 전에 📷\nQR 찍으면 바로 리뷰창이 떠요\n드신 메뉴 이름 한 줄이면 충분해요\n\n[직원 멘트]\n영수증 나온 김에 이거 찍으시면 바로 리뷰창 떠요. 메뉴 한 줄이면 돼요!",
+      "teaser": "오늘 할 일 딱 5개로 정리",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "20분이면 끝나는\n==리뷰 QR 체크리스트==",
+      "image_prompt": "Candid photo of a Korean female owner and young staff member standing at a restaurant counter before opening, owner showing a small QR stand and explaining, notepad on counter, morning light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장해두고 퇴근 전에 체크",
+      "items": [
+        "마이플레이스 링크로 QR 만들기",
+        "내 폰으로 찍어 리뷰창 확인",
+        "영수증 건네는 자리에 세우기",
+        "멘트 1줄 직원과 공유하기",
+        "1주 뒤 앱에서 리뷰 수 확인"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 QR부터 세우기==",
+      "image_prompt": "Candid photo of a Korean customer at a neighborhood restaurant counter scanning a QR stand with a smartphone while holding a receipt, owner smiling in the background, blurred screen, warm evening light",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "\"리뷰 부탁드려요~\" 하면 다 \"네~\" 하는데, 왜 리뷰는 안 올라올까요?\n\n손님이 직접 쓰려면 검색 → 마이플레이스 → 영수증 인식 → 작성, 4단계라서 '이따가'가 되는 순간 끝이에요.\n\n✔ STEP 1. 무료 QR 생성 사이트에 m.place.naver.com/my/checkin 넣고, 내 폰으로 꼭 테스트\n✔ STEP 2. 카운터 벽 말고 영수증 건네는 트레이·단말기 옆에 세우기\n✔ STEP 3. 영수증 든 순간 \"영수증 나온 김에 이거 찍으시면 바로 리뷰창 떠요. 메뉴 한 줄이면 충분해요\"\n\n오늘 할 일\n- QR 만들고 내 폰으로 찍어보기\n- 영수증 주는 자리에 세우기\n- 멘트 1줄 직원과 공유\n- 1주 뒤 스마트플레이스센터 앱에서 리뷰 확인\n\n안내판 문구는 7번째 장에 그대로 있어요. 저장해두고 오늘 마감 전에 세워보세요.",
+  "hashtags": [
+    "네이버플레이스",
+    "영수증리뷰",
+    "스마트플레이스",
+    "리뷰관리",
+    "사장님마케팅",
+    "소상공인마케팅",
+    "자영업자",
+    "식당마케팅",
+    "동네가게",
+    "매장홍보"
+  ],
+  "threads": [
+    "계산대에서 \"리뷰 부탁드려요\"\n말로만 하고 계시다면\n그 부탁은 '이따가'에서 끝나기 쉽습니다.\n\n손님이 직접 쓰려면\n검색부터 작성까지 4단계를 거쳐야 하거든요.\n\nQR 1장과 멘트 1줄이면\n영수증 받은 자리에서 리뷰창이 열립니다.\n준비는 20분이면 됩니다.\n\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. 마이플레이스 링크로 QR부터 만드세요\n\n무료 QR 생성 사이트에 이 링크를 넣으면 됩니다.\nhttps://m.place.naver.com/my/checkin\n\n네이버 리뷰는 마이플레이스에서 쓰기 때문에\n링크는 가게마다 같습니다.\n\n예) 출력 전 사장님 폰으로 찍어서 리뷰 쓰는 화면으로 넘어가는지 꼭 확인하세요.",
+    "2. 영수증 건네는 자리에 세우세요\n\n카운터 뒤 벽은 손님 눈에 들어오지 않습니다.\n계산 트레이, 카드단말기 옆처럼\n손님 손이 가는 곳이 맞습니다.\n\n공식 기준은 아니고,\n현업에서 효과를 본 위치입니다.\n\n예) 계산 트레이 바로 옆에 작은 아크릴 스탠드로 세워두기",
+    "3. 영수증을 손에 든 순간, 멘트 1줄\n\n'리뷰 부탁드려요'는 할 일을 넘기는 말이라\n'이따가'가 됩니다.\n\n네이버 고객센터도 당일·최근 영수증 인증을 안내하니\n받은 그 자리가 제일 확실합니다.\n\n예) \"영수증 나온 김에 이거 찍으시면 바로 리뷰창 떠요. 드신 메뉴 한 줄이면 충분해요.\"",
+    "말로 부탁하지 말고, 영수증 옆에 QR 1장과 멘트 1줄을 두세요.\n\n도움이 되셨다면 저장, 주변 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "비즈하우스 블로그 (리뷰 작성 4단계, 마이플레이스 링크, 나가기 직전 QR 안내): https://www.bizhows.com/cms/blog/acryl_pop/",
+    "네이버 영수증 리뷰 기간 (고객센터 안내 문구 인용): https://aieero.com/네이버-영수증-리뷰-기간-마이플레이스-이용방법/",
+    "스마트플레이스센터 앱 (리뷰 확인·답글): https://apps.apple.com/KR/app/id1521817390"
+  ]
+}
