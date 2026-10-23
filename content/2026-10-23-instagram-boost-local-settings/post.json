@@ -1,0 +1,223 @@
+{
+  "topic": "인스타 '홍보하기' 1만 원 돌렸는데 좋아요만 늘 때, 게시물·목표·타겟·예산 4개 설정 바꿔서 동네 문의 받기",
+  "pillar": "인스타그램",
+  "problem": "인스타 '홍보하기'로 1만 원 돌렸는데 좋아요만 늘고, 동네 손님이나 DM 문의는 0건이에요",
+  "slug": "instagram-boost-local-settings",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "인스타그램",
+      "title": "홍보하기 1만 원 날렸다면\n==설정 4개만 바꾸세요==",
+      "image_prompt": "A Korean woman in her late 30s, owner of a small neighborhood bakery, sitting at the counter after closing, frowning at her smartphone with a blurred screen, warm evening light, pastries on wooden shelves behind her, candid documentary photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone with a blurred social media post screen and a few floating heart icons, no readable text",
+          "label": "좋아요만 40개"
+        },
+        {
+          "prompt": "Close-up of a paper neighborhood map with a red pin and a hand-drawn circle around it, no readable text",
+          "label": "반경 3km"
+        },
+        {
+          "prompt": "Close-up of a smartphone showing an empty blurred messaging inbox, no readable text, soft desk light",
+          "label": "DM 문의 0건"
+        }
+      ],
+      "body": "",
+      "teaser": "버튼 누르기 전 이것부터",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 상담",
+      "title": "좋아요는 느는데\n==문의는 0건이라면==",
+      "image_prompt": "A Korean man in his 40s running a small flower shop, leaning on the counter and showing his blurred phone screen to a young Korean marketer in a casual jacket, both looking puzzled, buckets of flowers around, natural daylight, realistic photo, subjects in upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "돈이 샌 곳은 딱 4군데",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "홍보하기 1만 원 돌렸는데요"
+        },
+        {
+          "who": "client",
+          "text": "좋아요 40개 늘고 DM은 0건이에요"
+        },
+        {
+          "who": "us",
+          "text": "혹시 타겟 '자동'으로 두셨어요?"
+        },
+        {
+          "who": "client",
+          "text": "네… 기본이라 그냥 눌렀죠"
+        },
+        {
+          "who": "us",
+          "text": "멀리 사는 분께도 나갔을 수 있어요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "원인",
+      "title": "좋아요만 는 이유\n==기본값 그대로라서==",
+      "image_prompt": "Overhead shot of a cafe table in a small Korean cafe with a smartphone with blurred screen, a receipt, a coffee cup and a calculator, the owner's hand hovering over the phone hesitantly, natural window light, realistic photo",
+      "cutouts": [],
+      "body": "목표 기본값, 타겟 자동, 최소 금액 이틀. 이러면 동네 손님 말고 엉뚱한 사람한테 좋아요만 받고 끝나요.",
+      "teaser": "첫 번째는 게시물 고르기",
+      "items": [],
+      "chat": [],
+      "bad": "어제 올린 아무 사진 / 목표 기본값 / 타겟 자동 / 하루 3천 원×2일 / 좋아요 수로 판단",
+      "good": "2주 중 저장 1등 게시물 / 목표 메시지 / 반경 3km·25~45세 / 하루 1만 원×7일 / 받은 DM 수로 판단",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 1",
+      "title": "아무 사진 말고\n==저장 1등 게시물로==",
+      "image_prompt": "A Korean woman owner of a small pasta restaurant scrolling through her phone with a blurred grid of food photos at an empty table before opening, focused expression, plates and pasta in soft focus, warm interior light, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone with a blurred photo grid and a bookmark icon highlighted, no readable text",
+          "label": "저장 1등"
+        }
+      ],
+      "body": "프로필 → 최근 2주 중 저장·공유 1등 게시물 → 홍보하기 전에 캡션 첫 줄부터 수정 (공식 기준 아님, 현업 방법)\n\n○○동 ○○, 이번 주 평일 예약 DM으로 받아요. '예약'이라고만 보내주세요.",
+      "teaser": "목표 3개 중 뭘 고를까?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 2",
+      "title": "목표는 딱 하나만\n==업종 보고 고르기==",
+      "image_prompt": "A Korean hair salon owner in her 30s standing by the reception desk, tapping her phone with a blurred screen while a customer waits in the background, bright clean salon interior, candid realistic photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone with three blurred option buttons on screen and a thumb about to tap one, no readable text",
+          "label": "목표 1개만"
+        }
+      ],
+      "body": "홍보하기 → 목표에서 하나만. 예약·견적 받는 가게는 메시지, 예약 폼 있으면 웹사이트 방문, 그 외는 프로필 방문.",
+      "teaser": "타겟 자동, 그대로 두면?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 3",
+      "title": "타겟 자동 말고\n==직접 만들기 3km==",
+      "image_prompt": "A street view of a cozy Korean neighborhood alley with small shops, a Korean shop owner in an apron standing in front of her store looking at her phone with blurred screen, afternoon sunlight, realistic photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone showing a blurred map with a circular radius around a pin, no readable text",
+          "label": "매장 반경"
+        }
+      ],
+      "body": "타겟 대상 선택 → 직접 만들기. 위치는 매장 주소 기준 반경 3km, 연령 25~45세. 너무 좁히면 노출이 잘 안 될 수 있어요.",
+      "teaser": "예산은 얼마로 며칠?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "STEP 4",
+      "title": "최소 금액 이틀 말고\n==하루 1만 원 × 7일==",
+      "image_prompt": "A Korean man in his 30s at a small office desk with a laptop showing a blurred screen and a desk calendar, marking a week with a pen, coffee mug beside him, natural daylight, realistic photo",
+      "cutouts": [],
+      "body": "예산·기간에서 하루 1만 원×7일=7만 원이 테스트 1회. 하루 3천 원은 노출이 거의 없어요. 아이폰 앱 결제는 수수료가 빠져요.",
+      "teaser": "오늘 할 일 한 장 정리",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "7일"
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "홍보하기 누르기 전\n==이 5개만 체크==",
+      "image_prompt": "A Korean cafe owner in her 30s sitting at a window table with a notebook and pen, checking off items while holding a phone with a blurred screen, relaxed confident smile, soft morning light, realistic photo, subject in upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "저장 안 하면 또 까먹어요",
+      "items": [
+        "2주 중 저장 1등 게시물 찾기",
+        "캡션 첫 줄에 'DM 예약' 넣기",
+        "목표 하나만, 타겟은 직접 만들기",
+        "하루 1만 원 × 7일로 세팅",
+        "끝나면 좋아요 말고 DM 수 보기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==다음 홍보 전에 보기==",
+      "image_prompt": "A Korean small restaurant owner smiling while reading a new message on his phone with a blurred screen, standing at the entrance of his warmly lit shop in the evening, realistic candid photo, subject in upper center",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "홍보하기 1만 원 돌렸는데 좋아요만 늘고 DM은 0건이셨죠?\n\n버튼 잘못 아님. 누르기 전 설정 4개가 기본값이라 그래요.\n\n✔ STEP 1. 최근 2주 중 저장 1등 게시물 + 캡션 첫 줄에 'DM으로 예약 받아요'\n✔ STEP 2. 목표는 하나만 (예약·견적=메시지 / 예약 폼=웹사이트 / 그 외=프로필 방문)\n✔ STEP 3. 타겟 '자동' 말고 '직접 만들기'로 매장 반경 3km, 25~45세\n✔ STEP 4. 하루 3천 원×2일 말고 하루 1만 원×7일\n\n오늘 할 일: 다음 홍보 전에 세팅 메모 한 줄 써두기\n게시물 __ / 목표 __ / 반경 __km / 하루 __원 × __일 / 볼 숫자 __\n\n끝나면 좋아요 말고 받은 DM 수부터 보세요.\n다음 홍보하기 누르기 전에 꺼내 보게 저장해두세요 📌",
+  "hashtags": [
+    "인스타그램광고",
+    "인스타홍보하기",
+    "인스타마케팅",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님마케팅",
+    "동네가게홍보",
+    "매장마케팅",
+    "SNS광고",
+    "북적마케팅"
+  ],
+  "threads": [
+    "인스타 '홍보하기' 누를 때\n타겟을 '자동'에 두셨다면\n동네 손님 대신 엉뚱한 사람에게\n광고비를 쓰고 계실 수 있습니다.\n\n좋아요는 느는데 DM이 0건인 이유가\n대부분 여기 있습니다.\n\n설정 4개만 바꾸면 5분이면 끝나고\n다음 홍보는 동네 손님에게 닿습니다.\n\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. 홍보할 게시물부터 바꾸세요\n\n프로필에서 최근 2주 게시물 중\n저장·공유가 가장 많은 1개를 고릅니다.\n공식 기준은 아니지만 현업에서 효과 본 방법입니다.\n\n캡션 첫 줄엔 손님이 할 행동을 적어두세요.\n\n예) ○○동 ○○, 이번 주 평일 예약 DM으로 받아요. '예약'이라고만 보내주세요.",
+    "2. 목표는 하나만 고르세요\n\n홍보하기 → 목표에서 고릅니다.\n예약·견적처럼 대화로 파는 가게는 '메시지',\n예약 폼이 있으면 '웹사이트 방문',\n나머지는 '프로필 방문'입니다.\n\n둘 다 궁금하면 따로 두 번 돌려야 비교됩니다.\n\n예) 꽃집 주문 제작 → 메시지",
+    "3. 타겟은 '직접 만들기'로 동네만 잡으세요\n\n'자동'은 팔로워와 비슷한 사람을 찾는 방식이라\n멀리 사는 분께도 나갈 수 있습니다.\n\n직접 만들기에서 매장 주소 기준 반경과 연령을 정합니다.\n반경을 너무 좁히면 노출이 잘 안 될 수 있습니다.\n\n예) 타겟 이름 '성수 3km 25-45'",
+    "4. 하루 1만 원으로 7일 돌리세요\n\n하루 3천 원 이틀은 거의 노출 없이 끝납니다.\n하루 1만 원 × 7일, 7만 원이 테스트 1회입니다.\n\n아이폰 앱 결제는 앱스토어 수수료가 빠지니\nPC나 안드로이드에서 충전하는 게 낫습니다.\n\n예) 메시지 목표였다면 좋아요 말고 받은 DM 수와 1건당 비용을 보세요.",
+    "게시물·목표·타겟·예산, 이 4개만 바꾸면 좋아요 대신 문의에 돈을 쓰게 됩니다.\n\n도움이 되셨다면 저장해두시고, 주변 사장님께 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://help.instagram.com/1067656009937668",
+    "https://coinis.com/how-to/radius-targeting-instagram-ads",
+    "https://graphed.com/blog/how-to-change-instagram-ad-location",
+    "https://getkoro.app/blog/location-targeting-instagram-ads",
+    "https://tosspayments.com/blog/articles/semo-50",
+    "https://1point.kr/blog/insights/instagram-ad-budget-floor/",
+    "https://1point.kr/blog/insights/instagram-vs-meta/",
+    "newmunit.com (인스타그램 게시물 홍보하기 글)",
+    "https://lilachbullock.com/how-to-boost-a-post-on-instagram/",
+    "https://seerinteractive.com/insights/local-business-guide-to-instagram-posts",
+    "https://blog.hootsuite.com/boost-instagram-reels/"
+  ]
+}
