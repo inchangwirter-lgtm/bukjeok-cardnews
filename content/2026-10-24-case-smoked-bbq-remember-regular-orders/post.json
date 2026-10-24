@@ -1,0 +1,166 @@
+{
+  "topic": "미국 몬태나 그레이트폴스 바비큐집 SMOKED.가 SNS 전담 매니저를 두고 여러 플랫폼 팔로워 10만 명 이상을 모았고, 다른 주에서도 손님이 찾아왔지만 다시 오게 한 건 '단골 주문 기억'이었던 사례",
+  "pillar": "해외 사례",
+  "problem": "영상 한 번 터지면 끝날 줄 알았는데, 찾아온 손님이 다시 오지 않아 SNS가 매출로 안 남는 고민",
+  "slug": "smoked-bbq-remember-regular-orders",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "해외 사례",
+      "title": "팔로워 10만 바비큐집\n==비결은 바이럴 아님==",
+      "image_prompt": "Close-up of hands in black gloves slicing a smoky brisket on a wooden cutting board inside a cozy American barbecue restaurant, warm light, thin smoke rising, a line of customers far in the background out of focus, no faces visible, no text, no logos, main subject in upper center, realistic photo",
+      "cutouts": [],
+      "body": "미국 몬태나 그레이트폴스\n바비큐집 'SMOKED.' 이야기",
+      "teaser": "그럼 손님을 붙잡은 건 뭘까?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "배경",
+      "title": "체인점은 늘고\n==마진은 줄고==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "미국 동네 식당들도 같은 고민.\n버틸 방법을 찾는 중이었습니다.",
+      "teaser": "몬태나 바비큐집의 첫 선택은?",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "근처에 체인점 또 생겼어요"
+        },
+        {
+          "who": "client",
+          "text": "영상 하나 터지면 좀 나을까요?"
+        },
+        {
+          "who": "us",
+          "text": "터지는 것보다 중요한 게 있어요"
+        },
+        {
+          "who": "us",
+          "text": "미국 바비큐집 얘기 해드릴게요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 1",
+      "title": "SNS는 한 사람이\n==전담으로 맡았다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "소셜미디어 매니저 트렌트 캐버너가\n계정을 운영. 여러 플랫폼을 함께 키웠습니다.",
+      "teaser": "근데 그가 꼽은 진짜 비결은 따로",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 2",
+      "title": "줄이 문밖까지 서도\n==단골 주문은 기억==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "단골이 보이면 먼저 \"브리스킷 샌드위치 맞죠?\"\n다시 오게 하는 건 바이럴이 아니라 이거라고.",
+      "teaser": "그래서 숫자는 어떻게 됐을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "결과",
+      "title": "여러 플랫폼 합쳐\n==팔로워 10만 명 이상==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "조회수는 수백만 회.\n'2주 뒤', '7일' 카운트다운 댓글 달던 손님이\n워싱턴주에서 가족 5명과 차로 왔습니다.",
+      "teaser": "보통 가게랑 뭐가 달랐을까",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "10만+"
+    },
+    {
+      "type": "compare",
+      "sticker": "차이",
+      "title": "같은 SNS인데\n==남는 손님이 다르다==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "우리 가게는 뭘 하면 될까",
+      "items": [],
+      "chat": [],
+      "bad": "영상 터지면 끝.\n처음 온 손님도, 단골도 똑같이 응대",
+      "good": "영상으로 부르고,\n주문을 기억해서 다시 오게 함",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "우리 가게 적용",
+      "title": "우리 가게라면\n==이렇게 따라 하기==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "마지막 장에 오늘 할 일 하나",
+      "items": [
+        "SNS 담당 한 명 정해 꾸준히",
+        "'갈게요' 댓글엔 방문 날 묻기",
+        "영상 보고 온 손님 메뉴 메모",
+        "재방문 땐 먼저 \"늘 드시던 걸로?\""
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==단골 노트부터 시작==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "영상 한 번 터지면 끝날 줄 알았는데, 손님이 다시 안 오나요?\n\n미국 몬태나 그레이트폴스 바비큐집 SMOKED.\nSNS 전담 매니저가 여러 플랫폼 팔로워를 10만 명 넘게 모았고\n워싱턴주에서 가족 5명을 태우고 찾아온 손님까지 생겼습니다.\n\n그런데 담당자가 꼽은 비결은 바이럴이 아니었어요.\n줄이 문밖까지 서도 단골 주문을 먼저 기억해주는 것.\n\n✔ SNS는 한 사람이 전담\n✔ 영상으로 처음 손님을 부르고\n✔ 주문 기억으로 다시 오게 함\n\n우리 가게라면\n'갈게요' 댓글엔 방문 날을 물어보고\n영상 보고 온 손님 메뉴는 단골 노트에 적어두세요.\n\n오늘 할 일: 단골 5명 이름·단골 메뉴 적어보기\n\n저장해두고 이번 주 안에 바로 해보세요.\n출처: KRTV 보도 기준",
+  "hashtags": [
+    "자영업자마케팅",
+    "해외마케팅사례",
+    "식당마케팅",
+    "단골만들기",
+    "사장님마케팅",
+    "SNS마케팅",
+    "동네가게",
+    "소상공인",
+    "자영업자"
+  ],
+  "threads": [
+    "영상 하나 터지길 기다리며\n릴스만 붙잡고 계시다면\n절반만 하고 계신 겁니다.\n\n미국 몬태나의 한 바비큐집은\n팔로워 10만 명을 넘겼지만\n다시 오게 한 건 영상이 아니었습니다.\n\n하나만 더하면 이번 주부터\n처음 온 손님이 단골로 바뀝니다.\n\n어떻게 했는지 댓글에 순서대로 정리했습니다. 저장해두세요.",
+    "1. 배경부터 보세요\n\n미국 몬태나 그레이트폴스의\n바비큐집 SMOKED. 이야기입니다.\n\n미국도 체인점이 늘고 마진이 줄어\n동네 식당들이 버틸 방법을 찾는 중입니다.\n\n예) 우리 동네에 프랜차이즈가 하나 더 들어온 상황과 같습니다.",
+    "2. SNS는 한 사람에게 맡기세요\n\n이 가게는 소셜미디어 매니저\n트렌트 캐버너가 계정을 운영했습니다.\n\n여러 플랫폼을 함께 키운 게 핵심입니다.\n담당이 정해져야 꾸준함이 생깁니다.\n\n예) 직원 한 명을 정해 주 3회 올리는 걸 맡기기.",
+    "3. 단골 주문을 기억하세요\n\n담당자는 다시 오게 하는 건\n바이럴이 아니라 더 조용한 일이라고 했습니다.\n\n줄이 문밖까지 서 있어도\n단골이 보이면 먼저 알아봅니다.\n\n예) \"브리스킷 샌드위치 맞으시죠?\"",
+    "4. 결과는 이렇습니다\n\n여러 플랫폼 합쳐 팔로워 10만 명 이상,\n조회수는 수백만 회.\n\n영상마다 '2주 뒤', '7일'\n카운트다운 댓글을 달던 손님이\n실제로 찾아왔습니다.\n\n예) 워싱턴주에서 가족 5명을 태우고 차로 온 손님.",
+    "5. 우리 가게에선 이렇게 하세요\n\n'갈게요' 댓글엔 방문 날을 물어보세요.\n영상 보고 온 손님 메뉴는 메모하세요.\n\n두 번째 방문 때 먼저 말을 거는 게\n단골이 되는 순간입니다.\n\n예) 단골 노트에 '토요일 점심, 순한맛 2인' 적어두기.",
+    "영상으로 부르고, 주문 기억으로 다시 오게 하세요.\n\n도움이 되셨다면 저장과 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다.\n\n출처: KRTV"
+  ],
+  "sources": [
+    "KRTV (MTN News) | https://www.krtv.com/news/lunch-in-my-city-the-viral-internet-trend-bringing-new-customers-to-great-falls-restaurants"
+  ]
+}
