@@ -1,0 +1,172 @@
+{
+  "topic": "美 매사추세츠 블랙스톤 아이스크림 가게 Coldstuff Ice Cream 사장 형제가 '어린 직원에게 화내지 말아 달라'는 페이스북 글을 올리고, 몰린 관심을 감사 영상·직원 후원 모금·가게 문구 티셔츠로 이어가 팔로워가 1,200명에서 37,000명이 된 사례",
+  "pillar": "해외 사례",
+  "problem": "알바생이 손님에게 험한 말을 들어도 가게 입장을 밝히기 망설여지고, 어쩌다 관심이 몰려도 그냥 흘려보낼까 걱정인 사장님께 '원칙을 말하고 관심을 받아내는 순서'를 보여줍니다.",
+  "slug": "coldstuff-ice-cream-staff-post",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "해외 사례",
+      "title": "아이스크림 가게 글 하나\n==팔로워 1,200→37,000==",
+      "image_prompt": "A small cozy neighborhood ice cream shop counter in warm late-afternoon light, a young staff member's hands scooping pastel ice cream into a paper cup, shot from behind the counter, staff seen only from behind, a customer out of focus in the background, menu boards blurred with no readable text, no logos, realistic candid photo, main subject in the upper-center of the frame",
+      "cutouts": [],
+      "body": "직원 편 드는 글 하나가 퍼졌고,\n사장은 그 관심을 그냥 두지 않았어요.",
+      "teaser": "이 가게, 처음엔 뭐가 문제였나",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "배경",
+      "title": "알바생 혼날 때\n==사장은 뭘 했나==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "사장이 올린 글, 다음 장에",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "알바생이 손님한테 또 혼났어요"
+        },
+        {
+          "who": "us",
+          "text": "미국 한 아이스크림 가게도 그랬어요"
+        },
+        {
+          "who": "us",
+          "text": "10대 직원이 하루 2~3번씩 혼났대요"
+        },
+        {
+          "who": "client",
+          "text": "그래서 사장이 어떻게 했어요?"
+        },
+        {
+          "who": "us",
+          "text": "15센트 일로 터진 날, 글을 썼죠"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 1",
+      "title": "사장 말투 그대로\n==직원 편 드는 글==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "직원은 대부분 첫 직장인 아이들.\n실수할 수 있고, 미소와 예의면 된다.\n댓글에서도 '실수일 뿐 모욕 아니다'를 반복.",
+      "teaser": "글로 끝났으면 그냥 해프닝",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "무엇을 했나 2",
+      "title": "관심이 몰리자\n==영상·후원·굿즈로==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "이틀 뒤 공동 사장이 직접 감사 영상.\n돕고 싶다는 요청엔 직원 후원 모금,\n가게 문구 티셔츠도 온라인 판매.",
+      "teaser": "그래서 숫자는 얼마나 바뀌었나",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "결과",
+      "title": "페이스북 팔로워\n==1,200 → 37,000명==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "글 좋아요 30만 개 이상.\n후원 모금은 목표를 5,500달러로 올렸고\n5,000달러 이상 모였어요.",
+      "teaser": "보통 가게와 갈린 지점은?",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "37,000명"
+    },
+    {
+      "type": "compare",
+      "sticker": "비교",
+      "title": "보통 가게 vs\n==이 아이스크림 가게==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "우리 가게는 뭐부터 하면 될까",
+      "items": [],
+      "chat": [],
+      "bad": "손님과 마찰 나면 '죄송하다고 해'로 끝. 관심이 와도 그냥 지나감",
+      "good": "직원 지키는 원칙을 공개로 말함. 관심이 오면 영상·후원·굿즈로 받아냄",
+      "stat": ""
+    },
+    {
+      "type": "list",
+      "sticker": "우리 가게 적용",
+      "title": "우리 가게라면\n==이렇게 바꿔 쓰기==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "욕설·손님 비난은 빼고, 원칙만 정중하게.",
+      "teaser": "오늘 할 건 딱 하나",
+      "items": [
+        "'우리 직원 지키는 원칙' 공지",
+        "반응 오면 손·매장 감사 영상",
+        "가게 문구 스티커·컵홀더 굿즈",
+        "팔로우로 잇는 고정글 올리기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==직원 원칙 3줄 쓰기==",
+      "image_prompt": "",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "알바생이 손님한테 혼날 때, 사장님은 어디까지 나서시나요?\n\n美 매사추세츠 블랙스톤의 아이스크림 가게 Coldstuff Ice Cream 이야기예요.\n10대 직원이 하루 2~3번씩 손님에게 혼나던 가게.\n사장 형제가 가게 페이스북에 글 하나를 올렸습니다.\n\n✔ 직원은 대부분 첫 직장인 아이들, 실수할 수 있다는 글\n✔ 이틀 뒤 공동 사장이 직접 감사 영상\n✔ 응원이 이어지자 직원 후원 모금·가게 문구 티셔츠 판매\n\n결과: 팔로워 1,200명 → 37,000명, 후원 모금 5,000달러 이상.\n\n우리 가게라면\n직원 지키는 원칙을 정중한 한마디로 공지하고,\n반응이 오면 감사 영상·고정글·작은 굿즈로 관심을 받아두면 됩니다.\n\n오늘 할 일: '우리 직원 지키는 원칙' 3줄 써보기\n\n나중에 꺼내 쓰게 저장해두세요.\n출처: The Boston Globe, Boston.com 보도 기준",
+  "hashtags": [
+    "해외마케팅사례",
+    "자영업자마케팅",
+    "소상공인마케팅",
+    "사장님마케팅",
+    "알바생",
+    "페이스북마케팅",
+    "굿즈마케팅",
+    "동네가게",
+    "디저트가게사장님",
+    "카페사장님"
+  ],
+  "threads": [
+    "알바생이 손님한테 혼나도\n'죄송하다고 해'로 넘기고 계신다면\n가게 편을 만들 기회를 놓치는 겁니다.\n\n미국 한 아이스크림 가게는\n직원 편 드는 글 하나로\n팔로워 1,200명이 37,000명이 됐어요.\n\n어떻게 했는지 댓글에 순서대로 정리했습니다.\n저장해두세요.",
+    "1. 배경부터 보세요. 10대 직원만 있던 가게입니다\n\n美 매사추세츠 블랙스톤의\nColdstuff Ice Cream.\n직원 6명이 모두 18세 이하였어요.\n\n손님이 직원에게 화내는 일이\n하루 2~3번씩 있었습니다.\n\n예) 주문이 꼬여 15센트가 더 나오자\n16세 직원에게 손님이 폭발한 날이 시작이었습니다.",
+    "2. 사장 말투 그대로, 직원 편을 드는 글을 올렸습니다\n\n가게 페이스북에 직접 썼어요.\n직원은 아이들이고 대부분 첫 직장이다.\n실수할 수 있다, 미소와 예의면 된다.\n\n댓글에서도 해명하며 대화를 이어갔습니다.\n\n예) '실수일 뿐 모욕이 아니다'라는 말을\n끝까지 되풀이했어요.",
+    "3. 몰린 관심을 그냥 두지 않았습니다\n\n이틀 뒤 공동 사장이 얼굴을 보이는 영상으로\n가족 식당 소개, 직원 칭찬, 감사 인사를 했어요.\n\n돕고 싶다는 요청엔 직원 후원 모금으로,\n관심 자체는 가게 문구 티셔츠로 받았습니다.\n\n예) 'It's ice cream. Be nice or get out!' 문구 티셔츠",
+    "4. 결과는 숫자로 남았습니다\n\n페이스북 팔로워 1,200명 → 37,000명.\n글 좋아요는 30만 개를 넘었어요.\n\n후원 모금은 목표를 3,000달러에서\n5,500달러로 올렸고, 5,000달러 이상 모였습니다.\n\n예) 모금액은 직원별 근무시간 비율대로\n나눌 계획이라고 해요.",
+    "5. 우리 가게라면 이렇게 바꿔 쓰세요\n\n계획한 홍보 글은 아니었던 것으로 보입니다.\n그래서 따라 할 건 '터지는 법'이 아니라\n원칙을 말하고, 관심을 받아내는 순서예요.\n\n욕설이나 손님 비난은 빼고 정중하게.\n\n예) 계산대에 '우리 직원 지키는 원칙' 공지 → 반응 오면 손·매장 감사 영상 → 문구 스티커 굿즈",
+    "직원 편 드는 한마디가 가게 편을 만듭니다.\n\n도움이 됐다면 저장하고 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다.\n\n출처: The Boston Globe, Boston.com"
+  ],
+  "sources": [
+    "The Boston Globe | https://www.bostonglobe.com/2026/10/06/lifestyle/ice-cream-shop-facebook-post-mass/",
+    "Boston.com | https://www.boston.com/food/food-news/2026/10/14/viral-post-sparks-gofundme-for-blackstone-ice-cream-shops-teen-workers/"
+  ]
+}
