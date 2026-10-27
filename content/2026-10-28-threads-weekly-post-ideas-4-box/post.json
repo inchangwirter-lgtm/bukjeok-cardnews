@@ -1,0 +1,209 @@
+{
+  "topic": "스레드 3일 쓰고 멈췄을 때, 마감 후 글감 4칸 메모와 AI 프롬프트 1개로 7일치 초안 20분 만에 쌓기",
+  "pillar": "스레드",
+  "problem": "스레드 시작하고 3일 썼는데, 그다음부터 뭘 써야 할지 몰라 계정이 멈췄어요.",
+  "slug": "threads-weekly-post-ideas-4-box",
+  "slides": [
+    {
+      "type": "cover",
+      "sticker": "스레드",
+      "title": "스레드 뭘 쓰지? 3일째\n==글감 4칸이면 7일치 끝==",
+      "image_prompt": "A Korean small cafe owner in her 30s sitting alone at the counter after closing time, warm dim lights, apron still on, holding a smartphone with a blurred screen and staring at it with a stuck, thoughtful expression, empty chairs flipped on tables in the background, realistic candid photo, subject in upper center",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a hand holding a smartphone showing a blank notes app with a blurred screen, no readable text, soft cafe light",
+          "label": "마감 후 5분"
+        },
+        {
+          "prompt": "Close-up of a small spiral notebook divided into four boxes drawn with pen, no readable text, on a wooden counter next to a coffee cup",
+          "label": "글감 4칸"
+        },
+        {
+          "prompt": "Close-up of a laptop on a cafe table with a blurred chat screen, a cup of latte beside it, no readable text",
+          "label": "7일치 초안"
+        }
+      ],
+      "body": "",
+      "teaser": "사흘 만에 멈추는 이유, 따로 있음",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "chat",
+      "sticker": "사장님 공감",
+      "title": "3일 쓰고 멈춘 계정\n==사장님 탓 아님==",
+      "image_prompt": "A Korean restaurant owner in his 40s sitting at an empty table in his small neighborhood restaurant during break time, scrolling a smartphone with a blurred screen, frowning slightly, kitchen visible in the background, realistic candid photo",
+      "cutouts": [],
+      "body": "홍보거리만 찾으면 주 1~2개에서 막혀요. 쓸 건 가게 하루에 이미 있어요.",
+      "teaser": "매일 생기는 그 얘기, 어디에 모으냐면",
+      "items": [],
+      "chat": [
+        {
+          "who": "client",
+          "text": "첫날 오픈 얘기, 둘째 날 메뉴 소개…"
+        },
+        {
+          "who": "client",
+          "text": "셋째 날부터 쓸 게 없어요"
+        },
+        {
+          "who": "us",
+          "text": "혹시 매번 '뭐 홍보하지?'부터 생각하세요?"
+        },
+        {
+          "who": "client",
+          "text": "네… 신메뉴 없으면 쓸 게 없죠"
+        },
+        {
+          "who": "us",
+          "text": "홍보거리는 주 1~2개, 가게 얘기는 매일 생겨요"
+        }
+      ],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 1",
+      "title": "마감 후 5분\n==메모장에 글감 4칸==",
+      "image_prompt": "A Korean bakery owner wiping the counter after closing, then typing quickly on a smartphone with a blurred screen, relaxed focused expression, trays of leftover bread in the background, warm evening light, realistic photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a thumb typing on a smartphone notes app with a blurred screen, no readable text, flour dust on the counter",
+          "label": "칸마다 1줄"
+        }
+      ],
+      "body": "휴대폰 메모장에 ①오늘 고민한 것 ②실수·뒷이야기 ③손님이 한 말 ④오늘의 숫자. 칸마다 1줄만. (현업에서 쓰는 틀)",
+      "teaser": "같은 신메뉴도 이렇게 쓰면 달라요",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "compare",
+      "sticker": "BEFORE / AFTER",
+      "title": "홍보글 말고\n==뒷이야기로 쓰기==",
+      "image_prompt": "A Korean chef in a small pasta restaurant kitchen tasting cream sauce from a spoon with a serious face, several sauce pans on the stove, steam rising, realistic candid photo",
+      "cutouts": [],
+      "body": "광고 티 나는 글보다 경험·질문이 담긴 글이 반응 받는 경우가 많아요.",
+      "teaser": "이걸 7개, AI로 한 번에 뽑는 법",
+      "items": [],
+      "chat": [],
+      "bad": "신메뉴 출시! 많은 관심 부탁드려요🙏 #성수맛집",
+      "good": "크림 파스타 소스 3번 갈아엎었어요.\n짠맛 잡느라 일주일 걸림.\n꾸덕파세요, 묽은파세요?",
+      "stat": ""
+    },
+    {
+      "type": "copy",
+      "sticker": "STEP 2",
+      "title": "프롬프트 1개로\n==7일치 초안 20분==",
+      "image_prompt": "A Korean small shop owner in her 30s at a cafe table at night, laptop open with a blurred screen, smiling with relief while holding a pen over a notebook, warm lamp light, realistic photo",
+      "cutouts": [],
+      "body": "너는 [동네] [업종] 사장이야. 아래 메모로 스레드 글 7개 써줘. 규칙: 1개당 3~5줄, 첫 줄은 고백이나 질문, 가격·할인·'방문하세요' 금지, 마지막 줄은 손님에게 묻는 질문 1개. 메모: [글감 4칸 내용]",
+      "teaser": "초안 7개, 올리는 순서도 있음",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "point",
+      "sticker": "STEP 3",
+      "title": "하루 1개만\n==같은 시간에 복붙==",
+      "image_prompt": "A Korean flower shop owner in the morning before opening, holding a coffee in one hand and a smartphone with a blurred screen in the other, calm routine moment, buckets of flowers around, realistic candid photo",
+      "cutouts": [
+        {
+          "prompt": "Close-up of a smartphone alarm clock style screen blurred, placed next to a coffee cup on a wooden table, no readable text",
+          "label": "매일 같은 시간"
+        }
+      ],
+      "body": "초안 7개는 메모장에 저장 → 매일 같은 시간 1개 복붙. 토픽 태그는 글당 1개뿐이니 '성수'처럼 동네명으로.",
+      "teaser": "7일 뒤 꼭 봐야 할 숫자 하나",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "stat",
+      "sticker": "STEP 4",
+      "title": "7일 뒤엔\n==답글 많은 칸 2배로==",
+      "image_prompt": "A Korean cafe owner leaning on the counter looking at a smartphone with a blurred screen and nodding with a satisfied smile, customers chatting softly in the blurred background, daytime natural light, realistic photo",
+      "cutouts": [],
+      "body": "스레드 앱 인사이트에서 글별 조회·답글 확인. 답글 제일 많은 칸을 다음 주엔 2개씩 쓰기.",
+      "teaser": "오늘 밤 할 일, 이것만 하면 됨",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": "7일"
+    },
+    {
+      "type": "list",
+      "sticker": "오늘 할 일",
+      "title": "저장하고\n==오늘 밤 이것만==",
+      "image_prompt": "A Korean small restaurant owner turning off the lights at closing time, phone in hand with a blurred screen, a checklist notepad on the counter with no readable text, warm cozy atmosphere, realistic photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "7일 뒤 이 글 다시 열기",
+      "items": [
+        "메모장에 글감 4칸 만들기",
+        "마감 후 칸마다 1줄 채우기",
+        "프롬프트로 초안 7개 뽑기",
+        "내일 올릴 시간 정하기",
+        "토픽 태그용 동네명 정하기"
+      ],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    },
+    {
+      "type": "cta",
+      "sticker": "",
+      "title": "저장해두고\n==오늘 마감 후 4칸 채우기==",
+      "image_prompt": "A Korean shop owner smiling while locking the glass door of a small neighborhood store at night, smartphone in the other hand with a blurred screen, warm street lights, realistic candid photo",
+      "cutouts": [],
+      "body": "",
+      "teaser": "",
+      "items": [],
+      "chat": [],
+      "bad": "",
+      "good": "",
+      "stat": ""
+    }
+  ],
+  "instagram_caption": "스레드 3일 쓰고 멈췄다면, 매번 '뭐 홍보하지?'부터 생각하고 계신 거예요.\n\n홍보거리는 일주일에 1~2개뿐인데, 가게 하루 얘기는 매일 생깁니다.\n\n✔ STEP 1 마감 후 5분, 메모장에 글감 4칸 (고민·뒷이야기·손님 한마디·오늘의 숫자)\n✔ STEP 2 프롬프트 1개로 7일치 초안 20분\n✔ STEP 3 하루 1개, 같은 시간에 복붙 + 토픽 태그는 동네명 1개\n✔ STEP 4 7일 뒤 인사이트에서 답글 많은 칸 2배로\n\n오늘 할 일: 마감하고 메모장 열어서 4칸에 한 줄씩만 채우기.\n(글감 4칸은 공식 기준이 아니라 현업에서 효과 본 틀이에요)\n\n저장해두고 오늘 밤 바로 4칸 채워보세요.",
+  "hashtags": [
+    "스레드",
+    "스레드마케팅",
+    "스레드글쓰기",
+    "소상공인마케팅",
+    "자영업자",
+    "사장님마케팅",
+    "동네사장님",
+    "가게홍보",
+    "AI활용"
+  ],
+  "threads": [
+    "스레드 시작하고 사흘 만에 멈췄다면,\n매번 '홍보할 거리'부터 찾고 계신 겁니다.\n\n홍보거리는 일주일에 한두 개뿐인데\n가게 하루 이야기는 매일 생깁니다.\n\n마감 후 5분 메모와 프롬프트 1개면\n7일치 글이 20분에 나옵니다.\n\n순서대로 댓글에 정리했습니다. 저장해두세요.",
+    "1. 마감 후 5분, 글감 4칸부터 채우세요\n\n휴대폰 메모장에 4칸을 만듭니다.\n①오늘 고민한 것 ②실수·뒷이야기\n③손님이 한 말 ④오늘의 숫자.\n\n칸마다 한 줄이면 충분합니다.\n공식 기준은 아니고 현업에서 쓰는 틀입니다.\n\n예) 손님이 한 말: '소스가 예전보다 덜 짜네요'",
+    "2. 프롬프트 1개로 7일치 초안을 뽑으세요\n\n쓰시는 AI 채팅창에 아래를 붙여넣고\n[ ] 안만 바꾸면 됩니다.\n\n예) 너는 [동네] [업종] 사장이야. 아래 메모로 스레드 글 7개 써줘. 규칙: 1개당 3~5줄, 첫 줄은 고백이나 질문, 가격·할인·'방문하세요' 금지, 마지막 줄은 손님에게 묻는 질문 1개. 메모: [글감 4칸]",
+    "3. 하루 1개, 같은 시간에 올리세요\n\n초안 7개는 메모장에 저장해두고\n매일 정한 시간에 1개씩 복붙합니다.\n\n토픽 태그는 글당 1개만 달 수 있으니\n동네명으로 고정하세요.\n\n예) '크림 소스 3번 갈아엎었어요. 꾸덕파세요, 묽은파세요?' + 토픽 태그 '성수'",
+    "4. 7일 뒤, 답글 많은 칸을 2배로 쓰세요\n\n스레드 앱 인사이트에서\n글별 조회수와 답글 수를 확인합니다.\n\n답글이 가장 많이 달린 칸을\n다음 주엔 2개씩 씁니다.\n\n예) '손님이 한 말' 글에 답글이 몰렸다면 다음 주 7개 중 2개를 그 칸으로",
+    "홍보거리 대신 가게 하루를 4칸에 모으면\n쓸 게 없어서 멈추는 일은 없습니다.\n\n도움이 되셨다면 저장과 리포스트 부탁드립니다.\n\n인스타 @bustling_marketing 게시물에 지역과 가게명을 댓글로 남겨주시면 3분을 선정해 마케팅 진단 PDF를 보내드립니다."
+  ],
+  "sources": [
+    "https://www.i-boss.co.kr/ab-6141-71212",
+    "https://hashtagtools.io/blog/threads-tags-vs-hashtags-one-topic-tag-2026",
+    "https://socialbee.com/blog/threads-news/"
+  ]
+}
